@@ -1,0 +1,17 @@
+package com.practice;
+
+public class MySolution {
+	
+	public static boolean isMatch(String text,String pattern){
+		if(pattern.isEmpty() && text.isEmpty()) return true;
+		if(text.charAt(0)==pattern.charAt(0)){
+			if(pattern.charAt(1)=='*'){
+				isMatch(text.substring(1), pattern);
+			} else isMatch(text.substring(1), pattern.substring(1));
+		}
+		return false;
+	}
+	public static void main(String[] args) {
+		System.out.println(isMatch("abbcd", "ab*cd"));
+	}
+}

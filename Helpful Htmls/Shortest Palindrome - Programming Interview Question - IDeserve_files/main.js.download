@@ -1,0 +1,207 @@
+jQuery(document).ready(function($){
+	//fancybox.js init
+	$('.fancybox').fancybox({
+		openEffect : 'none',
+		closeEffect : 'none',
+		prevEffect : 'none',
+		nextEffect : 'none',
+
+		arrows : false,
+		helpers : {
+			media : {},
+			buttons : {}
+		}
+	});
+	SyntaxHighlighter.all();
+	jQuery('#navbar-bottom').hide();
+	jQuery('#preloader').animate({'opacity' : '0'},100,function(){jQuery('#preloader').hide()});
+	jQuery('.preloader_hide').animate({'opacity' : '1'},100);
+
+	var requestProfileCreationCount = localStorage.getItem("requestProfileCreationCount");
+	if(requestProfileCreationCount == null) {
+		requestProfileCreationCount = 20;
+		localStorage.setItem("requestProfileCreationCount", 20);
+	}
+	if (requestProfileCreationCount > 0) {
+		setTimeout(function() {
+			var lastRequestProfileCreationShownTime = localStorage.getItem("lastRequestProfileCreationShownTime");
+			var hours;
+			var seconds;
+			var minutes;
+			if(lastRequestProfileCreationShownTime != null) {
+				var t = Date.parse(new Date()) - lastRequestProfileCreationShownTime;
+				seconds = Math.floor((t / 1000) % 60);
+				minutes = Math.floor((t / 1000 / 60) % 60);
+				hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+			}
+			if( (lastRequestProfileCreationShownTime == null) || minutes >= 30) {
+
+				localStorage.setItem("lastRequestProfileCreationShownTime", Date.parse(new Date()));
+				$.notify({
+					message: '<b>Preparing for interviews? IDeserve team is here to help.</b><br><br>' +
+							'<div style="text-align:left;">' +
+										'Create your profile with us, and here is what you will get:<br>' +
+										'1: Interview practice platform.<br>' +
+										'2: Once you are ready to take the interview, IDeserve team will help you get connected to the best job opportunities.<br>' +
+										'3: Personalized mentorship from IDeserve team once your interview process has started.<br>' +
+										'Creation of profile should not take more than 2 minutes.' +
+							'</div>'
+				},{
+					element: 'body',
+					position: null,
+					allow_dismiss: true,
+					newest_on_top: true,
+					placement: {
+						from: "bottom",
+						align: "center"
+					},
+					offset: 10,
+					spacing: 10,
+					delay: 0,
+					timer: 1000,
+					mouse_over: 'pause',
+					animate: {
+						enter: 'animated fadeInLeft',
+						exit: 'animated fadeOutRight'
+					},
+					template:	'<div data-notify="container" style="background-color: #041e2b; border-color: black;" class="col-xs-11 col-sm-5 alert alert-{0}" role="alert">' +
+									'<h3 class="text-center">' +
+										'<span data-notify="icon"></span>' +
+										'<span>&nbsp;</span>' +
+										'<span data-notify="title">{1}</span>' +
+										'<span style="color: white" data-notify="message">{2}</span><br>' +
+										'<div class="col-sm-12">' +
+											'<div class="col-sm-4">' +
+												'<button type="button" id="create-profile-later" onclick="createProfileLater()" class="btn btn-danger" aria-hidden="true" class="close" data-notify="dismiss">Maybe later</button>' +
+											'</div>' +
+											'<div class="col-sm-4">' +
+												'<button type="button" id="create-profile" onclick="window.open(\'https://accounts.angrynerds.io/profile/new\')" class="btn btn-success" aria-hidden="true" class="close" data-notify="dismiss">Create Now!</button>' +
+											'</div>' +
+											'<div class="col-sm-4">' +
+												'<button type="button" id="profile-already-created" onclick="ProfileAlreadyCreated()" class="btn btn-info" aria-hidden="true" class="close" data-notify="dismiss">Created!</button>' +
+											'</div>' +
+										'</div>' +
+										'<script>'+
+											'function createProfileLater() {' +
+												'var requestProfileCreationCount = localStorage.getItem("requestProfileCreationCount");' +
+												'if(requestProfileCreationCount == null) {' +
+													'localStorage.setItem("requestProfileCreationCount", 20);' +
+												'}' +
+												'else {' +
+													'localStorage.setItem("requestProfileCreationCount", requestProfileCreationCount - 1);' +
+												'}' +
+											'}'+
+											'function ProfileAlreadyCreated() {' +
+												'localStorage.setItem("requestProfileCreationCount", 0);' +
+											'}'+
+										'</script>'+
+									'</h3>' +
+									'<div class="progress" data-notify="progressbar">' +
+										'<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+									'</div>' +
+									'<a href="{3}" target="{4}" data-notify="url"></a>' +
+								'</div>'
+				});
+			}
+
+		}, 10000);
+
+	}
+
+	var requestSubscriptionCount = localStorage.getItem("requestSubscriptionCount");
+	if(requestSubscriptionCount == null) {
+		requestSubscriptionCount = 2;
+		localStorage.setItem("requestSubscriptionCount", 2);
+	}
+	if (requestSubscriptionCount > 0) {
+		setTimeout(function() {
+			var lastRequestSubscriptionShownTime = localStorage.getItem("lastRequestSubscriptionShownTime");
+			var hours;
+			var seconds;
+			var minutes;
+			if(lastRequestSubscriptionShownTime != null) {
+				var t = Date.parse(new Date()) - lastRequestSubscriptionShownTime;
+				seconds = Math.floor((t / 1000) % 60);
+				minutes = Math.floor((t / 1000 / 60) % 60);
+				hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+			}
+			if( (lastRequestSubscriptionShownTime == null) || hours >= 24) {
+				
+				localStorage.setItem("lastRequestSubscriptionShownTime", Date.parse(new Date()));
+				$.notify({
+					message: 'A humble request.<br>If you like IDeserve, please subscribe to us on <a style="color:#FFE600;" href="https://www.youtube.com/c/ideserve?sub_confirmation=1" target="_blank">Youtube</a>.<br>This will motivate us to continue making quality content for you.'
+				},{
+					element: 'body',
+					position: null,
+					allow_dismiss: true,
+					newest_on_top: true,
+					placement: {
+						from: "bottom",
+						align: "center"
+					},
+					offset: 10,
+					spacing: 10,
+					delay: 0,
+					timer: 1000,
+					mouse_over: 'pause',
+					animate: {
+						enter: 'animated fadeInLeft',
+						exit: 'animated fadeOutRight'
+					},
+					template:	'<div data-notify="container" style="background-color: #041e2b; border-color: black;" class="col-xs-7 col-sm-5 alert alert-{0}" role="alert">' +
+									'<h3 class="text-center">' +
+										'<span data-notify="icon"></span>' +
+										'<span>&nbsp;</span>' +
+										'<span data-notify="title">{1}</span>' +
+										'<span style="color: white" data-notify="message">{2}</span><br><br>' +
+										'<button type="button" id="subscribe-later" onclick="subscribeLater()" class="btn btn-default" aria-hidden="true" class="close" data-notify="dismiss">I will subscribe later</button>' +
+										'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
+										'<button type="button" id="already-subscribed" onclick="alreadySubscribed()" class="btn btn-default" aria-hidden="true" class="close" data-notify="dismiss">Already subscribed :)</button>' +
+										'<script>'+
+											'function subscribeLater() {' +
+												'var requestSubscriptionCount = localStorage.getItem("requestSubscriptionCount");' +
+												'if(requestSubscriptionCount == null) {' +
+													'localStorage.setItem("requestSubscriptionCount", 2);' +
+												'}' +
+												'else {' +
+													'localStorage.setItem("requestSubscriptionCount", requestSubscriptionCount - 1);' +
+												'}' +
+											'}'+
+											'function alreadySubscribed() {' +
+												'localStorage.setItem("requestSubscriptionCount", 0);' +
+											'}'+
+										'</script>'+
+									'</h3>' +
+									'<div class="progress" data-notify="progressbar">' +
+										'<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+									'</div>' +
+									'<a href="{3}" target="{4}" data-notify="url"></a>' +
+								'</div>'
+				});
+			}
+
+		}, 30000);
+
+	}
+
+	if (!document.getElementById('AImkjnaTy')){
+		if(document.getElementById('disableAdBlockerRequestInAlgorithmSection')) {
+			document.getElementById('disableAdBlockerRequestInAlgorithmSection').style.display='block';
+		}
+		if(document.getElementById('disableAdBlockerRequestInCodeSection')) {
+			document.getElementById('disableAdBlockerRequestInCodeSection').style.display='block';
+		}
+	}
+
+	var backgroundColor = ['#21b2a6', '#4eb980', '#148094'];
+	var randomColor = backgroundColor[Math.floor(Math.random() * backgroundColor.length)];
+	$('.billboard.light').css('background', randomColor);
+});
+jQuery(document).scroll(function() {
+  var y = jQuery(this).scrollTop();
+  if (y > 620) {
+    jQuery('#navbar-bottom').show();
+  } else {
+    jQuery('#navbar-bottom').hide();
+  }
+});

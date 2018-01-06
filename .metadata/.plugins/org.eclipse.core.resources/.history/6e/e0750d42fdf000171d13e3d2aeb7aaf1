@@ -1,0 +1,11 @@
+package com.reverse;
+
+public class ReverseNumber {
+	public boolean isPalindrome(int x) {
+        
+		return false;
+    }
+	public static void main(String[] args) {
+		System.out.println(new ReverseNumber().isPalindrome(123));
+	}
+}

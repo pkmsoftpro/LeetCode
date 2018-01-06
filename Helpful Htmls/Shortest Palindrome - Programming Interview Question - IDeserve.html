@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0130)http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D -->
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Shortest Palindrome - Programming Interview Question - IDeserve</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Shortest Palindrome">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Using a KMP&#39;s preprocessing find out shortest palindrome. The algorithm is explained with the help of examples and animations. Java code is provided in Code Snippet Section.">
+    <meta property="og:url" content="http://www.ideserve.co.in/learn/shortest-palindrome">
+    <meta property="og:site_name" content="IDeserve">
+    <meta property="og:image" content="http://www.ideserve.co.in/images/shortest-palindrome.png">
+    <meta property="og:image:width" content="448">
+    <meta property="og:image:height" content="252">
+    <meta name="description" content="Using a KMP&#39;s preprocessing find out shortest palindrome. The algorithm is explained with the help of examples and animations. Java code is provided in Code Snippet Section.">
+    <meta name="keywords" content="Palindrome (Literature Subject),KMP algorithm,KMP string matchin algortihm,String matching,KMP partial match table,Algorithm (Literature Subject),Shortest Palindrome,Shortest Palindrome,Data Structures,Algorithms,Interview Questions,Computer Science,Programming Interview Questions,Technical Questions,Interview Answers,Algorithmic Questions,Algorithmic Answers,Programming Interview Questions and Answers, Algorithm Visualization">
+    <link rel="canonical" href="http://www.ideserve.co.in/learn/shortest-palindrome">
+    
+    <link rel="stylesheet" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/bootstrap.min.css">
+    <script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/cb=gapi.loaded_2" async=""></script><script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/cb=gapi.loaded_1" async=""></script><script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/cb=gapi(1).loaded_0" async=""></script><script id="facebook-jssdk" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/sdk.js.download"></script><script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery.js.download"></script>
+    <script defer="" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/bootstrap.min.js.download"></script>
+    <script defer="" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/bootstrap-notify.min.js.download"></script>
+    <script defer="" src="http://www.ideserve.co.in/learn/js/ads.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/reset.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox-thumbs.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox-buttons.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/main.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/animate.css">
+    <link rel="stylesheet" type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/shCoreDefault.css">
+    
+    <link rel="shortcut icon" href="http://www.ideserve.co.in/images/ico/IDeserve.ico">
+    
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox-buttons.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox-media.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/fancybox-thumbs.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/shCore.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/shBrushJScript.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/main.js.download"></script>
+    
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/d3.v2.min.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery-1.8.2.min.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery.simplemodal.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery.ba-bbq.min.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery.jsPlumb-1.3.10-all-min.js.download"></script>
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery-ui-1.8.24.custom.min.js.download"></script>
+    <link type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/jquery-ui-1.8.24.custom.css" rel="stylesheet">
+    <link type="text/css" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/basic.css" rel="stylesheet">
+    
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/pytutor.js.download"></script>
+    <link rel="stylesheet" href="./Shortest Palindrome - Programming Interview Question - IDeserve_files/pytutor.css">
+
+    <script defer="" type="text/javascript" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/shortest-palindrome.js.download"></script>
+    
+    <script async="" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/togetherjs-min.js.download"></script>
+    
+    <!-- Added for YouTube subscribe button -->
+    <script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/platform.js.download" async="" defer="" gapi_processed="true"></script>
+ 
+	<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  		ga('create', 'UA-67412349-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+	<script async="" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/analytics.js.download"></script>
+
+	<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-2251396836305299",
+	    enable_page_level_ads: true
+	  });
+	</script>
+
+<script type="text/javascript" async="" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/embed.js.download"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.1c973af76c6535955110c0c9d8551865.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.8edffe1405dcc2d5eb5ee9d96a2866d1.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.8d07a4869c3ec17ee1881ae6bd353027.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/alfie.f51946af45e0b561c60f768335c9eb79.js.download" async="" charset="UTF-8"></script><style type="text/css">.fancybox-margin{margin-right:17px;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style></head>
+
+<body style="">
+
+<img id="preloader" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/preloader.gif" alt="" style="opacity: 0; display: none;">
+<div class="preloader_hide" style="opacity: 1;">
+
+	<div id="topNavbar">
+		<topnavbar>
+			<nav class="navbar navbar-fixed-top navbar-inverse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#newTopNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				</button>
+				<div class="add-padding"> 
+					<div class="collapse navbar-collapse" id="newTopNavbar">
+						<ul class="nav navbar-nav pull-left">
+							<li><a href="http://www.ideserve.co.in/">Home</a></li>
+							<li><a href="http://www.ideserve.co.in/search" target="_blank">Search</a></li>
+							<li class="dropdown">
+								<a href="http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Topics <span class="caret"></span></a>
+								<ul class="dropdown-menu" style="background-color: #080808;">
+									<li><a href="http://www.ideserve.co.in/learn/dynamic-programming-interview-questions">Dynamic Programming</a></li>
+									<li><a href="http://www.ideserve.co.in/learn/tree-interview-questions">Trees</a></li>
+									<li><a href="http://www.ideserve.co.in/learn/array-interview-questions">Arrays</a></li>
+									<li><a href="http://www.ideserve.co.in/learn/string-interview-questions">Strings</a></li>
+									<li><a href="http://www.ideserve.co.in/learn/linked-list-interview-questions">Linked List</a></li>
+									<li><a href="http://www.ideserve.co.in/learn/graph-interview-questions">Graph</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li><a href="http://angrynerds.io/my-account" target="_blank"><b>My Account</b></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav id="navbar-bottom" class="navbar-default navbar-fixed-bottom" style="display: block;">
+			  <div class="container-fluid mobile-hide">
+				  <a href="http://www.ideserve.co.in/learn/subset-sum-dynamic-programming" title="Subset Sum Problem" class="btn btn-primary btn-arrow-left pull-left">Previous Algorithm</a>
+				  <a href="http://www.ideserve.co.in/learn/print-maximum-number-of-a-using-four-keys-of-special-keyboard" title="To print maximum number of As using four keys of special keyboard." class="btn btn-primary btn-arrow-right pull-right">Next Algorithm</a>
+			  </div>
+			</nav>
+		</topnavbar>
+	</div>
+
+	<div itemscope="" itemtype="http://schema.org/Question">
+		<section class="billboard light" id="articleTitle" style="background: rgb(78, 185, 128);">
+			<header class="wrapper light">
+			</header>
+			<div class="caption light clearfix">
+				<h1 itemprop="name" align="center">Shortest Palindrome</h1>
+			</div>
+			<div class="shadow"></div>
+		</section>
+	</div>
+	
+	<div class="row newWrapper">
+	  <affix-section class="mobile-hide">
+	    <nav class="col-sm-3 light-1">
+	      <ul class="nav nav-pills nav-stacked affix" data-spy="affix" data-offset-top="380">
+					<li class="add-padding-left"><button class="animate action-button blue" title="Start learning session with your friends" onclick="TogetherJS(this); return false;">Learn together</button></li>
+					<li><a href="http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D#algorithmVisualization">Visualize Algorithm!</a></li>
+					<li><a href="http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D#codeSnippet">Code Snippet</a></li>
+					<hr class="style-six">
+					<li><affixh3 class="add-padding-left">What's new @IDeserve?</affixh3></li>
+					<li><a href="http://angrynerds.io/tests" target="_blank"><h3small>Companies are hiring through us&nbsp;<span class="label label-danger">New</span></h3small></a></li>
+					<hr class="style-six">
+					<li><affixh3 class="add-padding-left">Popular Uploads</affixh3></li><br>
+					<li>
+						  <div class="add-padding-left">
+							<iframe width="171" height="97" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/NBcqBddFbZw.html" frameborder="0" allowfullscreen=""></iframe>
+						  </div>
+					</li>
+					<li>
+						  <div class="add-padding-left">
+							<iframe width="171" height="97" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/apIw0Opq5nk.html" frameborder="0" allowfullscreen=""></iframe>
+						  </div>
+					</li>
+					<li class="zoom-hide">
+						  <div class="add-padding-left">
+							<iframe width="171" height="97" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/nbTSfrEfo6M.html" frameborder="0" allowfullscreen=""></iframe>
+						  </div>
+					</li>
+					<li><a href="https://www.youtube.com/c/ideserve?sub_confirmation=1" target="_blank">Subscribe to IDeserve Youtube Channel</a></li>
+	      </ul>
+	    </nav>
+	  </affix-section>
+		
+	  	<div class="col-sm-9"> 
+		
+			<section class="services wrapper" id="problemStatement">
+				<div class="caption dark clearfix">
+					<p style="font-size: 16px;" itemprop="text">Given a string s, form a shortest palindrome by appending characters at the start of the string. <br>Example: abab =&gt; babab. abcd =&gt; dcbabcd. ananab&nbsp;&nbsp;&nbsp;&nbsp;=&gt; bananab.</p>
+				</div>
+			</section>
+			<hr class="style-six">
+
+			
+			
+			<section class="video services wrapper" id="videoTutorial">
+	<div itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
+		<h3 class="light">Please try solving this problem before jumping on the solution</h3>
+		<h3 class="light">Click to learn</h3><br><br>
+		<meta itemprop="name" content="Shortest Palindrome">
+		<meta itemprop="description" content="Using a KMP&#39;s preprocessing find out shortest palindrome. The algorithm is explained with the help of examples and animations. Java code is provided in Code Snippet Section.">
+		<meta itemprop="thumbnailUrl" content="http://www.ideserve.co.in/images/shortest-palindrome.png">
+		<meta itemprop="uploadDate" content="09/17/2015">
+		<meta itemprop="duration" content="PT9M53S">
+		<meta itemprop="embedUrl" href="https://www.youtube.com/watch?v=c4akpqTwE5g">
+		<meta itemprop="height" content="400">
+		<meta itemprop="width" content="400">
+		<object>
+			<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+					<div class="videoWrapper">
+						<iframe src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/c4akpqTwE5g.html" frameborder="0" allowfullscreen=""></iframe>
+					</div>
+				</div>
+				<div class="col-sm-3">
+				</div>
+			</div>
+		</object>
+		<br><br><br><h4>Subscribe for more updates</h4>
+		<br><div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 117px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 117px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1514253668333" name="I0_1514253668333" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/subscribe_embed.html" data-gapiattached="true"></iframe></div>
+	</div>
+</section>
+<hr class="style-six">
+
+			<section class="video services wrapper">
+					<h3 class="light ">Preparing for interviews? IDeserve team is here to help.</h3><br><br>
+					<p><input type="button" id="job-opportunities-button" class="btn btn-success" style="font-size: 1.17em; line-height: 175%; margin: .83em 0; font-weight: 500" value="Here&#39;s How!" data-toggle="modal" data-target="#job-opportunities-modal"></p>
+					<div class="modal fade" tabindex="-1" id="job-opportunities-modal" role="dialog">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">×</button>
+									<p class="modal-title">Create your profile</p>
+								</div>
+								<div class="modal-body">
+									<p style="text-align:left;">
+										Create your profile, and here is what you will get:<br>
+										1: Interview practice platform.<br>
+										2: Once you are ready to take the interview, IDeserve team will help you get connected to the best job opportunities.<br>
+										3: Personalized mentorship from IDeserve team once your interview process has started.<br>
+										Creation of profile shouldn't take more than 2 minutes.
+									</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-md btn-success" data-dismiss="modal" id="suggest-test-cases-submit" onclick="window.open(&#39;https://accounts.angrynerds.io/profile/new&#39;)">Create my profile »</button>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+			<hr class="style-six">
+
+			
+
+			<section class="video services wrapper">
+					<h3 class="light ">Hone your coding skills!</h3><br><br><br>
+					<a href="http://angrynerds.io/practice" target="_blank" class="btn btn-success"><span style="font-size: 1.17em; line-height: 175%; margin: .83em 0; font-weight: 500">AngryNerds Practice platform »</span></a>
+			</section>
+			<hr class="style-six">
+
+			<section class="mobile-hide services wrapper" id="algorithmVisualization">
+	<div class="caption dark clearfix">
+		<h2>Algorithm Visualization</h2>
+	</div>
+    <br>
+	<div id="listSumDiv"><div class="ExecutionVisualizer"><div id="vizHeader" style="display: none;">       <textarea class="vizTitleText" id="vizTitleEditor" cols="60" rows="1" style="display: none;"></textarea>       <div class="vizTitleText" id="vizTitleViewer"></div>       <textarea class="vizDescriptionText" id="vizDescriptionEditor" cols="75" rows="2" style="display: none;"></textarea>       <div class="vizDescriptionText" id="vizDescriptionViewer"></div>    </div><table border="0" class="visualizer"><tbody><tr><td class="vizLayoutTd" id="vizLayoutTdFirst"><div id="codeDisplayDiv" class="ui-resizable">       <!--<div id="langDisplayDiv"></div>-->       <div id="pyCodeOutputDiv"><table id="pyCodeOutput"><tr><td id="gutterTD" valign="top" rowspan="39"><svg id="leftCodeGutterSVG" style="height: 663px;"><polygon id="prevLineArrow" points="0,3 12,3 12,0 18,5 12,10 12,7 0,7" fill="#c9e6ca" style="display: none;"></polygon><polygon id="curLineArrow" points="0,3 12,3 12,0 18,5 12,10 12,7 0,7" fill="#e93f34" transform="translate(0, 581)"></polygon></svg></td><td class="lineNo" id="lineNo1">1</td><td class="cod" id="vundefined__cod1">public&nbsp;class&nbsp;ShortestPalindrome&nbsp;{</td></tr><tr><td class="lineNo" id="lineNo2">2</td><td class="cod" id="vundefined__cod2">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo3">3</td><td class="cod" id="vundefined__cod3">&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;&nbsp;static&nbsp;String&nbsp;shortestPal(String&nbsp;s)</td></tr><tr><td class="lineNo" id="lineNo4">4</td><td class="cod" id="vundefined__cod4">&nbsp;&nbsp;&nbsp;&nbsp;{</td></tr><tr><td class="lineNo" id="lineNo5">5</td><td class="cod" id="vundefined__cod5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;rev_s&nbsp;=&nbsp;new&nbsp;StringBuilder(s).reverse().toString();</td></tr><tr><td class="lineNo" id="lineNo6">6</td><td class="cod" id="vundefined__cod6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo7">7</td><td class="cod" id="vundefined__cod7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;l&nbsp;=&nbsp;s&nbsp;+&nbsp;"#"&nbsp;&nbsp;+&nbsp;rev_s;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo8">8</td><td class="cod" id="vundefined__cod8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo9">9</td><td class="cod" id="vundefined__cod9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[]&nbsp;p&nbsp;=&nbsp;new&nbsp;int[l.length()];</td></tr><tr><td class="lineNo" id="lineNo10">10</td><td class="cod" id="vundefined__cod10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo11">11</td><td class="cod" id="vundefined__cod11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo12">12</td><td class="cod" id="vundefined__cod12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo13">13</td><td class="cod" id="vundefined__cod13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo14">14</td><td class="cod" id="vundefined__cod14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo15">15</td><td class="cod" id="vundefined__cod15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo16">16</td><td class="cod" id="vundefined__cod16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int&nbsp;i=1;&nbsp;i&lt;l.length();&nbsp;i++)</td></tr><tr><td class="lineNo" id="lineNo17">17</td><td class="cod" id="vundefined__cod17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</td></tr><tr><td class="lineNo" id="lineNo18">18</td><td class="cod" id="vundefined__cod18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo19">19</td><td class="cod" id="vundefined__cod19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;j&nbsp;=&nbsp;p[i-1];</td></tr><tr><td class="lineNo" id="lineNo20">20</td><td class="cod" id="vundefined__cod20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo21">21</td><td class="cod" id="vundefined__cod21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo22">22</td><td class="cod" id="vundefined__cod22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(j&gt;0&nbsp;&amp;&amp;&nbsp;l.charAt(i)!=l.charAt(j))</td></tr><tr><td class="lineNo" id="lineNo23">23</td><td class="cod" id="vundefined__cod23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j&nbsp;=&nbsp;p[j-1];</td></tr><tr><td class="lineNo" id="lineNo24">24</td><td class="cod" id="vundefined__cod24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo25">25</td><td class="cod" id="vundefined__cod25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo26">26</td><td class="cod" id="vundefined__cod26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo27">27</td><td class="cod" id="vundefined__cod27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(l.charAt(i)&nbsp;==&nbsp;l.charAt(j))&nbsp;p[i]&nbsp;=&nbsp;j&nbsp;+&nbsp;1;</td></tr><tr><td class="lineNo" id="lineNo28">28</td><td class="cod" id="vundefined__cod28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr><tr><td class="lineNo" id="lineNo29">29</td><td class="cod" id="vundefined__cod29">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo30">30</td><td class="cod" id="vundefined__cod30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;rev_s.substring(0,&nbsp;s.length()&nbsp;-&nbsp;p[l.length()&nbsp;-&nbsp;1])&nbsp;+&nbsp;s;</td></tr><tr><td class="lineNo" id="lineNo31">31</td><td class="cod" id="vundefined__cod31">&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr><tr><td class="lineNo" id="lineNo32">32</td><td class="cod" id="vundefined__cod32">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo33">33</td><td class="cod" id="vundefined__cod33">&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;void&nbsp;main(String&nbsp;args[])</td></tr><tr><td class="lineNo" id="lineNo34">34</td><td class="cod" id="vundefined__cod34">&nbsp;&nbsp;&nbsp;&nbsp;{</td></tr><tr><td class="lineNo" id="lineNo35">35</td><td class="cod" id="vundefined__cod35">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(shortestPal("abab"&nbsp;));</td></tr><tr><td class="lineNo" id="lineNo36">36</td><td class="cod" id="vundefined__cod36">&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr><tr><td class="lineNo" id="lineNo37">37</td><td class="cod" id="vundefined__cod37">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="lineNo" id="lineNo38">38</td><td class="cod" id="vundefined__cod38"></td></tr><tr><td class="lineNo" id="lineNo39">39</td><td class="cod" id="vundefined__cod39">}</td></tr></table></div>       <div id="editCodeLinkDiv" style="display: none;"><a id="editBtn" href="http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D#">Edit code</a></div>       <div id="executionSlider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="font-size: 0.9em;"><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://www.ideserve.co.in/learn/shortest-palindrome?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B%2FSoAk6aaTNezPNszEy12SA%3D%3D#" style="left: 0%; width: 0.8em; height: 1.4em;"></a></div>       <div id="vcrControls">         <button id="jmpFirstInstr" ,="" type="button" class="animate action-button blue" disabled="disabled">&lt;&lt; First</button>         <button id="jmpStepBack" ,="" type="button" class="animate action-button blue" disabled="disabled">&lt; Back</button>         <span id="curInstr">Step 1 of 55</span>         <button id="jmpStepFwd" ,="" type="button" class="animate action-button blue">Forward &gt;</button>         <button id="jmpLastInstr" ,="" type="button" class="animate action-button blue">Last &gt;&gt;</button>       </div>       <div id="rawUserInputDiv" style="display: none;">         <span id="userInputPromptStr"></span>         <input type="text" id="raw_input_textbox" size="30">         <button id="raw_input_submit_btn">Submit</button>       </div>       <div id="errorOutput" style="display: none;"></div>       <div id="legendDiv"><svg id="prevLegendArrowSVG"><polygon points="0,3 12,3 12,0 18,5 12,10 12,7 0,7" fill="#c9e6ca"></polygon></svg> <span style="font-size: 16px;">line that has just executed</span><br><br><span style="margin-top: 4px; font-size: 16px;"><svg id="curLegendArrowSVG"><polygon points="0,3 12,3 12,0 18,5 12,10 12,7 0,7" fill="#e93f34"></polygon></svg> next line to execute</span><br></div>       <div id="stepAnnotationDiv">         <textarea class="annotationText" id="stepAnnotationEditor" cols="60" rows="3" style="display: none;"></textarea>         <div class="annotationText" id="stepAnnotationViewer"></div>       </div>       <div id="annotateLinkDiv"><button id="annotateBtn" type="button" style="display: none;">Annotate this step</button></div>     <div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div></div><div id="htmlOutputDiv"></div>     <div id="progOutputs">       <span style="font-size: 16px;">Program output:</span><br>       <textarea id="pyStdout" cols="50" rows="2" wrap="off" readonly=""></textarea>     </div></td><td class="vizLayoutTd" id="vizLayoutTdSecond"><div id="dataViz">       <table id="stackHeapTable">         <tbody><tr>           <td id="stack_td">             <div id="globals_area">               <div id="stackHeader">Frames</div>             <div class="stackFrame" id="vundefined__globals" style="display: none;"><div id="vundefined__globals_header" class="stackFrameHeader">Static fields</div><table class="stackFrameVarTable" id="vundefined__global_table"></table></div></div>             <div id="stack"><div class="stackFrame highlightedStackFrame" id="vundefined__stack0" data-frame_id="1"><div class="stackFrameHeader">main:35</div><table class="stackFrameVarTable"></table></div></div>           </td>           <td id="heap_td">             <div id="heap"><div id="heapHeader">Objects</div></div>           </td>         </tr>       </tbody></table>     </div></td></tr></tbody></table></div></div>
+    <br>
+    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/IDeserve.co.in" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=479364315554571&amp;container_width=931&amp;href=https%3A%2F%2Fwww.facebook.com%2FIDeserve.co.in&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true"><span style="vertical-align: bottom; width: 77px; height: 20px;"><iframe name="f1f52e687448284" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/like.html" style="border: none; visibility: visible; width: 77px; height: 20px;" class=""></iframe></span></div>
+    <div class="fb-share-button fb_iframe_widget" data-href="http://www.ideserve.co.in/learn/shortest-palindrome" data-layout="button" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=479364315554571&amp;container_width=931&amp;href=http%3A%2F%2Fwww.ideserve.co.in%2Flearn%2Fshortest-palindrome&amp;layout=button&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 59px; height: 20px;"><iframe name="f261965f1e539e4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/share_button.html" style="border: none; visibility: visible; width: 59px; height: 20px;" class=""></iframe></span></div>
+    <div class="fb-send fb_iframe_widget" data-href="http://www.ideserve.co.in/learn/shortest-palindrome" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=479364315554571&amp;container_width=931&amp;href=http%3A%2F%2Fwww.ideserve.co.in%2Flearn%2Fshortest-palindrome&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 54px; height: 20px;"><iframe name="f3f0147fd206c84" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:send Facebook Social Plugin" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/send.html" style="border: none; visibility: visible; width: 54px; height: 20px;" class=""></iframe></span></div>
+</section>
+<hr class="mobile-hide style-six">
+			
+			<div class="row">	
+				<div class="col-sm-9">	
+					<section class="services wrapper" id="codeSnippet">
+    <div itemscope="" itemtype="http://schema.org/Code" class="caption dark clearfix">
+		<h2 itemprop="name">Code Snippet</h2>
+		<meta itemprop="headline" content="Shortest Palindrome">
+		<meta itemprop="keywords" content="Using a KMP&#39;s preprocessing find out shortest palindrome. The algorithm is explained with the help of examples and animations. Java code is provided in Code Snippet Section.">
+		<meta itemprop="educationalUse" content="Programming/Coding Interviews">
+		<!--<meta itemprop="programmingLanguage" content="Java" />-->
+		<div><div id="highlighter_214134" class="syntaxhighlighter nogutter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number2 index1 alt1"><code class="js plain">package com.ideserve.virendra.questions;</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="js plain">public class ShortestPalindrome {</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">public&nbsp; static String shortestPal(String s)</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">String rev_s = </code><code class="js keyword">new</code> <code class="js plain">StringBuilder(s).reverse().toString();</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//use special character to avoid overlap</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">String l = s + </code><code class="js string">"#"</code> <code class="js plain">+ rev_s; </code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">int[] p = </code><code class="js keyword">new</code> <code class="js plain">int[l.length()];</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//build KMP table.</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//i -&gt; suffix boundary</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//j -&gt; prefix boundary</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">for</code><code class="js plain">(int i=1; i&lt;l.length(); i++)</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//update prefix boundary to previous match position</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">int j = p[i-1];</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//move to the last prefix boundary match</code></div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">while</code><code class="js plain">(j&gt;0 &amp;&amp; l.charAt(i)!=l.charAt(j))</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">j = p[j-1];</code></div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//if prefix boundary matches suffix boundary,</code></div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">//increase prefix length </code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code><code class="js plain">(l.charAt(i) == l.charAt(j)) p[i] = j + 1;</code></div><div class="line number31 index30 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number33 index32 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">return</code> <code class="js plain">rev_s.substring(0, s.length() - p[l.length() - 1]) + s;</code></div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number35 index34 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number36 index35 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">public static void main(String args[])</code></div><div class="line number37 index36 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number38 index37 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">System.out.println(shortestPal(</code><code class="js string">"abab"</code><code class="js plain">));</code></div><div class="line number39 index38 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number40 index39 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number41 index40 alt2">&nbsp;</div><div class="line number42 index41 alt1"><code class="js plain">}</code></div><div class="line number43 index42 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div></div></td></tr></tbody></table></div></div>
+  </div>
+</section>
+<hr class="style-six">
+				
+					<section class="services wrapper">
+    <div class="caption dark clearfix">
+		<h2>Order of the Algorithm</h2>
+		<p>Time Complexity is O(n)<br>Space Complexity is O(n)</p>
+	</div>
+</section>
+<hr class="style-six">
+				
+					<section class="testimonials wrapper">
+						<div class="caption dark clearfix">
+							<h2>Contribution</h2>
+						<ul class="clearfix">
+							<li>
+							 <p>Sincere thanks from IDeserve community to Virendra Karappa for compiling current post.</p>
+							 <div class="client">
+							  <a href="https://www.facebook.com/virendra.karappa" target="_blank" rel="nofollow">
+							   <img src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/VirendraKarappa.jpg" class="avatar" width="130" height="100"></a>
+								<div class="client_details">   
+									<h4>Virendra Karappa</h4>
+									<h5>Ninja Programmer</h5>
+								</div>
+							 </div>
+							</li>		 
+						</ul>
+					   </div>
+					</section>
+					<hr class="style-six">
+				</div>
+
+				<div class="col-sm-3">
+					<br><br><br><br><br><br>
+					<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2251396836305299" data-ad-slot="8078034961"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					<br><br><br><br><br><br>
+					<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2251396836305299" data-ad-slot="9557370967"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					<br><br><br><br><br><br>
+					<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2251396836305299" data-ad-slot="9557370967"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					<div id="disableAdBlockerRequestInCodeSection" style="background-color: rgb(52, 152, 219); padding: 10px; display: block; width: 300px;">
+						<p style="font-size:16px; font-family: Segoe UI,Arial,Verdana,sans-serif; color:white; text-align:center;">Like IDeserve?<br><br>Support us by whitelisting IDeserve in your ad-blocker.<br><br>Thanks,<br>-Team IDeserve</p>
+					</div>
+				</div>	
+			</div>
+
+			
+
+			<br> <br>
+			<section class="services wrapper">
+				<div class="caption dark clearfix">
+					<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-2251396836305299" data-ad-slot="9617146569"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</section>
+
+
+			<br> <br>
+			<br> <br>
+			
+				<div class="wrapper">
+					<div id="disqus_thread"><iframe id="dsq-app4422" name="dsq-app4422" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 2131px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+					<script type="text/javascript">
+					    /* * * CONFIGURATION VARIABLES * * */
+					    var disqus_shortname = 'ideserve';
+					    var disqus_identifier = 'shortest-palindrome';
+					    var disqus_title = 'Shortest Palindrome';
+					    var disqus_url = 'http://www.ideserve.co.in/learn/shortest-palindrome';
+					    
+					    /* * * DON'T EDIT BELOW THIS LINE * * */
+					    (function() {
+					        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					    })();
+					</script>
+				</div>
+			<br> <br>
+			
+				<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/lY4eZXm_YWu.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/lY4eZXm_YWu(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=479364315554571";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<br> <br>
+				<footer style="opacity: 1;">
+					<div class="wrapper">
+						<nav>
+							<ul>
+								<li><a title="Visualization Section: pythontutor.com. Originally Created by Dr. Philip Guo and Dr. David Pritchard. Modified by Team IDeserve.">Credits</a></li>
+								<li><a href="http://www.ideserve.co.in/search" target="_blank">Search</a></li>
+								<li><a href="http://www.ideserve.co.in/">Home</a></li>
+							</ul>
+						</nav>
+					</div>
+				</footer>
+		</div>
+	</div>
+</div>
+
+
+
+<iframe style="display: none;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/saved_resource(1).html"></iframe><iframe name="oauth2relay1505823990" id="oauth2relay1505823990" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 129px; left: -10000px; top: -10000px; height: 45px; z-index: 2000000000;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width: 129px; height: 45px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width: 15px !important; height: 9px !important; max-width: 15px !important; max-height: 9px !important; display: inline; left: 35.5px; top: 0px;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: none;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width: 9px !important; height: 15px !important; max-width: 9px !important; max-height: 15px !important; display: none;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset" style="width: 123px; height: 27px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin: 0px; position: absolute; z-index: 1; border-style: none; outline: none; width: 123px; height: 27px;" tabindex="0" vspace="0" width="100%" id="I0_1514253670128" name="I0_1514253670128" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/subscribe_embed(1).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width: 12px !important; height: 19px !important; max-width: 12px !important; max-height: 19px !important; display: none;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width: 19px !important; height: 13px !important; max-width: 19px !important; max-height: 13px !important; display: none;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width: 1px !important; height: 1px !important; max-width: 1px !important; max-height: 1px !important; display: block;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Shortest Palindrome - Programming Interview Question - IDeserve_files/spacer.gif"></td></tr></tbody></table></div><ins style="position: absolute !important; background-color: transparent !important; left: 727.453px !important; top: 1122.97px !important; width: 85px !important; height: 24px !important; z-index: -10000 !important; display: none !important;"></ins></body></html>

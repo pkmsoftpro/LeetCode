@@ -1,0 +1,27 @@
+package com.practice;
+
+public class Sol {
+	
+	public static boolean isMatch(String s,String pattern){
+		if(pattern.isEmpty() && s.isEmpty()) return true;
+		if(pattern.charAt(0)=='.' || s.charAt(0)==pattern.charAt(0)){
+			if(pattern.charAt(0)=='.') return isMatch(s.substring(1), pattern.substring(1));
+			if(pattern.length()>=2 && pattern.charAt(1)=='*'){
+				return isMatch(removeSame(s,pattern.charAt(0)), pattern.substring(2));
+			} else return isMatch(s.substring(1), pattern.substring(1));
+			
+		} else return false;
+	}
+	private static String removeSame(String str,char c){
+		String retval = null;
+		for(int i=0;i<str.length();i++){
+			if(str.charAt(i)==c){
+				retval = str.substring(i+1);
+			} else break;
+		}
+		return retval;
+	}
+	public static void main(String[] args) {
+		System.out.println(isMatch("bbcccccccccd", ".b*c*."));
+	}
+}

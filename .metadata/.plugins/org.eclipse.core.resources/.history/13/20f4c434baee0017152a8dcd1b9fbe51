@@ -1,0 +1,14 @@
+package com.practice;
+
+public class MySolution {
+	
+	public boolean isMatch(String text,String pattern){
+		if(pattern.isEmpty() && text.isEmpty()) return true;
+		if(text.charAt(0)==pattern.charAt(0)){
+			if(text.charAt(1)=='*'){
+				isMatch(text.substring(1), pattern);
+			} else isMatch(text.substring(1), pattern.substring(1));
+		}
+		else return false;
+	}
+}

@@ -1,0 +1,26 @@
+package com.reverse;
+
+public class ReverseNumber {
+	public boolean isPalindrome(int y) {
+		if(y<1) return false;
+		int x = y;
+		int length = 0;
+		int revInt = 0;
+		int i = 0;
+        while(x!=0){
+        	x=x/10;
+        	length++;
+        } i = length;
+        
+        x = y;
+        while(x!=0){
+        	i--;
+        	revInt = revInt+(x%10) * (int)Math.pow(10, i);
+        	x=x/10;
+        }
+		return revInt==y;
+    }
+	public static void main(String[] args) {
+		System.out.println(new ReverseNumber().isPalindrome(12321));
+	}
+}

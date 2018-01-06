@@ -1,0 +1,3335 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://leetcode.com/articles/generate-parentheses/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/8d5fb92f6e"></script><script src="./Generate Parentheses - LeetCode Articles_files/nr-1071.min.js.download"></script><script async="" src="./Generate Parentheses - LeetCode Articles_files/analytics.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"8d5fb92f6e","agent":"","transactionName":"ZwMAYEdSCktRWxZRXV5JJEFbUBBRX1ZNT1NXEgNdWR0TWVdMA1FeUwkQURtFDV1HS1hLV0IQBw==","applicationID":"2098939","errorBeacon":"bam.nr-data.net","applicationTime":374}</script>
+    <title>Generate Parentheses - LeetCode Articles</title>
+    <meta property="og:title" content="Generate Parentheses">
+
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" name="viewport">
+    
+    <meta name="description" content="
+
+Read LeetCode&#39;s official solution for Generate Parentheses
+
+">
+    <meta property="og:image" content="/static/images/LeetCode_Articles_Sharing.png">
+    <meta property="og:description" content="2027 views so far on LeetCode Articles">
+
+    
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Articles">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://leetcode.com/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://leetcode.com/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://leetcode.com/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://leetcode.com/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://leetcode.com/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://leetcode.com/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://leetcode.com/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://leetcode.com/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://leetcode.com/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://leetcode.com/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://leetcode.com/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://leetcode.com/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://leetcode.com/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://leetcode.com/favicon-192x192.png" sizes="192x192">
+    <meta name="application-name" content="LeetCode">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o)
+  ,m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a
+  ,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'
+  );
+  ga('create', 'UA-6849839-6', 'leetcode.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+    <link href="./Generate Parentheses - LeetCode Articles_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Generate Parentheses - LeetCode Articles_files/font-awesome.min.css" rel="stylesheet">
+    <link href="./Generate Parentheses - LeetCode Articles_files/bootstrap-table.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="./Generate Parentheses - LeetCode Articles_files/0a348c9f13db.css" type="text/css">
+    
+<link rel="stylesheet" href="./Generate Parentheses - LeetCode Articles_files/2e9024318cbb.css" type="text/css">
+<link rel="stylesheet" href="./Generate Parentheses - LeetCode Articles_files/katex.min.css">
+<script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/star-ratings.min.js.download"></script>
+<script src="./Generate Parentheses - LeetCode Articles_files/katex.min.js.download"></script>
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    showMathMenu: false,
+    config: ['MMLorHTML.js'],
+    jax: ['input/TeX','input/MathML','input/AsciiMath','output/HTML-CSS','output/NativeMML', 'output/PreviewHTML'],
+    extensions: ['tex2jax.js','mml2jax.js','asciimath2jax.js','MathMenu.js','MathZoom.js', 'fast-preview.js', 'AssistiveMML.js', 'a11y/accessibility-menu.js'],
+    TeX: {
+      extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js', 'enclose.js']
+    }
+  });
+</script>
+
+<script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/MathJax.js.download"></script>
+
+
+    
+
+    <script src="./Generate Parentheses - LeetCode Articles_files/portability_check.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/jquery.min.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/jquery.sticky.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/clipboard.min.js.download"></script>
+    <script>
+      $(document).ready(function(){
+        $('.sticky').sticky({topSpacing:0});
+      });
+
+      var userStatus = {
+        isSignedIn: true,
+        isPremium: false ,
+        isAdmin:  false ,
+        
+          username: 'pkmdotsoftpro',
+          userSlug: 'pkmdotsoftpro',
+          avatar: 'https://www.gravatar.com/avatar/ba2d695e8c4b149862cafcfda5adbc50.png?s=200',
+        
+      };
+
+      var regionInfo =  'US' ;
+    </script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/angular.min.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/jquery-ui.min.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/noty.min.js.download"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="/static/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="/static/respond.js/dest/respond.min.js"></script>
+    <![endif]-->
+
+    
+  <script>
+    function openNavList() {
+      var menu = $('#nav-menu-btn');
+      var navbar = $('.navbar-collapse');
+      if(!navbar.hasClass('collapsing')) {
+        if(navbar.hasClass('in')) {
+          menu.removeClass('open');
+        } else {
+          menu.addClass('open');
+        }
+      }
+    };
+  </script>
+
+  <style type="text/css">.CodeMirror-foldmarker {
+  color: blue;
+  text-shadow: #b9f 1px 1px 2px, #b9f -1px -1px 2px, #b9f 1px -1px 2px, #b9f -1px 1px 2px;
+  font-family: arial;
+  line-height: .3;
+  cursor: pointer;
+}
+.CodeMirror-foldgutter {
+  width: .7em;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+}
+.CodeMirror-foldgutter-open:after {
+  content: "\25BE";
+}
+.CodeMirror-foldgutter-folded:after {
+  content: "\25B8";
+}
+</style><style type="text/css">.CodeMirror-dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: inherit;
+  z-index: 15;
+  padding: .1em .8em;
+  overflow: hidden;
+  color: inherit;
+}
+.CodeMirror-dialog-top {
+  border-bottom: 1px solid #eee;
+  top: 0;
+}
+.CodeMirror-dialog-bottom {
+  border-top: 1px solid #eee;
+  bottom: 0;
+}
+.CodeMirror-dialog input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 20em;
+  color: inherit;
+  font-family: monospace;
+}
+.CodeMirror-dialog button {
+  font-size: 70%;
+}
+</style><style type="text/css">/* BASICS */
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 300px;
+  color: black;
+}
+/* PADDING */
+.CodeMirror-lines {
+  padding: 4px 0;
+  /* Vertical padding around content */
+}
+.CodeMirror pre {
+  padding: 0 4px;
+  /* Horizontal padding of content */
+}
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: white;
+  /* The little square between H and V scrollbars */
+}
+/* GUTTER */
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+.CodeMirror-guttermarker {
+  color: black;
+}
+.CodeMirror-guttermarker-subtle {
+  color: #999;
+}
+/* CURSOR */
+.CodeMirror-cursor {
+  border-left: 1px solid black;
+  border-right: none;
+  width: 0;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0 !important;
+  background: #7e7;
+}
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+.cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7;
+}
+@-moz-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+/* Can style cursor different in overwrite (non-insert) mode */
+.cm-tab {
+  display: inline-block;
+  text-decoration: inherit;
+}
+.CodeMirror-rulers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  bottom: -20px;
+  overflow: hidden;
+}
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+/* DEFAULT THEME */
+.cm-s-default .cm-header {
+  color: blue;
+}
+.cm-s-default .cm-quote {
+  color: #090;
+}
+.cm-negative {
+  color: #d44;
+}
+.cm-positive {
+  color: #292;
+}
+.cm-header,
+.cm-strong {
+  font-weight: bold;
+}
+.cm-em {
+  font-style: italic;
+}
+.cm-link {
+  text-decoration: underline;
+}
+.cm-strikethrough {
+  text-decoration: line-through;
+}
+.cm-s-default .cm-keyword {
+  color: #708;
+}
+.cm-s-default .cm-atom {
+  color: #219;
+}
+.cm-s-default .cm-number {
+  color: #164;
+}
+.cm-s-default .cm-def {
+  color: #00f;
+}
+.cm-s-default .cm-variable-2 {
+  color: #05a;
+}
+.cm-s-default .cm-variable-3,
+.cm-s-default .cm-type {
+  color: #085;
+}
+.cm-s-default .cm-comment {
+  color: #a50;
+}
+.cm-s-default .cm-string {
+  color: #a11;
+}
+.cm-s-default .cm-string-2 {
+  color: #f50;
+}
+.cm-s-default .cm-meta {
+  color: #555;
+}
+.cm-s-default .cm-qualifier {
+  color: #555;
+}
+.cm-s-default .cm-builtin {
+  color: #30a;
+}
+.cm-s-default .cm-bracket {
+  color: #997;
+}
+.cm-s-default .cm-tag {
+  color: #170;
+}
+.cm-s-default .cm-attribute {
+  color: #00c;
+}
+.cm-s-default .cm-hr {
+  color: #999;
+}
+.cm-s-default .cm-link {
+  color: #00c;
+}
+.cm-s-default .cm-error {
+  color: #f00;
+}
+.cm-invalidchar {
+  color: #f00;
+}
+.CodeMirror-composing {
+  border-bottom: 2px solid;
+}
+/* Default styles for common addons */
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0f0;
+}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #f22;
+}
+.CodeMirror-matchingtag {
+  background: rgba(255, 150, 0, 0.3);
+}
+.CodeMirror-activeline-background {
+  background: #e8f2ff;
+}
+/* STOP */
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+.CodeMirror-scroll {
+  overflow: scroll !important;
+  /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none;
+  /* Prevent dragging from highlighting the element */
+  position: relative;
+}
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+}
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actual scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar,
+.CodeMirror-hscrollbar,
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+.CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0;
+}
+.CodeMirror-gutter-filler {
+  left: 0;
+  bottom: 0;
+}
+.CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -30px;
+}
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important;
+}
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+}
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+.CodeMirror-gutter-wrapper ::selection {
+  background-color: transparent;
+}
+.CodeMirror-gutter-wrapper ::-moz-selection {
+  background-color: transparent;
+}
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 1px;
+  /* prevents collapsing before first draw */
+}
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+}
+.CodeMirror-rtl pre {
+  direction: rtl;
+}
+.CodeMirror-code {
+  outline: none;
+}
+/* Force content-box sizing for the elements where we expect it */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+.CodeMirror-measure pre {
+  position: static;
+}
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+.CodeMirror-selected {
+  background: #d9d9d9;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0;
+}
+.CodeMirror-crosshair {
+  cursor: crosshair;
+}
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+  background: #d7d4f0;
+}
+.CodeMirror-line::-moz-selection,
+.CodeMirror-line > span::-moz-selection,
+.CodeMirror-line > span > span::-moz-selection {
+  background: #d7d4f0;
+}
+.cm-searching {
+  background: #ffa;
+  background: rgba(255, 255, 0, 0.4);
+}
+/* Used to force a border model for a node */
+.cm-force-border {
+  padding-right: .1px;
+}
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+/* See issue #2901 */
+.cm-tab-wrap-hack:after {
+  content: '';
+}
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext {
+  background: none;
+}
+</style><style type="text/css">/* Based on Sublime Text's Monokai theme */
+.cm-s-monokai.CodeMirror {
+  background: #272822;
+  color: #f8f8f2;
+}
+.cm-s-monokai div.CodeMirror-selected {
+  background: #49483E;
+}
+.cm-s-monokai .CodeMirror-line::selection,
+.cm-s-monokai .CodeMirror-line > span::selection,
+.cm-s-monokai .CodeMirror-line > span > span::selection {
+  background: rgba(73, 72, 62, 0.99);
+}
+.cm-s-monokai .CodeMirror-line::-moz-selection,
+.cm-s-monokai .CodeMirror-line > span::-moz-selection,
+.cm-s-monokai .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(73, 72, 62, 0.99);
+}
+.cm-s-monokai .CodeMirror-gutters {
+  background: #272822;
+  border-right: 0px;
+}
+.cm-s-monokai .CodeMirror-guttermarker {
+  color: white;
+}
+.cm-s-monokai .CodeMirror-guttermarker-subtle {
+  color: #d0d0d0;
+}
+.cm-s-monokai .CodeMirror-linenumber {
+  color: #d0d0d0;
+}
+.cm-s-monokai .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0;
+}
+.cm-s-monokai span.cm-comment {
+  color: #75715e;
+}
+.cm-s-monokai span.cm-atom {
+  color: #ae81ff;
+}
+.cm-s-monokai span.cm-number {
+  color: #ae81ff;
+}
+.cm-s-monokai span.cm-property,
+.cm-s-monokai span.cm-attribute {
+  color: #a6e22e;
+}
+.cm-s-monokai span.cm-keyword {
+  color: #f92672;
+}
+.cm-s-monokai span.cm-builtin {
+  color: #66d9ef;
+}
+.cm-s-monokai span.cm-string {
+  color: #e6db74;
+}
+.cm-s-monokai span.cm-variable {
+  color: #f8f8f2;
+}
+.cm-s-monokai span.cm-variable-2 {
+  color: #9effff;
+}
+.cm-s-monokai span.cm-variable-3,
+.cm-s-monokai span.cm-type {
+  color: #66d9ef;
+}
+.cm-s-monokai span.cm-def {
+  color: #fd971f;
+}
+.cm-s-monokai span.cm-bracket {
+  color: #f8f8f2;
+}
+.cm-s-monokai span.cm-tag {
+  color: #f92672;
+}
+.cm-s-monokai span.cm-header {
+  color: #ae81ff;
+}
+.cm-s-monokai span.cm-link {
+  color: #ae81ff;
+}
+.cm-s-monokai span.cm-error {
+  background: #f92672;
+  color: #f8f8f0;
+}
+.cm-s-monokai .CodeMirror-activeline-background {
+  background: #373831;
+}
+.cm-s-monokai .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+</style><style type="text/css">/* Port of TextMate's Blackboard theme */
+.cm-s-blackboard.CodeMirror {
+  background: #0C1021;
+  color: #F8F8F8;
+}
+.cm-s-blackboard div.CodeMirror-selected {
+  background: #253B76;
+}
+.cm-s-blackboard .CodeMirror-line::selection,
+.cm-s-blackboard .CodeMirror-line > span::selection,
+.cm-s-blackboard .CodeMirror-line > span > span::selection {
+  background: rgba(37, 59, 118, 0.99);
+}
+.cm-s-blackboard .CodeMirror-line::-moz-selection,
+.cm-s-blackboard .CodeMirror-line > span::-moz-selection,
+.cm-s-blackboard .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(37, 59, 118, 0.99);
+}
+.cm-s-blackboard .CodeMirror-gutters {
+  background: #0C1021;
+  border-right: 0;
+}
+.cm-s-blackboard .CodeMirror-guttermarker {
+  color: #FBDE2D;
+}
+.cm-s-blackboard .CodeMirror-guttermarker-subtle {
+  color: #888;
+}
+.cm-s-blackboard .CodeMirror-linenumber {
+  color: #888;
+}
+.cm-s-blackboard .CodeMirror-cursor {
+  border-left: 1px solid #A7A7A7;
+}
+.cm-s-blackboard .cm-keyword {
+  color: #FBDE2D;
+}
+.cm-s-blackboard .cm-atom {
+  color: #D8FA3C;
+}
+.cm-s-blackboard .cm-number {
+  color: #D8FA3C;
+}
+.cm-s-blackboard .cm-def {
+  color: #8DA6CE;
+}
+.cm-s-blackboard .cm-variable {
+  color: #FF6400;
+}
+.cm-s-blackboard .cm-operator {
+  color: #FBDE2D;
+}
+.cm-s-blackboard .cm-comment {
+  color: #AEAEAE;
+}
+.cm-s-blackboard .cm-string {
+  color: #61CE3C;
+}
+.cm-s-blackboard .cm-string-2 {
+  color: #61CE3C;
+}
+.cm-s-blackboard .cm-meta {
+  color: #D8FA3C;
+}
+.cm-s-blackboard .cm-builtin {
+  color: #8DA6CE;
+}
+.cm-s-blackboard .cm-tag {
+  color: #8DA6CE;
+}
+.cm-s-blackboard .cm-attribute {
+  color: #8DA6CE;
+}
+.cm-s-blackboard .cm-header {
+  color: #FF6400;
+}
+.cm-s-blackboard .cm-hr {
+  color: #AEAEAE;
+}
+.cm-s-blackboard .cm-link {
+  color: #8DA6CE;
+}
+.cm-s-blackboard .cm-error {
+  background: #9D1E15;
+  color: #F8F8F8;
+}
+.cm-s-blackboard .CodeMirror-activeline-background {
+  background: #3C3636;
+}
+.cm-s-blackboard .CodeMirror-matchingbracket {
+  outline: 1px solid grey;
+  color: white !important;
+}
+</style><style type="text/css">.cm-s-eclipse span.cm-meta {
+  color: #FF1717;
+}
+.cm-s-eclipse span.cm-keyword {
+  line-height: 1em;
+  font-weight: bold;
+  color: #7F0055;
+}
+.cm-s-eclipse span.cm-atom {
+  color: #219;
+}
+.cm-s-eclipse span.cm-number {
+  color: #164;
+}
+.cm-s-eclipse span.cm-def {
+  color: #00f;
+}
+.cm-s-eclipse span.cm-variable {
+  color: black;
+}
+.cm-s-eclipse span.cm-variable-2 {
+  color: #0000C0;
+}
+.cm-s-eclipse span.cm-variable-3,
+.cm-s-eclipse span.cm-type {
+  color: #0000C0;
+}
+.cm-s-eclipse span.cm-property {
+  color: black;
+}
+.cm-s-eclipse span.cm-operator {
+  color: black;
+}
+.cm-s-eclipse span.cm-comment {
+  color: #3F7F5F;
+}
+.cm-s-eclipse span.cm-string {
+  color: #2A00FF;
+}
+.cm-s-eclipse span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-eclipse span.cm-qualifier {
+  color: #555;
+}
+.cm-s-eclipse span.cm-builtin {
+  color: #30a;
+}
+.cm-s-eclipse span.cm-bracket {
+  color: #cc7;
+}
+.cm-s-eclipse span.cm-tag {
+  color: #170;
+}
+.cm-s-eclipse span.cm-attribute {
+  color: #00c;
+}
+.cm-s-eclipse span.cm-link {
+  color: #219;
+}
+.cm-s-eclipse span.cm-error {
+  color: #f00;
+}
+.cm-s-eclipse .CodeMirror-activeline-background {
+  background: #e8f2ff;
+}
+.cm-s-eclipse .CodeMirror-matchingbracket {
+  outline: 1px solid grey;
+  color: black !important;
+}
+</style><style type="text/css">/*
+
+    Name:       Tomorrow Night - Bright
+    Author:     Chris Kempson
+
+    Port done by Gerard Braad <me@gbraad.nl>
+
+*/
+.cm-s-tomorrow-night-bright.CodeMirror {
+  background: #000000;
+  color: #eaeaea;
+}
+.cm-s-tomorrow-night-bright div.CodeMirror-selected {
+  background: #424242;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-gutters {
+  background: #000000;
+  border-right: 0px;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-guttermarker {
+  color: #e78c45;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-guttermarker-subtle {
+  color: #777;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-linenumber {
+  color: #424242;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-cursor {
+  border-left: 1px solid #6A6A6A;
+}
+.cm-s-tomorrow-night-bright span.cm-comment {
+  color: #d27b53;
+}
+.cm-s-tomorrow-night-bright span.cm-atom {
+  color: #a16a94;
+}
+.cm-s-tomorrow-night-bright span.cm-number {
+  color: #a16a94;
+}
+.cm-s-tomorrow-night-bright span.cm-property,
+.cm-s-tomorrow-night-bright span.cm-attribute {
+  color: #99cc99;
+}
+.cm-s-tomorrow-night-bright span.cm-keyword {
+  color: #d54e53;
+}
+.cm-s-tomorrow-night-bright span.cm-string {
+  color: #e7c547;
+}
+.cm-s-tomorrow-night-bright span.cm-variable {
+  color: #b9ca4a;
+}
+.cm-s-tomorrow-night-bright span.cm-variable-2 {
+  color: #7aa6da;
+}
+.cm-s-tomorrow-night-bright span.cm-def {
+  color: #e78c45;
+}
+.cm-s-tomorrow-night-bright span.cm-bracket {
+  color: #eaeaea;
+}
+.cm-s-tomorrow-night-bright span.cm-tag {
+  color: #d54e53;
+}
+.cm-s-tomorrow-night-bright span.cm-link {
+  color: #a16a94;
+}
+.cm-s-tomorrow-night-bright span.cm-error {
+  background: #d54e53;
+  color: #6A6A6A;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-activeline-background {
+  background: #2a2a2a;
+}
+.cm-s-tomorrow-night-bright .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+</style><style type="text/css">/*
+Solarized theme for code-mirror
+http://ethanschoonover.com/solarized
+*/
+/*
+Solarized color palette
+http://ethanschoonover.com/solarized/img/solarized-palette.png
+*/
+.solarized.base03 {
+  color: #002b36;
+}
+.solarized.base02 {
+  color: #073642;
+}
+.solarized.base01 {
+  color: #586e75;
+}
+.solarized.base00 {
+  color: #657b83;
+}
+.solarized.base0 {
+  color: #839496;
+}
+.solarized.base1 {
+  color: #93a1a1;
+}
+.solarized.base2 {
+  color: #eee8d5;
+}
+.solarized.base3 {
+  color: #fdf6e3;
+}
+.solarized.solar-yellow {
+  color: #b58900;
+}
+.solarized.solar-orange {
+  color: #cb4b16;
+}
+.solarized.solar-red {
+  color: #dc322f;
+}
+.solarized.solar-magenta {
+  color: #d33682;
+}
+.solarized.solar-violet {
+  color: #6c71c4;
+}
+.solarized.solar-blue {
+  color: #268bd2;
+}
+.solarized.solar-cyan {
+  color: #2aa198;
+}
+.solarized.solar-green {
+  color: #859900;
+}
+/* Color scheme for code-mirror */
+.cm-s-solarized {
+  line-height: 1.45em;
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+.cm-s-solarized.cm-s-dark {
+  color: #839496;
+  background-color: #002b36;
+  text-shadow: #002b36 0 1px;
+}
+.cm-s-solarized.cm-s-light {
+  background-color: #fdf6e3;
+  color: #657b83;
+  text-shadow: #eee8d5 0 1px;
+}
+.cm-s-solarized .CodeMirror-widget {
+  text-shadow: none;
+}
+.cm-s-solarized .cm-header {
+  color: #586e75;
+}
+.cm-s-solarized .cm-quote {
+  color: #93a1a1;
+}
+.cm-s-solarized .cm-keyword {
+  color: #cb4b16;
+}
+.cm-s-solarized .cm-atom {
+  color: #d33682;
+}
+.cm-s-solarized .cm-number {
+  color: #d33682;
+}
+.cm-s-solarized .cm-def {
+  color: #2aa198;
+}
+.cm-s-solarized .cm-variable {
+  color: #839496;
+}
+.cm-s-solarized .cm-variable-2 {
+  color: #b58900;
+}
+.cm-s-solarized .cm-variable-3,
+.cm-s-solarized .cm-type {
+  color: #6c71c4;
+}
+.cm-s-solarized .cm-property {
+  color: #2aa198;
+}
+.cm-s-solarized .cm-operator {
+  color: #6c71c4;
+}
+.cm-s-solarized .cm-comment {
+  color: #586e75;
+  font-style: italic;
+}
+.cm-s-solarized .cm-string {
+  color: #859900;
+}
+.cm-s-solarized .cm-string-2 {
+  color: #b58900;
+}
+.cm-s-solarized .cm-meta {
+  color: #859900;
+}
+.cm-s-solarized .cm-qualifier {
+  color: #b58900;
+}
+.cm-s-solarized .cm-builtin {
+  color: #d33682;
+}
+.cm-s-solarized .cm-bracket {
+  color: #cb4b16;
+}
+.cm-s-solarized .CodeMirror-matchingbracket {
+  color: #859900;
+}
+.cm-s-solarized .CodeMirror-nonmatchingbracket {
+  color: #dc322f;
+}
+.cm-s-solarized .cm-tag {
+  color: #93a1a1;
+}
+.cm-s-solarized .cm-attribute {
+  color: #2aa198;
+}
+.cm-s-solarized .cm-hr {
+  color: transparent;
+  border-top: 1px solid #586e75;
+  display: block;
+}
+.cm-s-solarized .cm-link {
+  color: #93a1a1;
+  cursor: pointer;
+}
+.cm-s-solarized .cm-special {
+  color: #6c71c4;
+}
+.cm-s-solarized .cm-em {
+  color: #999;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.cm-s-solarized .cm-strong {
+  color: #eee;
+}
+.cm-s-solarized .cm-error,
+.cm-s-solarized .cm-invalidchar {
+  color: #586e75;
+  border-bottom: 1px dotted #dc322f;
+}
+.cm-s-solarized.cm-s-dark div.CodeMirror-selected {
+  background: #073642;
+}
+.cm-s-solarized.cm-s-dark.CodeMirror ::selection {
+  background: rgba(7, 54, 66, 0.99);
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-line::-moz-selection,
+.cm-s-dark .CodeMirror-line > span::-moz-selection,
+.cm-s-dark .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(7, 54, 66, 0.99);
+}
+.cm-s-solarized.cm-s-light div.CodeMirror-selected {
+  background: #eee8d5;
+}
+.cm-s-solarized.cm-s-light .CodeMirror-line::selection,
+.cm-s-light .CodeMirror-line > span::selection,
+.cm-s-light .CodeMirror-line > span > span::selection {
+  background: #eee8d5;
+}
+.cm-s-solarized.cm-s-light .CodeMirror-line::-moz-selection,
+.cm-s-ligh .CodeMirror-line > span::-moz-selection,
+.cm-s-ligh .CodeMirror-line > span > span::-moz-selection {
+  background: #eee8d5;
+}
+/* Editor styling */
+/* Little shadow on the view-port of the buffer view */
+.cm-s-solarized.CodeMirror {
+  -moz-box-shadow: inset 7px 0 12px -6px #000;
+  -webkit-box-shadow: inset 7px 0 12px -6px #000;
+  box-shadow: inset 7px 0 12px -6px #000;
+}
+/* Remove gutter border */
+.cm-s-solarized .CodeMirror-gutters {
+  border-right: 0;
+}
+/* Gutter colors and line number styling based of color scheme (dark / light) */
+/* Dark */
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+  background-color: #073642;
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber {
+  color: #586e75;
+  text-shadow: #021014 0 -1px;
+}
+/* Light */
+.cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: #eee8d5;
+}
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+  color: #839496;
+}
+/* Common */
+.cm-s-solarized .CodeMirror-linenumber {
+  padding: 0 5px;
+}
+.cm-s-solarized .CodeMirror-guttermarker-subtle {
+  color: #586e75;
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-guttermarker {
+  color: #ddd;
+}
+.cm-s-solarized.cm-s-light .CodeMirror-guttermarker {
+  color: #cb4b16;
+}
+.cm-s-solarized .CodeMirror-gutter .CodeMirror-gutter-text {
+  color: #586e75;
+}
+/* Cursor */
+.cm-s-solarized .CodeMirror-cursor {
+  border-left: 1px solid #819090;
+}
+/* Fat cursor */
+.cm-s-solarized.cm-s-light.cm-fat-cursor .CodeMirror-cursor {
+  background: #77ee77;
+}
+.cm-s-solarized.cm-s-light .cm-animate-fat-cursor {
+  background-color: #77ee77;
+}
+.cm-s-solarized.cm-s-dark.cm-fat-cursor .CodeMirror-cursor {
+  background: #586e75;
+}
+.cm-s-solarized.cm-s-dark .cm-animate-fat-cursor {
+  background-color: #586e75;
+}
+/* Active line */
+.cm-s-solarized.cm-s-dark .CodeMirror-activeline-background {
+  background: rgba(255, 255, 255, 0.06);
+}
+.cm-s-solarized.cm-s-light .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0.06);
+}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" async="" src="./Generate Parentheses - LeetCode Articles_files/general.js.download"></script><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+/* ---------------------------------------- */
+/* Desktop & General
+/* ---------------------------------------- */
+.dropdown-content.user-dropdown {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  border: none;
+  min-width: 240px;
+  padding-bottom: 0;
+  right: -1px;
+  top: 30px;
+}
+.dropdown-content.user-dropdown .square {
+  background: white;
+  -webkit-transform: rotate(45deg);
+  /* Safari */
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: -5px;
+}
+.dropdown-content.user-dropdown,
+.dropdown-content.user-dropdown * {
+  text-decoration: none;
+}
+.dropdown-content.user-dropdown .square {
+  right: 18px;
+}
+.dropdown-content.user-dropdown .line {
+  margin-top: -1px;
+}
+.dropdown.nav-user-mobile-base .user-dropdown {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+}
+.dropdown.nav-user-mobile-base.open .user-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+/* @End of Desktop */
+/* ---------------------------------------- */
+/* Mobile
+/* ---------------------------------------- */
+@media (max-width: 767px) {
+  .dropdown-content.user-dropdown {
+    right: -10px;
+    left: auto;
+    top: 38px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+  }
+  .dropdown-content.user-dropdown .square {
+    right: 17px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .dropdown-content.user-dropdown {
+    top: 30px;
+  }
+}
+/* @End of Mobile */
+.option-list.nav-user-app .list-item {
+  cursor: pointer;
+  padding: 8px 10px;
+}
+@media (max-width: 767px) {
+  .option-list.nav-user-app .list-item {
+    padding: 12px 10px;
+  }
+}
+.option-list.nav-user-app .list-item:hover {
+  background: #f5f5f5;
+}
+.option-list.nav-user-app .list-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+/* ---------------------------------------- */
+/* App Box
+/* ---------------------------------------- */
+.nav-user-app.app-box .row {
+  margin: 0;
+}
+/* @End of App Box */
+/* ---------------------------------------- */
+/* Single App
+/* ---------------------------------------- */
+.nav-user-app.app {
+  position: relative;
+  padding: 0 5px;
+  border-bottom: 1px solid #ecf0f1;
+}
+.nav-user-app.app:not(:nth-child(3n)) {
+  border-right: 1px solid #ecf0f1;
+}
+.nav-user-app.app .app-base {
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.nav-user-app.app .app-base:hover {
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+.nav-user-app.app .app-icon {
+  font-size: 20px;
+}
+.nav-user-app.app .app-name {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #95a5a6;
+}
+/* @End of Single App */
+/* ---------------------------------------- */
+/* Special Apps
+/* ---------------------------------------- */
+.app-box.nav-user-app .app-base .app-icon {
+  color: #5a5a5a;
+}
+.app-box.nav-user-app .notebook .app-icon {
+  color: #FEA116;
+}
+.app-box.nav-user-app .list .app-icon {
+  color: #D05451;
+}
+.app-box.nav-user-app .submission .app-icon {
+  color: #1DA09C;
+}
+.app-box.nav-user-app .points .app-icon {
+  color: #ffdf00;
+}
+.app-box.nav-user-app .user-progress .app-icon {
+  color: #8365cd;
+}
+/* @End of Special Apps */
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+.nav-user-app.account-info {
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #ecf0f1;
+}
+.nav-user-app.account-info .user-info {
+  height: 30px;
+  padding: 5px 5px;
+}
+.nav-user-app.account-info .user-info .username {
+  display: inline-block;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  cursor: pointer;
+}
+.nav-user-app.account-info .user-info .username:hover {
+  color: grey;
+}
+.nav-user-app.account-info .member-status {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  border: 1px solid #1DA09C;
+  color: #1DA09C;
+  border-radius: 3px;
+  padding: 0px 5px;
+  font-size: 9px;
+}
+.nav-user-app.account-info .member-status:hover {
+  border-color: #17807d;
+  color: #17807d;
+}
+.nav-user-app.account-info .member-status.vip {
+  border-color: #FEA116;
+  color: #FEA116;
+}
+.nav-user-app.account-info .member-status.vip:hover {
+  border-color: #d58512;
+  color: #d58512;
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+#nav-user-app {
+  margin-top: 13px;
+  margin-left: 20px;
+  margin-right: 5px;
+  /* Mobile */
+  /* Screen sm */
+}
+@media (max-width: 767px) {
+  #nav-user-app {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #nav-user-app {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  #nav-user-app .btn.sign-in-btn {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+.nav-user-base:hover .nav-user-icon-base {
+  color: white;
+}
+.nav-user-base:hover .nav-user-icon-base img.avatar {
+  opacity: 1;
+}
+.nav-user-base .nav-user-icon-base {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  color: #9d9d9d;
+  font-size: 12px;
+  cursor: pointer;
+}
+.nav-user-base .nav-user-icon-base img.avatar {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  border-radius: 5px;
+  opacity: 0.85;
+  height: 21px;
+}
+.nav-user-base .nav-user-icon-base i.caret {
+  margin-left: 6px;
+}
+/* ---------------------------------------- */
+/* Don't show playground create new when open
+/* ---------------------------------------- */
+.playground-create-btn-dropdown.covered .dropdown-content {
+  display: none !important;
+}
+/* @End of hide playground create panel */
+/* ---------------------------------------- */
+/* Not logged in
+/* ---------------------------------------- */
+.nav-login-base {
+  margin-top: -2px;
+  /* None mobile */
+  /* Mobile */
+}
+.nav-login-base .btn {
+  border: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: white;
+  font-weight: 500;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  .nav-login-base .btn:first-child {
+    border-left: 1px solid #5a5a5a;
+    padding-left: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .nav-login-base {
+    border-top: 1px solid #464646;
+    margin-top: -15px;
+    padding-top: 8px;
+  }
+}
+.nav-login-base .or {
+  position: relative;
+  top: 1px;
+  color: grey;
+  font-weight: 300;
+}
+/* @End of Not logged in */
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+.nav-user-mobile-base {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 100%;
+}
+.nav-user-mobile-base:hover .nav-user-icon-base {
+  color: white;
+}
+.nav-user-mobile-base:hover .nav-user-icon-base img.avatar {
+  opacity: 1;
+}
+.nav-user-mobile-base .nav-user-icon-base {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  color: #9d9d9d;
+  font-size: 12px;
+  cursor: pointer;
+}
+.nav-user-mobile-base .nav-user-icon-base img.avatar {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  border-radius: 5px;
+  opacity: 0.85;
+  height: 25px;
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+.playground-create-btn-dropdown:hover .add-icon {
+  opacity: 1 !important;
+}
+.playground-create-btn-dropdown:hover .dropdown-content {
+  display: block;
+}
+.nav-img-animation img {
+  filter: brightness(0.85);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.nav-img-animation:hover img {
+  filter: none;
+}
+.navbar #playgroundNav {
+  margin-top: 12px;
+  margin-left: 10px;
+}
+.navbar #playgroundNav .dropdown {
+  text-align: center;
+}
+.navbar #playgroundNav .dropdown-menu {
+  width: 160px;
+  left: 50%;
+  margin-left: -80px;
+}
+.navbar #playgroundNav .square {
+  margin-left: 75px;
+  z-index: -1;
+  background: white;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari */
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
+}
+.navbar #playgroundNav .dropdown-view {
+  background: white;
+  border-radius: 5px;
+  margin-top: -5px;
+  font-size: 10px;
+  color: #95a5a6;
+}
+.navbar #playgroundNav .dropdown-view .select-title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 1px solid #ecf0f1;
+}
+.navbar #playgroundNav .dropdown-view .selection-left {
+  border-right: 1px solid #ecf0f1;
+}
+.navbar #playgroundNav .dropdown-view .selection-bottom {
+  border-top: 1px solid #ecf0f1;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar #playgroundNav .dropdown-view .selection-bottom .selector {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar #playgroundNav .dropdown-view .selector {
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.navbar #playgroundNav .dropdown-view .selector:hover {
+  background: #f5f5f5;
+}
+.navbar #playgroundNav .dropdown-view .selection {
+  cursor: pointer;
+  width: 50%;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.navbar #playgroundNav .dropdown-view .selection .icon {
+  font-size: 32px;
+  font-weight: 200;
+  height: 40px;
+}
+.navbar #playgroundNav .dropdown-view .selection .new-icon {
+  color: #0088cc;
+}
+.navbar #playgroundNav .dropdown-view .selection .more-icon {
+  color: #FEA116;
+}
+.navbar #playgroundNav .dropdown-view .selection .more-icon lc {
+  position: absolute;
+  left: 106px;
+  top: 42px;
+  font-weight: 600;
+}
+.navbar #playgroundNav .dropdown-view .selection .title {
+  margin-top: 5px;
+}
+.navbar #playgroundNav .dropdown-content {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 0;
+  background: none;
+  border: none;
+}
+.navbar #playgroundNav .icon-base {
+  padding-top: 13px;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: white;
+  cursor: pointer;
+}
+.navbar #playgroundNav .icon-base .add-icon {
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  top: 10px;
+  right: 0;
+  background: #222222;
+  border-radius: 1020px;
+  line-height: 0;
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.navbar #playgroundNav img {
+  filter: brightness(0.85);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.navbar #playgroundNav:hover img {
+  filter: none;
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+.element-base {
+  margin-top: 20px;
+}
+.element-base .element-touch-event {
+  cursor: pointer;
+}
+.element-base .element-touch-event:hover .element-name {
+  color: #17807d;
+}
+.element-base .element-touch-event:hover .element-object {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.element-base .element-name {
+  margin-top: 10px;
+}
+.element-base .element-object {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  background: white;
+  vertical-align: middle;
+}
+.element-base .element-object .object {
+  position: relative;
+  top: 35%;
+  transform: translateY(-35%);
+}
+.element-base .element-object .object .text-100 {
+  font-size: 50px;
+}
+.element-base .element-object .object .object-img {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+}
+.element-base .element-object .object .template-label {
+  color: #373737;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  bottom: 0;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+@media (max-width: 375px) {
+  .CreateModal-base .modal-body.row {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .CreateModal-base .element-base {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.CreateModal-base .modal-content {
+  background: #FAFAFA;
+}
+.CreateModal-base .modal-body.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+</style><style type="text/css">.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+.animation-default,
+.default-animation {
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.default-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+}
+@media (max-width: 767px) {
+  .default-sticky {
+    top: 53px;
+  }
+}
+.backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hover-panel,
+.panel-hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.hover-panel:hover,
+.panel-hover:hover {
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+}
+.strong-hover-shadow,
+.hover-shadow-strong {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.strong-hover-shadow:hover,
+.hover-shadow-strong:hover {
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+}
+.noselect,
+.no-select,
+.select-off {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+@media (max-width: 360px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.fluid-nav.navbar.navbar-inverse .container {
+  width: 100%;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-brand {
+  margin-left: 0;
+}
+.fluid-nav.navbar.navbar-inverse .container .navbar-right {
+  margin-right: 10px;
+}
+.share-button-CN-base .jiathis_style_32x32 {
+  display: inline-block;
+  height: 32px;
+  width: 176px;
+}
+.share-button-CN-base a span.jiathis_txt.jtico {
+  height: 32px !important;
+  width: 32px !important;
+  padding-left: 0 !important;
+  border-radius: 1020px;
+}
+.share-button-CN-base a span.jiathis_txt.jtico:hover {
+  opacity: 1;
+}
+.share-button-CN-base a:not(:first-child) span {
+  margin-left: 4px;
+}
+.share-button-CN-base .imgIcon {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.share-button-CN-base .faIcon {
+  font: normal normal normal 14px/1 FontAwesome;
+  color: rgba(255, 255, 255, 0.95);
+  background-image: none;
+  text-align: center;
+  font-size: 18px;
+}
+.share-button-CN-base span.jtico_tieba {
+  border: 1px solid #0088cc;
+  background-image: url(/static/images/sharing/tieba.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.share-button-CN-base span.jtico_qzone {
+  background-color: #FECE00;
+  background-image: url(/static/images/sharing/qzone.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.share-button-CN-base span.jtico_douban {
+  background-image: url(/static/images/sharing/douban.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.share-button-CN-base span.jtico_tsina {
+  background: #EC0017;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: rgba(255, 255, 255, 0.95);
+  background-image: none;
+  text-align: center;
+  font-size: 18px;
+}
+.share-button-CN-base span.jtico_tsina:before {
+  content: "\F18A";
+}
+.share-button-CN-base span.jtico_weixin {
+  background: #2EC102;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: rgba(255, 255, 255, 0.95);
+  background-image: none;
+  text-align: center;
+  font-size: 18px;
+}
+.share-button-CN-base span.jtico_weixin:before {
+  content: "\F1D7";
+}
+.share-button-CN-base span.jtico_cqq {
+  background: #0098E6;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: rgba(255, 255, 255, 0.95);
+  background-image: none;
+  text-align: center;
+  font-size: 18px;
+}
+.share-button-CN-base span.jtico_cqq:before {
+  content: "\F1D6";
+}
+</style><style type="text/css">.share-button {
+  display: inline-block;
+  margin-right: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.share-button:last-child {
+  margin-right: 0;
+}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><link rel="stylesheet" type="text/css" href="./Generate Parentheses - LeetCode Articles_files/comments.css"><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style></head>
+  <body><div id="MathJax_Message" style="display: none;"></div>
+    <script src="./Generate Parentheses - LeetCode Articles_files/bootstrap.min.js.download"></script>
+    <script src="./Generate Parentheses - LeetCode Articles_files/bootstrap-table.min.js.download"></script>
+    <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/5ae5edf6f1aa.js.download"></script>
+
+    <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/manifest.186762bf.js.download"></script>
+    <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/vendor.js.download"></script>
+    
+
+    
+  <div class="content-wrapper" style="padding-bottom: 64px;">
+    
+
+    <div class="navbar navbar-inverse navbar-extra">
+      <div class="container">
+        <div class="navbar-header">
+          <div id="nav-user-mobile-app"><div class="dropdown nav-user-mobile-base visible-xs"><span data-toggle="dropdown" title="pkmdotsoftpro" class="nav-user-icon-base pull-right"><img crossorigin="anonymous" class="avatar" src="./Generate Parentheses - LeetCode Articles_files/ba2d695e8c4b149862cafcfda5adbc50.png" alt="pkmdotsoftpro"></span><ul class="dropdown-menu dropdown-content user-dropdown"><div class="square"></div><div class="dropdown-view"><li class="account-info nav-user-app"><div class="user-info"><div title="Profile" class="username"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>pkmdotsoftpro</b></div><div title="My Subscription" class="pull-right"><div class="member-status false">Member</div></div></div></li><li class="app-box nav-user-app"><div class="row"><div class="col-xs-4 app nav-user-app"><div class="app-base notebook"><div class="app-icon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></div><div class="app-name">Notebook</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base list"><div class="app-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></div><div class="app-name">My List</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base submission"><div class="app-icon"><i class="fa fa-file-code-o" aria-hidden="true"></i></div><div class="app-name">Submissions</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base session"><div class="app-icon"><i class="fa fa-tasks" aria-hidden="true"></i></div><div class="app-name">Sessions</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base user-progress"><div class="app-icon"><i class="fa fa-pie-chart" aria-hidden="true"></i></div><div class="app-name">Progress</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base points"><div class="app-icon"><i class="fa fa-database" aria-hidden="true"></i></div><div class="app-name">Points</div></div></div></div></li><hr class="line"><li class="option-list nav-user-app"><div class="list-item"><span>Manage Subscription</span></div><div class="list-item"><span>Change Password</span></div><div class="list-item"><span class="text-danger">Sign out</span></div></li></div></ul></div></div>
+          <button id="nav-menu-btn" type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse" onclick="openNavList()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://leetcode.com/">
+            <img src="./Generate Parentheses - LeetCode Articles_files/LeetCode_nav.png" height="30px" alt="LeetCode">
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li id="storeNav" class="visible-sm">
+              <a href="https://leetcode.com/store/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;story&#39;, &#39;click&#39;, &#39;nav&#39;);">
+                <span class="navitem-highlight"><i class="fa fa-gift" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            
+            <li id="subscribe" class="subscribe-sm">
+              <a href="https://leetcode.com/subscribe/">
+                <i class="fa fa-star" aria-hidden="true"></i> &nbsp;Premium
+              </a>
+            </li>
+            
+            
+            <li id="problemsNav"><a href="https://leetcode.com/problemset/all/">Problems</a></li>
+            
+              <li class="dropdown">
+                <a href="https://leetcode.com/articles/generate-parentheses/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  Mock
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="https://leetcode.com/mockinterview/">Mock Interview</a>
+                  </li>
+                  <li>
+                    <a href="https://leetcode.com/mockinterview/session/list/">Past Sessions</a>
+                  </li>
+                </ul>
+              </li>
+            
+            
+              
+                <li><a href="https://leetcode.com/contest/">Contest</a></li>
+              
+            
+            
+              <li id="coursesNav" class="hide"><a href="https://leetcode.com/courses/">Courses</a></li>
+            
+            <li id="articlesNav"><a href="https://leetcode.com/articles/">Articles</a></li>
+            
+              
+                <li id="discussNav"><a href="https://discuss.leetcode.com/" target="_blank">Discuss</a></li>
+              
+            
+            <li class="visible-xs">
+              <a href="https://leetcode.com/playground/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;playground&#39;, &#39;click&#39;, &#39;nav-bar&#39;);">Playground</a></li>
+            
+            <li id="dot" class="hidden-sm">
+              <a>•</a>
+            </li>
+            <li id="storeNav" class="dropdown hidden-sm">
+              <a href="https://leetcode.com/articles/generate-parentheses/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="navitem-highlight"><i class="fa fa-gift" aria-hidden="true"></i>&nbsp; Store
+                <span class="caret"></span></span>
+              </a>
+              <ul class="dropdown-menu store-dropdown">
+                <li>
+                  <a href="https://leetcode.com/store/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;store&#39;, &#39;click&#39;, &#39;nav&#39;);">
+                    <span class="text-orange">Redeem</span></a>
+                </li>
+                <li>
+                  <a href="https://leetcode.com/subscribe/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;subscribe&#39;, &#39;click&#39;, &#39;nav&#39;);">
+                    <span class="text-orange">Premium</span></a>
+                </li>
+                
+                <li>
+                  <a href="https://leetcode.com/book/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;book&#39;, &#39;click&#39;, &#39;nav-bar&#39;);">
+                    <span class="text-orange">Book</span></a>
+                </li>
+                
+              </ul>
+            </li>
+            
+            
+            <li id="storyNav" class="hide"><a href="https://leetcode.com/story/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;story&#39;, &#39;click&#39;, &#39;nav&#39;);">
+              <span class="navitem-highlight">Story</span></a></li>
+            
+            
+          </ul>
+          <ul id="navbar-right" class="nav navbar-nav navbar-right nav-user-module hidden-xs">
+            
+            <li id="subscribe" class="subscribe-btn hidden-sm">
+              <a class="subscribe text-white" href="https://leetcode.com/subscribe/">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                Premium
+              </a>
+            </li>
+            
+            <li id="playgroundNav" class="hidden-xs"><span class="dropdown playground-create-btn-dropdown"><span data-toggle="dropdown" class="playground-create-new-btn-base icon-base"><div class="add-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></div><img src="./Generate Parentheses - LeetCode Articles_files/LeetCode_Playground.png" height="26px" alt="New Playground" class="img-rounded"></span><ul class="dropdown-menu dropdown-content"><div class="square"></div><div class="dropdown-view"><div class="select-title">Playground</div><div class="selection selection-left"><div class="selector"><div class="new-icon icon">+</div><div class="title">New</div></div></div><div class="selection"><div class="selector" data-toggle="modal" data-target="#newPlaygroundwModal"><div class="more-icon icon"><lc>…</lc></div><div class="title">More</div></div></div><div class="selection-bottom"><div class="selector"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp; Manage</div></div></div></ul></span></li>
+            <li id="nav-user-app"><span class="dropdown nav-user-base"><span data-toggle="dropdown" title="pkmdotsoftpro" class="nav-user-icon-base"><img crossorigin="anonymous" class="avatar img-rounded" src="./Generate Parentheses - LeetCode Articles_files/ba2d695e8c4b149862cafcfda5adbc50.png" alt="pkmdotsoftpro"><i class="caret" aria-hidden="true"></i></span><ul class="dropdown-menu dropdown-content user-dropdown"><div class="square"></div><div class="dropdown-view"><li class="account-info nav-user-app"><div class="user-info"><div title="Profile" class="username"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>pkmdotsoftpro</b></div><div title="My Subscription" class="pull-right"><div class="member-status false">Member</div></div></div></li><li class="app-box nav-user-app"><div class="row"><div class="col-xs-4 app nav-user-app"><div class="app-base notebook"><div class="app-icon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></div><div class="app-name">Notebook</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base list"><div class="app-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></div><div class="app-name">My List</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base submission"><div class="app-icon"><i class="fa fa-file-code-o" aria-hidden="true"></i></div><div class="app-name">Submissions</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base session"><div class="app-icon"><i class="fa fa-tasks" aria-hidden="true"></i></div><div class="app-name">Sessions</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base user-progress"><div class="app-icon"><i class="fa fa-pie-chart" aria-hidden="true"></i></div><div class="app-name">Progress</div></div></div><div class="col-xs-4 app nav-user-app"><div class="app-base points"><div class="app-icon"><i class="fa fa-database" aria-hidden="true"></i></div><div class="app-name">Points</div></div></div></div></li><hr class="line"><li class="option-list nav-user-app"><div class="list-item"><span>Manage Subscription</span></div><div class="list-item"><span>Change Password</span></div><div class="list-item"><span class="text-danger">Sign out</span></div></li></div></ul></span></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    
+<div class="article-reader-app">
+  <div id="sticky-wrapper" class="sticky-wrapper is-sticky" style="height: 46px;"><div class="navigation-base sticky" style="width: 1349px; position: fixed; top: 0px; z-index: inherit;">
+    <div class="navigation container">
+      <div id="article-share-buttons" class="text-right pull-right"><div><div class="share-button"><div class="SocialMediaShareButton SocialMediaShareButton--facebook"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--facebook "><g><circle cx="32" cy="32" r="31" fill="#3b5998"></circle></g><g><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></g></svg></div></div></div><div class="share-button"><div class="SocialMediaShareButton SocialMediaShareButton--twitter"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--twitter "><g><circle cx="32" cy="32" r="31" fill="#00aced"></circle></g><g><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"></path></g></svg></div></div></div><div class="share-button"><div class="SocialMediaShareButton SocialMediaShareButton--googlePlus"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--google "><g><circle cx="32" cy="32" r="31" fill="#dd4b39"></circle></g><g><path d="M25.3,30.1v3.8h6.3c-0.3,1.6-1.9,4.8-6.3,4.8c-3.8,0-6.9-3.1-6.9-7s3.1-7,6.9-7c2.2,0,3.6,0.9,4.4,1.7l3-2.9c-1.9-1.8-4.4-2.9-7.4-2.9c-6.1,0-11.1,5-11.1,11.1s5,11.1,11.1,11.1c6.4,0,10.7-4.5,10.7-10.9c0-0.7-0.1-1.3-0.2-1.8H25.3L25.3,30.1z M49.8,28.9h-3.2v-3.2h-3.2v3.2h-3.2v3.2h3.2v3.2h3.2v-3.2h3.2"></path></g></svg></div></div></div><div class="share-button"><div class="SocialMediaShareButton SocialMediaShareButton--linkedin"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--linkedin "><g><circle cx="32" cy="32" r="31" fill="#007fb1"></circle></g><g><path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"></path></g></svg></div></div></div></div></div>
+      <span class="dirc" onclick="window.location.href=&#39;/articles&#39;"><i class="fa fa-list-ul" aria-hidden="true"></i> &nbsp;Articles</span> &nbsp;
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+      &nbsp;
+      <span class="dirc hide" id="no-nav-nav" onclick="window.location.href=&#39;#&#39;">22. Generate Parentheses</span>
+      <div class="dropdown dirc" id="has-nav-nav">
+        <a href="https://leetcode.com/articles/generate-parentheses/#" class="dropdown-toggle dirc" data-toggle="dropdown">
+          22. Generate Parentheses &nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+      </a>
+        <span class="dropdown-menu navigation-dropdown">
+          <div id="quick-nav" class="solution-nav touch one-level">
+<ul>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-1-brute-force-accepted">Approach #1: Brute Force [Accepted]</a></li>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-2-backtracking-accepted">Approach #2: Backtracking [Accepted]</a></li>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-3-closure-number-accepted">Approach #3: Closure Number [Accepted]</a></li>
+</ul>
+</div>
+        </span>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="article-top-base container">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-xs-12 clearfix">
+          
+
+
+  
+    <div class="pager-mini touch">
+      <span class="previous">
+        <a href="https://leetcode.com/articles/number-of-corner-rectangles/" title="Number of Corner Rectangles">
+          <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+          Previous</a>
+      </span>
+      &nbsp;&nbsp;
+      <span class="next">
+        <a href="https://leetcode.com/articles/traverse-a-tree/" title="Traverse a Tree">
+          Next
+          <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+      </span>
+    </div>
+  
+
+
+          <div class="article-title">
+            <h2 class="title">22. Generate Parentheses
+              <span class="question-link">
+                
+                  <a href="https://leetcode.com/problems/generate-parentheses/" title="Open question page">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+                
+              </span>
+            </h2>
+            <div class="pull-right text-right">
+              <div class="rating rating-top">
+                
+<style>
+    #dsrc56f018b148541c4b8a0912d6c4ce6c0 .star-ratings-rating-full, #dsrc56f018b148541c4b8a0912d6c4ce6c0 .star-ratings-rating-empty {
+        width: 16px;
+        height: 16px;
+        background: url(/static/images/articles/stars.png) no-repeat;
+        background-size: 48px;
+    }
+
+    #dsrc56f018b148541c4b8a0912d6c4ce6c0 .star-ratings-rating-empty {
+        background-position: -16px 0;
+    }
+
+    
+    #dsrc56f018b148541c4b8a0912d6c4ce6c0 .star-ratings-rating-full:hover, #dsrc56f018b148541c4b8a0912d6c4ce6c0 .star-ratings-rating-empty:hover {
+        background-position: -32px 0;
+    }
+    
+</style>
+<div id="dsrc56f018b148541c4b8a0912d6c4ce6c0" class="star-ratings" data-max-rating="5" data-avg-rating="5.000">
+    
+        <div class="star-ratings-rating-stars-container">
+            <ul class="star-ratings-rating-background">
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="1" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="2" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="3" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="4" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="5" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+            </ul>
+
+            <ul class="star-ratings-rating-foreground" style="width: 100%">
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="1" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="2" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="3" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="4" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="5" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+            </ul>
+        </div>
+    
+    
+<p>Average Rating: 5 (4 votes)</p>
+
+</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="entry-meta">
+            Dec. 17, 2017&nbsp;&nbsp;|&nbsp;&nbsp;2K views
+            <span class="taglist">
+              
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row question-base">
+      <div class="col-md-12" id="question-preview">
+        
+          <div class="block-markdown question">
+            <p>
+Given <i>n</i> pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+</p>
+
+<p>
+For example, given <i>n</i> = 3, a solution set is:
+</p>
+<pre>[
+  "((()))",
+  "(()())",
+  "(())()",
+  "()(())",
+  "()()()"
+]
+</pre>
+          </div>
+        
+      </div>
+    </div>
+
+  </div>
+  <div class="article-base">
+    <div class="editorial-base container">
+      <div class="article-body">
+        
+          <div class="block-markdown">
+            <div class="toc hide">
+<ul>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-1-brute-force-accepted">Approach #1: Brute Force [Accepted]</a></li>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-2-backtracking-accepted">Approach #2: Backtracking [Accepted]</a></li>
+<li><a href="https://leetcode.com/articles/generate-parentheses/#approach-3-closure-number-accepted">Approach #3: Closure Number [Accepted]</a></li>
+</ul>
+</div>
+<h4 id="approach-1-brute-force-accepted">Approach #1: Brute Force [Accepted]</h4>
+<p><strong>Intuition</strong></p>
+<p>We can generate all <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 0.814108em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.363em; margin-right: 0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span> sequences of <code>'('</code> and <code>')'</code> characters.  Then, we will check if each one is valid.</p>
+<p><strong>Algorithm</strong></p>
+<p>To generate all sequences, we use a recursion.  All sequences of length <code>n</code> is just <code>'('</code> plus all sequences of length <code>n-1</code>, and then <code>')'</code> plus all sequences of length <code>n-1</code>.</p>
+<p>To check whether a sequence is valid, we keep track of <code>balance</code>, the net number of opening brackets minus closing brackets.  If it falls below zero at any time, or doesn't end in zero, the sequence is invalid - otherwise it is valid.</p>
+<iframe src="./Generate Parentheses - LeetCode Articles_files/shared.html" frameborder="0" width="100%" height="500" name="kQgWndgY"></iframe>
+
+<p><strong>Complexity Analysis</strong></p>
+<ul>
+<li>
+<p>Time Complexity : <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi></mrow></msup><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(2^{2n}n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.363em; margin-right: 0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span>.  For each of <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 0.814108em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.363em; margin-right: 0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span></span> sequences, we need to create and validate the sequence, which takes <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span> work.</p>
+</li>
+<li>
+<p>Space Complexity : <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi></mrow></msup><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(2^{2n}n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.814108em;"></span><span class="strut bottom" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.363em; margin-right: 0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span>.  Naively, every sequence could be valid.  See <em>Approach #3</em> for development of a tighter asymptotic bound.</p>
+</li>
+</ul>
+<hr>
+<h4 id="approach-2-backtracking-accepted">Approach #2: Backtracking [Accepted]</h4>
+<p><strong>Intuition and Algorithm</strong></p>
+<p>Instead of adding <code>'('</code> or <code>')'</code> every time as in <em>Approach #1</em>, let's only add them when we know it will remain a valid sequence.  We can do this by keeping track of the number of opening and closing brackets we have placed so far.</p>
+<p>We can start an opening bracket if we still have one (of <code>n</code>) left to place.  And we can start a closing bracket if it would not exceed the number of opening brackets.</p>
+<iframe src="./Generate Parentheses - LeetCode Articles_files/shared(1).html" frameborder="0" width="100%" height="378" name="TYczBrmL"></iframe>
+
+<p><strong>Complexity Analysis</strong></p>
+<p>Our complexity analysis rests on understanding how many elements there are in <code>generateParenthesis(n)</code>.  This analysis is outside the scope of this article, but it turns out this is the <code>n</code>-th Catalan number <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mrow><mo fence="true">(</mo><mfrac linethickness="0px"><mrow><mn>2</mn><mi>n</mi></mrow><mrow><mi>n</mi></mrow></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\frac{1}{n+1}\binom{2n}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.895108em;"></span><span class="strut bottom" style="height: 1.29844em; vertical-align: -0.403331em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="" style="top: -0.23em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span class="" style="top: -0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top: 0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="" style="top: -0.444em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top: 0em;"><span class="delimsizing size1">)</span></span></span></span></span></span></span>, which is bounded asymptotically by <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msup><mn>4</mn><mi>n</mi></msup></mrow><mrow><mi>n</mi><msqrt><mrow><mi>n</mi></mrow></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{4^n}{n\sqrt{n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.91098em;"></span><span class="strut bottom" style="height: 1.46098em; vertical-align: -0.55em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.395696em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mord sqrt mtight"><span class="sqrt-sign mtight" style="top: 0.0204343em;"><span class="style-wrap reset-scriptstyle scriptstyle uncramped mtight"><span class="mtight">√</span></span></span><span class="vlist"><span class="" style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="" style="top: -0.722423em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="reset-scriptstyle textstyle uncramped sqrt-line mtight"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span>​</span></span></span></span></span></span><span class="" style="top: -0.23em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span class="" style="top: -0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathrm mtight">4</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.431em; margin-right: 0.0714286em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span>​</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span>.</p>
+<ul>
+<li>
+<p>Time Complexity : <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mfrac><mrow><msup><mn>4</mn><mi>n</mi></msup></mrow><mrow><msqrt><mrow><mi>n</mi></mrow></msqrt></mrow></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\frac{4^n}{\sqrt{n}})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.91098em;"></span><span class="strut bottom" style="height: 1.46098em; vertical-align: -0.55em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.395696em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord sqrt mtight"><span class="sqrt-sign mtight" style="top: 0.0204343em;"><span class="style-wrap reset-scriptstyle scriptstyle uncramped mtight"><span class="mtight">√</span></span></span><span class="vlist"><span class="" style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="" style="top: -0.722423em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="reset-scriptstyle textstyle uncramped sqrt-line mtight"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span>​</span></span></span></span></span></span><span class="" style="top: -0.23em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span class="" style="top: -0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathrm mtight">4</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.431em; margin-right: 0.0714286em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span>​</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span>.  Each valid sequence has at most <code>n</code> steps during the backtracking procedure.</p>
+</li>
+<li>
+<p>Space Complexity : <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mfrac><mrow><msup><mn>4</mn><mi>n</mi></msup></mrow><mrow><msqrt><mrow><mi>n</mi></mrow></msqrt></mrow></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\frac{4^n}{\sqrt{n}})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.91098em;"></span><span class="strut bottom" style="height: 1.46098em; vertical-align: -0.55em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.395696em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord sqrt mtight"><span class="sqrt-sign mtight" style="top: 0.0204343em;"><span class="style-wrap reset-scriptstyle scriptstyle uncramped mtight"><span class="mtight">√</span></span></span><span class="vlist"><span class="" style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="" style="top: -0.722423em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="reset-scriptstyle textstyle uncramped sqrt-line mtight"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span>​</span></span></span></span></span></span><span class="" style="top: -0.23em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span class="" style="top: -0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathrm mtight">4</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.431em; margin-right: 0.0714286em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span>​</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span>, as described above, and using <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></span> space to store the sequence.</p>
+</li>
+</ul>
+<hr>
+<h4 id="approach-3-closure-number-accepted">Approach #3: Closure Number [Accepted]</h4>
+<p><strong>Intuition</strong></p>
+<p>To enumerate something, generally we would like to express it as a sum of disjoint subsets that are easier to count.</p>
+<p>Consider the <em>closure number</em> of a valid parentheses sequence <code>S</code>: the least <code>index &gt;= 0</code> so that <code>S[0], S[1], ..., S[2*index+1]</code> is valid.  Clearly, every parentheses sequence has a unique <em>closure number</em>.  We can try to enumerate them individually.</p>
+<p><strong>Algorithm</strong></p>
+<p>For each closure number <code>c</code>, we know the starting and ending brackets must be at index <code>0</code> and <code>2*c + 1</code>. Then, the <code>2*c</code> elements between must be a valid sequence, plus the rest of the elements must be a valid sequence.</p>
+<iframe src="./Generate Parentheses - LeetCode Articles_files/shared(2).html" frameborder="0" width="100%" height="293" name="V6CGHRUP"></iframe>
+
+<p><strong>Complexity Analysis</strong></p>
+<ul>
+<li>Time and Space Complexity : <span class="maths katex-rendered"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mfrac><mrow><msup><mn>4</mn><mi>n</mi></msup></mrow><mrow><msqrt><mrow><mi>n</mi></mrow></msqrt></mrow></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\frac{4^n}{\sqrt{n}})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.91098em;"></span><span class="strut bottom" style="height: 1.46098em; vertical-align: -0.55em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span class="" style="top: 0.395696em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord sqrt mtight"><span class="sqrt-sign mtight" style="top: 0.0204343em;"><span class="style-wrap reset-scriptstyle scriptstyle uncramped mtight"><span class="mtight">√</span></span></span><span class="vlist"><span class="" style="top: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="" style="top: -0.722423em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span><span class="reset-scriptstyle textstyle uncramped sqrt-line mtight"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1.42857em;">​</span></span>​</span></span></span></span></span></span><span class="" style="top: -0.23em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span class="" style="top: -0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathrm mtight">4</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.431em; margin-right: 0.0714286em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 1em;">​</span></span>​</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span>.  The analysis is similar to <em>Approach #2</em>.</li>
+</ul>
+<hr>
+<p>Analysis written by: <a href="https://leetcode.com/awice">@awice</a>.  Approach #2 inspired by <a href="https://discuss.leetcode.com/topic/8724/easy-to-understand-java-backtracking-solution">@brobins9</a>.</p>
+          </div>
+        
+      </div>
+      <div class="rate-header">
+        Rate this article:
+        <span class="rating rating-bottom">
+          
+<style>
+    #dsr3de16e217cd549bba4987d92a7d1be82 .star-ratings-rating-full, #dsr3de16e217cd549bba4987d92a7d1be82 .star-ratings-rating-empty {
+        width: 20px;
+        height: 20px;
+        background: url(/static/images/articles/stars.png) no-repeat;
+        background-size: 60px;
+    }
+
+    #dsr3de16e217cd549bba4987d92a7d1be82 .star-ratings-rating-empty {
+        background-position: -20px 0;
+    }
+
+    
+    #dsr3de16e217cd549bba4987d92a7d1be82 .star-ratings-rating-full:hover, #dsr3de16e217cd549bba4987d92a7d1be82 .star-ratings-rating-empty:hover {
+        background-position: -40px 0;
+    }
+    
+</style>
+<div id="dsr3de16e217cd549bba4987d92a7d1be82" class="star-ratings" data-max-rating="5" data-avg-rating="5.000">
+    
+        <div class="star-ratings-rating-stars-container">
+            <ul class="star-ratings-rating-background">
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="1" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="2" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="3" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="4" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                        <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="5" class="star-ratings-rate-action">
+                            <span class="star-ratings-rating-empty"></span>
+                        </a>
+                        
+                    </li>
+                
+            </ul>
+
+            <ul class="star-ratings-rating-foreground" style="width: 100%;">
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="1" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="2" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="3" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="4" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+                    <li>
+                    
+                    <a href="https://leetcode.com/ratings/107/349/?return=/articles/generate-parentheses/" data-score="5" class="star-ratings-rate-action">
+                        <span class="star-ratings-rating-full"></span>
+                    </a>
+                    
+                    </li>
+                
+            </ul>
+        </div>
+    
+    
+<p>Average Rating: 5 (4 votes)</p>
+
+</div>
+
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    
+
+
+  
+    <nav>
+      <ul class="pager article-pagers touch">
+        <li class="previous">
+          <a href="https://leetcode.com/articles/number-of-corner-rectangles/" title="Number of Corner Rectangles">
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            &nbsp;Previous&nbsp;
+          </a>
+        </li>
+        <li class="next">
+          <a href="https://leetcode.com/articles/traverse-a-tree/" title="Traverse a Tree">
+            &nbsp;Next&nbsp;
+            <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  
+
+
+    
+
+<div id="nodebb">
+	
+		<div class="topic-profile-pic user">
+			
+			<img src="https://leetcode.com/articles/generate-parentheses/" class="profile-image">
+			
+		</div>
+		<form action="https://discuss.leetcode.com/comments/reply" method="post">
+			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
+		
+			<small>Signed in as <strong>pkmdotsoftpro</strong>. <strong id="nodebb-error"></strong></small>
+			<button class="btn btn-primary">Post a Reply</button>
+			<input type="hidden" name="_csrf" value="cCJF9LfF-N8cd55ms6MXXxsOqfzPyL3DymL8">
+			<input type="hidden" name="tid" value="114301">
+			<input type="hidden" name="url" value="https://leetcode.com/articles/generate-parentheses/">
+		</form>
+		
+	
+
+	<ul id="nodebb-comments-list">
+		
+		<li class="">
+			<div class="topic-item">
+				<div class="topic-body">
+					<div class="topic-profile-pic">
+						<a href="https://discuss.leetcode.com/user/ankush6">
+							
+							<div class="profile-image" style="background-color: #3f51b5" title="ankush6" alt="ankush6">A</div>
+							
+						</a>
+					</div>
+					<div class="topic-text">
+						<div class="post-content" itemprop="text"><small><strong>ankush6</strong> commented 1 hour ago</small><br><p>slight optimization : for all cases where c = (n-1)/2 , Aren't we calling the function twice ?</p></div>
+					</div>
+				</div>
+			</div>
+		</li>
+		
+		<li class="">
+			<div class="topic-item">
+				<div class="topic-body">
+					<div class="topic-profile-pic">
+						<a href="https://discuss.leetcode.com/user/raybb">
+							
+							<div class="profile-image" style="background-color: #795548" title="RayBB" alt="RayBB">R</div>
+							
+						</a>
+					</div>
+					<div class="topic-text">
+						<div class="post-content" itemprop="text"><small><strong>RayBB</strong> commented 4 days ago</small><br><p>In approach 2 for java str.length() should be cur.length().</p></div>
+					</div>
+				</div>
+			</div>
+		</li>
+		
+	</ul>
+	<br>
+
+	
+
+	<a class="btn btn-view" target="_blank" href="https://discuss.leetcode.com/topic/114301">View original thread</a>
+	<button class="btn btn-primary" id="nodebb-load-more" style="display: none;">Load more comments...</button>
+
+</div><a id="nodebb-comments"></a>
+<script src="./Generate Parentheses - LeetCode Articles_files/display_comments.js.download"></script>
+<script type="text/javascript">
+var nodeBBURL = 'https://discuss.leetcode.com',
+    articleID = 349;
+var articleData = {"title_plain": "Generate Parentheses", "url": "https://leetcode.com/articles/generate-parentheses/", "tags": [], "markDownContent": '<p>' + $('#solution').next().html() + '\n\n---\n</p>'};
+displayComments();
+</script>
+
+<noscript>Please enable JavaScript to view comments</noscript>
+
+
+  </div>
+</div>
+
+    <div id="playground-create-modal"></div>
+  </div>
+
+  
+  <footer class="site-footer" style="margin-top: -64px;">
+    <div class="container">
+      <hr>
+      <div class="row">
+        
+        <div class="col-sm-4 copyright">
+          <span>Copyright © 2017 LeetCode</span>
+        </div>
+        
+        <div class="text-right col-sm-8 region-us">
+          <div class="links">
+            <a data-toggle="modal" data-target="#supportModal">Contact Us</a>
+            &nbsp;|&nbsp;
+            
+            <a href="https://leetcode.com/faq/">F<span class="hide-too-small">requently </span>A<span class="hide-too-small">sked </span>Q<span class="hide-too-small">uestions</span></a>
+            &nbsp;|&nbsp;
+            <a href="https://leetcode.com/tos/">Terms<span class="hide-too-small"> of Service</span></a>
+            &nbsp;|&nbsp;
+            <a href="https://leetcode.com/privacy/">Privacy<span class="hide-too-small">  Policy</span></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <div class="modal fade simple-modal" id="supportModal" role="dialog">
+    <div class="modal-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <span class="text-lg text-300">&nbsp;How can we help you?</span>
+          </div>
+
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <a class="support-module btn btn-default" href="mailto:billing@leetcode.com?subject=Billing%20Issue&amp;body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A" target="_blank">
+                  <i class="fa fa-credit-card text-xl" aria-hidden="true"></i>
+                  <br><text>Billing &amp; Account</text>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a class="support-module btn btn-default" href="mailto:support@leetcode.com?subject=General%20Support&amp;body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A" target="_blank">
+                  <i class="fa fa-life-ring text-xl" aria-hidden="true"></i>
+                  <br><text>General Support</text>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a class="support-module btn btn-default" href="mailto:feedback@leetcode.com?subject=Other%20Inquiries&amp;body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A" target="_blank">
+                  <i class="fa fa-question-circle text-xl" aria-hidden="true"></i>
+                  <br><text>Other Inquiries</text>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/nav_user.9924647d.js.download"></script>
+  <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/base.0c7bcf7e.js.download"></script>
+  <script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/create.c08d726e.js.download"></script>
+
+  <script>
+    (function($, w, d){
+      const settings = {
+        method: 'GET',
+        url: '/points/api/checkin/',
+      };
+      $.ajax(settings)
+      .done(data => {
+        if(!data.msg){
+          new Noty({
+            text: '<a href="/points/"><div>' +
+              '<div class="body pull-right leetcoin">' +
+              '<img src="/static/images/LeetCoin.png" alt="LeetCoin" ' +
+              'width="12px" />&nbsp;+1</div>' +
+              '<div class="title">Daily Check-in</div></div></a>',
+            type: 'alert',
+            timeout: 3000
+          }).show();
+        }
+      });
+
+      $(function() {
+        $('#navbar-right img').addClass('img-rounded');
+        setFooterStyles();
+      });
+
+      function setFooterStyles() {
+        var $footer = $('.site-footer'),
+            height = $footer.outerHeight();
+        $footer.css('margin-top', -height);
+        $('.content-wrapper').css('padding-bottom', height);
+      }
+
+    }(jQuery, window, document));
+    try {
+      ace.config.set("basePath", "/static/ace-builds/src-noconflict/")
+    } catch(err) {}
+  </script>
+
+
+    
+<script type="text/javascript" src="./Generate Parentheses - LeetCode Articles_files/68acb4d7db22.js.download"></script>
+
+  
+
+</body></html>
