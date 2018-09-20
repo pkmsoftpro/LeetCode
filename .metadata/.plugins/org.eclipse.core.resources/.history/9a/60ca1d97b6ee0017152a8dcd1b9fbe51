@@ -1,9 +1,0 @@
-package com.practice;
-
-public class MySolution {
-	
-	public boolean isMatch(String text,String pattern){
-		
-		return false;
-	}
-}

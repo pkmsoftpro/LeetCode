@@ -1,0 +1,41 @@
+else {
+			if(current.right!=null && current.value == root.value){
+				Node m = current.right;
+				Node parent = null;
+				while (m.left != null){
+					parent = m;
+					m = m.left;
+				}
+				if(value==m.value)m.right = new Node(value);
+				else m.left = new Node(value);
+			}
+			if(current.value != root.value)y.right.right = new Node(current.value);
+			return current;
+		}
+		
+		else {
+	        if(current.right==null && current.value == value){
+	        	current.right=new Node(value);
+	        } else if (current.right != null){
+	        	if(value<current.right.value){
+	        		current.right.left = addRecursive(current.right.left, value);
+	        	} else if(value>current.right.value){
+	        		current.right.right = addRecursive(current.right.right, value);
+	        	} else if(value == current.right.value){
+	        		
+	        	}
+	        }
+	        
+	    }
+	    
+	    
+	    /*if(current.left!=null){
+			current = current.left;
+			count++;
+			calculateDaimeter(current.left,count);
+		}
+		if(current.right != null){
+			current = current.right;
+			count++;
+			calculateDaimeter(current.right,count);
+		}*/
