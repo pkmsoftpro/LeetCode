@@ -1,6 +1,6 @@
 package maxrect_85;
 /*
- * https://leetcode.com/problems/maximal-rectangle/discuss/231921/Simple-Java-Solution-based-on-84.-Largest-Rectangle-in-Histogram
+ * https://leetcode.com/problems/maximal-rectangle/discuss/231921/Simple-Java-iterative_dontconsider-based-on-84.-Largest-Rectangle-in-Histogram
  */
 class Solution {
 

@@ -1,7 +1,7 @@
 package reverselinklist_206;
 
 /*
- * https://leetcode.com/problems/reverse-linked-list-ii/discuss/235483/Java-recursive-solution-2ms
+ * https://leetcode.com/problems/reverse-linked-list-ii/discuss/235483/Java-recursive_memoization-solution-2ms
  */
 
 import java.util.ArrayList;

@@ -3,11 +3,11 @@ package binarytreeinorder_94;
 import java.util.Stack;
 
 public class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
+	public int val;
+	public TreeNode left;
+	public TreeNode right;
 
-	TreeNode(int x) {
+	public TreeNode(int x) {
 		val = x;
 	}
 
@@ -29,7 +29,7 @@ public class TreeNode {
 				curr = curr.left;
 			}
 			curr = s.pop();
-			m = m+curr.val+" ";
+			m = m+" "+curr.val+" ";
 			curr = curr.right;
 		}
 		return m;
@@ -41,11 +41,9 @@ public class TreeNode {
 		label.push("root");
 		s.push(r);
 		while(!s.isEmpty()){
-			if(m.length()>50) break;
+			if(m.length()>1000) break;
 			TreeNode tn = s.pop();
-			String name = label.pop();
-			/*m=m+":"+label+":"+tn.val;*/
-			m=m+name+":"+tn.val+",";
+			m=m+tn.val+" ";
 			if(tn.right!=null){
 				label.push("right");
 				s.push(tn.right);
@@ -54,6 +52,29 @@ public class TreeNode {
 				label.push("left");
 				s.push(tn.left);
 			}
+		}
+		return m;
+	}
+	
+	public static String toString_preorder1(TreeNode r, String m) {
+		Stack<TreeNode> s = new Stack<TreeNode>();
+		Stack<String> label = new Stack<String>();
+		label.push("root");
+		s.push(r);
+		while(!s.isEmpty()){
+			if(m.length()>1000) break;
+			TreeNode tn = s.pop();
+			String name = label.pop();
+			/*m=m+":"+label+":"+tn.val;*/
+			m=m+name+":"+tn.val+",";
+			if(tn.right!=null){
+				label.push("right");
+				s.push(tn.right);
+			} else m=m+"right:null,";
+			if(tn.left!=null){
+				label.push("left");
+				s.push(tn.left);
+			} else m=m+"left:null,";
 		}
 		return m;
 	}

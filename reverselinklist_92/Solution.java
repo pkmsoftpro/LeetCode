@@ -1,7 +1,7 @@
 package reverselinklist_92;
 
 /*
- * https://leetcode.com/problems/reverse-linked-list-ii/discuss/236020/Java-Solution-with-explanation
+ * https://leetcode.com/problems/reverse-linked-list-ii/discuss/236020/Java-iterative_dontconsider-with-explanation
  */
 
 /*

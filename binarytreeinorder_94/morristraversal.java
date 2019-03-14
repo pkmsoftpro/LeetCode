@@ -6,8 +6,8 @@ package binarytreeinorder_94;
  */
 
 public class morristraversal {
-    public void inorder(TreeNode root) {
-        TreeNode current = root;
+    public void inorder(TreeNode_old root) {
+        TreeNode_old current = root;
         while(current != null) {
             //left is null then print the node and go to right
             if (current.left == null) {
@@ -16,7 +16,7 @@ public class morristraversal {
             }
             else {
                 //find the predecessor.
-                TreeNode predecessor = current.left;
+                TreeNode_old predecessor = current.left;
                 //To find predecessor keep going right till right node is not null or right node is not current.
                 while(predecessor.right != current && predecessor.right != null){
                     predecessor = predecessor.right;
@@ -34,15 +34,15 @@ public class morristraversal {
         }
     }
 
-    public void preorder(TreeNode root) {
-        TreeNode current = root;
+    public void preorder(TreeNode_old root) {
+        TreeNode_old current = root;
         while (current != null) {
             if(current.left == null) {
                 System.out.print(current.val + " ");
                 current = current.right;
             }
             else {
-                TreeNode predecessor = current.left;
+                TreeNode_old predecessor = current.left;
                 while(predecessor.right != current && predecessor.right != null) {
                     predecessor = predecessor.right;
                 }
@@ -59,14 +59,14 @@ public class morristraversal {
     }
 
     public static void main(String[] args) {
-		TreeNode root = new TreeNode(8);
-		root.left=new TreeNode(5);
-		root.left.right=new TreeNode(9);
-		root.left.left=new TreeNode(2);
-		root.right = new TreeNode(1);
-		root.right.right = new TreeNode(6);
-		root.right.left = new TreeNode(3);
-		//root.right.left.left = new TreeNode(4);
+		TreeNode_old root = new TreeNode_old(8);
+		root.left=new TreeNode_old(5);
+		root.left.right=new TreeNode_old(9);
+		root.left.left=new TreeNode_old(2);
+		root.right = new TreeNode_old(1);
+		root.right.right = new TreeNode_old(6);
+		root.right.left = new TreeNode_old(3);
+		//root.right.left.left = new TreeNode_old(4);
 		new morristraversal().inorder(root);
 		System.out.println();
 		new morristraversal().preorder(root);

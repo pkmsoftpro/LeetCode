@@ -44,8 +44,8 @@ public class using_stack {
 		 */
 		root.right = new TreeNode(3);
 		/*
-		 * root.right.left = new TreeNode(6); root.right.right = new
-		 * TreeNode(20);
+		 * root.right.left = new TreeNode_old(6); root.right.right = new
+		 * TreeNode_old(20);
 		 */
 		System.out.println(new using_stack().maxDepth(root));
 	}

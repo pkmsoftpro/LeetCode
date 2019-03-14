@@ -9,7 +9,7 @@ package recoverbinarysearchtree_99;
 	
 	Let's start by writing the in order traversal:
 	
-	private void traverse (TreeNode root) {
+	private void traverse (TreeNode_old root) {
 	   if (root == null)
 	      return;
 	   traverse(root.left);

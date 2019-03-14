@@ -10,7 +10,7 @@ import java.util.Stack;
  * https://leetcode.com/problems/combination-sum/discuss/16559/Non-Recursive-JAVA-solution
  * 
  * honorable mentions:
- * https://leetcode.com/problems/combination-sum/discuss/16829/A-recursive-yet-efficient-Java-solution-with-explanation
+ * https://leetcode.com/problems/combination-sum/discuss/16829/A-recursive_memoization-yet-efficient-Java-solution-with-explanation
  */
 public class comsumiterative {
 

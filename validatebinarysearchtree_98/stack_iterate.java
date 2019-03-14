@@ -30,8 +30,8 @@ public class stack_iterate {
 		/*root.left.left = null;
 		root.left.right = null;*/
 		root.right = new TreeNode(3);
-		/*root.right.left = new TreeNode(6);
-		root.right.right = new TreeNode(20);*/
+		/*root.right.left = new TreeNode_old(6);
+		root.right.right = new TreeNode_old(20);*/
 		System.out.println(new stack_iterate().isValidBST2(root));
 	}
 }

@@ -10,8 +10,8 @@ package recoverbinarysearchtree_99;
 	It take use of leaf nodes' right/left pointer to achieve O(1) space Traversal on a Binary Tree.
 	Below is a standard Inorder Morris Traversal, referred from http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html (a Chinese Blog, while the graphs are great for illustration)
 	
-	public void morrisTraversal(TreeNode root){
-			TreeNode temp = null;
+	public void morrisTraversal(TreeNode_old root){
+			TreeNode_old temp = null;
 			while(root!=null){
 				if(root.left!=null){
 					// connect threading for root
@@ -117,16 +117,16 @@ public class morristraversal_best {
  * 
  * For me, the true O(1) space solution means Morris Traversal and an iterative instead of recursive solution.
 
-public void recoverTree(TreeNode root) {
-    List<TreeNode> targets = new ArrayList<TreeNode>(2);
-    TreeNode curr = root, prev = null;
+public void recoverTree(TreeNode_old root) {
+    List<TreeNode_old> targets = new ArrayList<TreeNode_old>(2);
+    TreeNode_old curr = root, prev = null;
     while (curr != null) {
         if (curr.left == null) {
             getTargets(prev, curr, targets);
             prev = curr;
             curr = curr.right;
         } else {
-            TreeNode rightmost = curr.left;
+            TreeNode_old rightmost = curr.left;
             while (rightmost.right != null && rightmost.right != curr)
                 rightmost = rightmost.right;
             if (rightmost.right != curr) {
@@ -147,7 +147,7 @@ public void recoverTree(TreeNode root) {
     }
 }
 
-private void getTargets(TreeNode prev, TreeNode curr, List<TreeNode> targets) {
+private void getTargets(TreeNode_old prev, TreeNode_old curr, List<TreeNode_old> targets) {
     if (prev != null && prev.val > curr.val) {
         if (targets.isEmpty()) {
             targets.add(prev);

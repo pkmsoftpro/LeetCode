@@ -39,6 +39,6 @@ public class recursive_bestSol {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new recursive_bestSol().generateTrees(2));
+		System.out.println(new recursive_bestSol().generateTrees(3));
 	}
 }

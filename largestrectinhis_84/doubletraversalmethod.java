@@ -59,7 +59,7 @@ For an array, there are three solutions that can become the maximum:
 
 a solution to the left of the minimum
 a solution to the right of the minimum
-Solution containing the current minimum
+iterative_dontconsider containing the current minimum
 In addition, in the above method, by judging whether the current sub-array is an ordered array, the judgment of the array is simplified, and only the order from small to large is judged, and it is also judged whether it is a large or small The order further improves the judgment efficiency. The time complexity of this algorithm is O(n\log n).
 
 S3: Using the stack

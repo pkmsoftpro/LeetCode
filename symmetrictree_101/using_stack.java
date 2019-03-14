@@ -40,11 +40,13 @@ public class using_stack {
 		root.right.right = new TreeNode(4);
 		root.right.right.right = new TreeNode(5);
 		root.right.right.right.right = new TreeNode(2);
+		root.right.right.right.right.left = new TreeNode(1);
 		
 		root.left = new TreeNode(3);
 		root.left.left = new TreeNode(4);
 		root.left.left.left = new TreeNode(5);
 		root.left.left.left.left = new TreeNode(2);
+		root.left.left.left.left.right = new TreeNode(1);
 		
 		System.out.println(new using_stack().isSymmetric(root));
 	}

@@ -1,7 +1,7 @@
 package graycode_89;
 
 /*
- * https://leetcode.com/problems/gray-code/discuss/29984/Share-my-simple-recursive-and-iterative-solution-Java
+ * https://leetcode.com/problems/gray-code/discuss/29984/Share-my-simple-recursive_memoization-and-iterative-solution-Java
  * 
  * https://leetcode.com/problems/gray-code/discuss/29881/An-accepted-three-line-solution-in-JAVA
  * 

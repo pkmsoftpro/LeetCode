@@ -21,7 +21,7 @@ public class recursive_memoization {
             if(s2.length() > 0 && s2.charAt(0) == s3.charAt(0))
                 if(isInterleave(s1,s2.substring(1),s3.substring(1))) return true;
         }
-        mem.add((s1.isEmpty()?"-":s1)+"#"+(s2.isEmpty()?"-":s2));
+        mem.add(s1+"#"+s2);
         return false;
     }
 	

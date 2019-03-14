@@ -38,12 +38,12 @@ public class MySol {
 		root.right = new TreeNode(20);
 		root.right.right = new TreeNode(7);
 		root.right.left = new TreeNode(15);
-		/*root.right.right.right.right = new TreeNode(2);*/
+		/*root.right.right.right.right = new TreeNode_old(2);*/
 		
 		root.left = new TreeNode(9);
 		root.left.left = null;
 		root.left.right = null;
-		/*root.left.left.left.left = new TreeNode(2);*/
+		/*root.left.left.left.left = new TreeNode_old(2);*/
 		
 		System.out.println(new MySol().levelOrder(root));
 	}
