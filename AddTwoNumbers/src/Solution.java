@@ -4,7 +4,7 @@ import util.ListNode;
 
 
 public class Solution {
-public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		
 		ListNode dummy = new ListNode(0);
 		ListNode current = dummy; ListNode p = l1, q = l2;
@@ -24,5 +24,10 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		}
 		
 		return dummy.next;
+	}
+	public static void main(String[] args) {
+		ListNode l1 = new ListNode(2); l1.next = new ListNode(4); l1.next.next = new ListNode(3);
+		ListNode l2 = new ListNode(5); l2.next = new ListNode(6); l2.next.next = new ListNode(4);
+		System.out.println(new Solution().addTwoNumbers(l1, l2));
 	}
 }
