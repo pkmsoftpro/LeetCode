@@ -1,47 +1,28 @@
-import java.util.ArrayList;
+package twosum;
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
+import util.ListNode;
 
 
 public class Solution {
-	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		
-        ListNode dummy = null;
-        ArrayList<Integer> a1 = new ArrayList<>();
-        ArrayList<Integer> a2 = new ArrayList<>();
-        if(l1!=null) a1.add(l1.val);
-        if(l2!=null) a2.add(l2.val);
-        while(l1.next!=null){
-        	l1 = l1.next;
-        	a1.add(l1.val);
-        }
-        while(l2.next!=null){
-        	l2 = l2.next;
-        	a2.add(l2.val);
-        }
-        int a1size = a1.size();
-        int a2size = a2.size();
-        int n=1,num1=0,num2=0;
-        for(int i=a1size; i>0; i--){
-        	int m = (int) (a1.get(a1.size()-n) * Math.pow(10,a1.size()-n));
-        	num1 = num1+m;
-        	n++;
-        }
-        n=1;
-        for(int i=a2size; i>0; i--){
-        	int m = (int) (a2.get(a2.size()-n) * Math.pow(10,a2.size()-n));
-        	num2 = num2+m;
-        	n++;
-        }
-        int sum = num1+num2;
-        return dummy;
+		ListNode dummy = new ListNode(0);
+		ListNode current = dummy; ListNode p = l1, q = l2;
+		int carry = 0;
+		while(p!=null || q!=null){
+			int x = p!=null? p.val:0;
+			int y = q!=null? q.val:0;
+			int sum = carry + x + y;
+			carry = sum/10;
+			current.next = new ListNode(sum%10);
+			current = current.next;
+			if(p != null) p = p.next;
+			if(q != null) q = q.next;
+		}
+		if(carry > 0){
+			current.next = new ListNode(carry);
+		}
 		
-    }
+		return dummy.next;
+	}
 }
