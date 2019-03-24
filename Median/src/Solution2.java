@@ -17,7 +17,7 @@ public class Solution {
         if (input1.length > input2.length) {
             return findMedianSortedArrays(input2, input1);
         }
-    if(input1.length==0){
+    	if(input1.length==0){
 			int l = input2.length;
 			return l%2==0?(double)(input2[l/2]+input2[l/2 -1])/2:input2[l/2];
 		}
