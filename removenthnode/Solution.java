@@ -1,5 +1,14 @@
 package removenthnode;
-
+/*
+ * This algorithm generates counter. In this case, list size is 5 and n is 1. so we will
+ * generate a counter FAST, it lapses the list by 1 from the beginning, so we are left with 
+ * a counter with count equals 4.  
+dummy,fast,slow = 0 1 2 3 4 5 
+	after fast while counter
+	fast  = 2 3 4 5
+after slow while counter, slow will point to the element that is needed to be removed 
+	slow  = 4 5 
+ */
 class Solution {
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
