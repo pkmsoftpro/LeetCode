@@ -1,3 +1,6 @@
+/*
+https://leetcode.com/problems/longest-palindromic-substring/discuss/2928/Very-simple-clean-java-solution
+*/
 package com.palin;
 
 public class Solution {
