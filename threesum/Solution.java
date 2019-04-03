@@ -13,7 +13,7 @@ class Solution {
 			int target = -nums[i];
 			while (j < k) {
 				if (nums[j] + nums[k] == target) {
-					res.add(Arrays.asList(nums[i], nums[j], nums[k]));
+					res.add(Arrays.asList(nums[i], nums[j], nums[k])); // you can skip duplicates here
 					j++;
 					k--;
 				} else if (nums[j] + nums[k] > target) {
