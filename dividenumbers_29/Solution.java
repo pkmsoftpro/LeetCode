@@ -25,6 +25,17 @@ class Solution {
 	    	sum += sum;
 	    	divide += divide;
 	    }
+		
+	    /*
+	    dividend = dividend - sum;
+	    sum = divisor;
+	    while(sum<=dividend){
+	    	sum += divisor;
+	    	divide += 1;
+	    }
+	    
+	    return negative ? -divide: divide;
+	    */
 	    
 	    // Make a recursive call for (devided-sum) and add it to the result
 	    long x = negative ? -(divide + divideLong((dividend-sum), divisor)) :
