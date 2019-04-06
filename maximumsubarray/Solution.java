@@ -39,7 +39,6 @@ public class Solution {
 	
 	public static void main(String[] args) {
 		int[] arr = {16,3,-1,8,-10,1,8,-5,10,-14,15};
-		int mid = 0 + (arr.length-1)/2;
 		int sum = new Solution().maxSubArray(arr, 0, arr.length-1);
 		System.out.println(sum);
 	}
