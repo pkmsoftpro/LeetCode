@@ -2,7 +2,7 @@ package longestvalidparentheses;
 
 import java.util.Stack;
 
-public class Solution2 {
+public class Solution1 {
 	public int longestValidParentheses(String s) {
         if (s == null) return 0;
         int len = s.length();
@@ -33,7 +33,7 @@ public class Solution2 {
 		//String s = "()(()";
 		String s = ")())()()())()(";
 		//String s = "()(()";
-		Solution2 sol = new Solution2();
+		Solution1 sol = new Solution1();
 		System.out.println(sol.longestValidParentheses(s));
 	}
 }
