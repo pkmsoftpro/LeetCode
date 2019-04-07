@@ -1,4 +1,4 @@
-package searchinsertposition;
+package searchinsertposition_35;
 
 public class Solution {
 
