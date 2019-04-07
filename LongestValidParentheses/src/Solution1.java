@@ -3,7 +3,7 @@ package longestvalidparentheses;
 import java.util.Stack;
 
 public class Solution1 {
-	public int longestValidParentheses(String s) {
+     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
         int max = 0;
