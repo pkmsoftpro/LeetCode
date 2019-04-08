@@ -1,3 +1,6 @@
+//https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
+//https://www.youtube.com/watch?v=K8qVpQfNoy0
+
 package firstmissingpositive; 
 
 public class Solution3
