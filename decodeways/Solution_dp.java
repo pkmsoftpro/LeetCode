@@ -2,7 +2,10 @@ package decodeways;
 /*
  * https://leetcode.com/problems/decode-ways/discuss/30358/Java-clean-DP-solution-with-explanation
  * 
+ *
+ * video: https://www.youtube.com/watch?v=Q4_azFiO5nE
  * 
+ *
  * I used a dp array of size n + 1 to save subproblem solutions. dp[0] means an empty string will have one 
  * way to decode, dp[1] means the way to decode a string of size 1. 
  * I then check one digit and two digit combination and save the results along the way. 
