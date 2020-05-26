@@ -1,4 +1,4 @@
-package maxrect_85;
+package maxrectangle_85;
 /*
  * https://leetcode.com/problems/maximal-rectangle/discuss/231921/Simple-Java-iterative_dontconsider-based-on-84.-Largest-Rectangle-in-Histogram
  */
