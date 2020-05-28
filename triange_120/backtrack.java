@@ -1,3 +1,15 @@
+/*
+    public int bt(List<List<Integer>> triangle, int row, int col) {
+      if (row == triangle.size()) {
+          return 0;
+      }
+      int curr = triangle.get(row).get(col);
+      int left = bt(triangle, row + 1, col);
+      int right = bt(triangle, row + 1, col + 1);
+      return Math.min(left, right) + curr;
+  }
+*/
+
 package triange_120;
 
 import java.util.Arrays;
