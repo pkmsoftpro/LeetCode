@@ -27,9 +27,9 @@ public class trueiterative {
                     cRoot.left = copyTree(root.right.left);
                     //reusing - point new root.right to the original right subtree
                     cRoot.right = root.right.right;
-                    //curr is the cutoff node whose right child will be replaced by the new n 
+                    //curr is the cutoff node whose left child will be replaced by the new n 
                     TreeNode curr = getValNode(cRoot, node.val); 
-                    //place n as curr's right child, make curr's original right child as the left child of n.
+                    //place n as curr's left child, make curr's original left child as the right child of new n
                     TreeNode tmp = curr.left;
                     curr.left = new TreeNode(n);
                     curr.left.right = tmp;
