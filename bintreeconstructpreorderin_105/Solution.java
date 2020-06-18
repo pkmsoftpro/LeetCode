@@ -3,6 +3,7 @@ package bintreeconstructpreorderin_105;
 /*
  * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/34744/Concise-Java-Recursive-Solution_bestrecursive
  * 
+ * https://www.youtube.com/watch?v=PoBGyrIWisE (Visualization)
  * 
     1. The Root of the tree is the first element in Preorder Array.
     2. Find the position of the Root in Inorder Array.
