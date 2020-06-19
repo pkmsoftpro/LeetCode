@@ -1,5 +1,8 @@
 package constructtree_105;
 
+//to handle the duplicate, we need to provide start and e Index.
+//Link: https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
+
 import java.util.HashMap;
 import java.util.Map;
 import basenode.TreeNode;
@@ -10,8 +13,8 @@ public class BinaryTree {
   { 
       BinaryTree tree = new BinaryTree(); 
 
-      int in[] = new int[] { 9, 8, 4, 2, 10, 5, 1, 6, 3, 13, 12, 7 }; 
-      int pre[] = new int[] { 1, 2, 4, 8, 9, 5, 10, 3, 6, 7, 12, 13 }; 
+      int in[] = new int[] { 9, 8, 4, 2, 10, 5, 1, 6, 3, 12, 7 }; 
+      int pre[] = new int[] { 1, 2, 4, 8, 9, 5, 10, 3, 6, 7, 12 }; 
       
       Map<Integer, Integer> map = new HashMap<Integer, Integer>();
       for(int i=0; i<in.length; i++) {
