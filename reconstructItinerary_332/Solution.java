@@ -42,6 +42,11 @@ route = ['JFK', 'A', 'C', 'D', 'B', 'C', 'JFK', 'D', 'A']
       visit(targets.get(airport).poll());
     route.add(0, airport);
   }
+  
+  similar:
+Delete Nodes And Return Forest
+Maximum Product of Splitted Binary Tree
+Time Needed to Inform All Employees
 */
 
 package reconstructItinerary;
