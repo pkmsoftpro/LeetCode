@@ -29,6 +29,19 @@ stack = []
 Return route in reverse or do route.add(0,s):
 
 route = ['JFK', 'A', 'C', 'D', 'B', 'C', 'JFK', 'D', 'A']
+
+ public List<String> findItinerary(List<List<String>> tickets) {
+    for (List<String> ticket : tickets)
+      targets.computeIfAbsent(ticket.get(0), k -> new PriorityQueue()).add(ticket.get(1));
+    visit("JFK");
+    return route;
+  }
+
+  void visit(String airport) {
+    while (targets.containsKey(airport) && !targets.get(airport).isEmpty())
+      visit(targets.get(airport).poll());
+    route.add(0, airport);
+  }
 */
 
 package reconstructItinerary;
