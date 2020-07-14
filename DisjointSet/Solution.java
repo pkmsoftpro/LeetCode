@@ -1,5 +1,10 @@
 package redundantConnection_684;
 
+/*
+https://www.youtube.com/watch?v=ID00PMy0-vE
+
+https://leetcode.com/problems/redundant-connection/discuss/123819/Union-Find-with-Explanations-(Java-Python)
+*/
 public class Solution {
   
   public static void main(String[] args) {
