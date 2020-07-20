@@ -1,6 +1,8 @@
 /*
 https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/discuss/197668/Count-the-Number-of-Islands-O(N)
 
+https://cp-algorithms.com/data_structures/disjoint_set_union.html
+
 Problem:
 we can remove a stone if and only if,
 there is another stone in the same column OR row.
