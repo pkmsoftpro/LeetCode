@@ -1,6 +1,6 @@
 /*
 ** https://leetcode.com/problems/accounts-merge/discuss/109157/JavaC%2B%2B-Union-Find
-/*
+*/
 
 
 import java.util.ArrayList;
