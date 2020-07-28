@@ -1,4 +1,6 @@
 /*
+Link: https://leetcode.com/problems/find-eventual-safe-states/discuss/119871/Straightforward-Java-solution-easy-to-understand!
+
 value of color represents three states:
 0:have not been visited
 1:safe
