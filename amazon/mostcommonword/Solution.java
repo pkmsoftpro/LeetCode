@@ -1,6 +1,7 @@
+package mostcommonword;
 import java.util.*;
 
-class Solution {
+public class Solution {
   public String mostCommonWord(String paragraph, String[] bd) {
     String[] words = paragraph.split("[\\s]+|\\,");
     Map<String, Integer> map = new HashMap<>();
