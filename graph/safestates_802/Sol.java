@@ -6,7 +6,7 @@ Add the node whose out-degree is 0 into queue and result Set, then process each 
 
 https://leetcode.com/problems/find-eventual-safe-states/discuss/120633/Java-Solution-(DFS-andand-Topological-Sort)
 */
-
+package safestates_802;
 
 import java.util.ArrayList;
 import java.util.Collections;

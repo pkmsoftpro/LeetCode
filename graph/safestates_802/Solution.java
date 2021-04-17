@@ -1,3 +1,8 @@
+package safestates_802;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 Link: https://leetcode.com/problems/find-eventual-safe-states/discuss/119871/Straightforward-Java-solution-easy-to-understand!
 
