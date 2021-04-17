@@ -18,6 +18,7 @@ public class Solution {
 
   public static void main(String[] args) {
     String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-    System.out.println(new Solution().groupAnagrams(strs));
+    String[] strs1 = {"c", "c"};
+    System.out.println(new Solution().groupAnagrams(strs1));
   }
 }
