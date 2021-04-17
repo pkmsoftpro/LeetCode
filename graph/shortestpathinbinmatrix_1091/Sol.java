@@ -8,7 +8,7 @@ package shortestpathinbinmatrix_1091;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution {
+public class Sol {
   
 
   public static void main(String[] args) {
