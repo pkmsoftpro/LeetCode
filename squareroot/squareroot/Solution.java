@@ -3,7 +3,7 @@ package squareroot;
 /*
  * https://leetcode.com/problems/sqrtx/discuss/222141/Java-Solution2-using-Binary-Search
  */
-class Solution2
+public class Solution
 {
 	public int mySqrt(int n)
 	{

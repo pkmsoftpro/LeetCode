@@ -1,3 +1,5 @@
+package squareroot;
+
 /*
 https://math.mit.edu/~stevenj/18.335/newton-sqrt.pdf
 http://mathworld.wolfram.com/NewtonsIteration.html
@@ -14,7 +16,7 @@ public class Solution3 {
     }
     
     public static void main(String[] args) {
-		System.out.println(new Solution().mySqrt(2147395599));
+		System.out.println(new Solution3().mySqrt(2147395599));
 	}
 }
 
