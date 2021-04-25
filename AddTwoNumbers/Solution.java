@@ -1,4 +1,4 @@
-package twosum;
+package arraysandstrings.twosum;
 
 import util.ListNode;
 
