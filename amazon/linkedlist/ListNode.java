@@ -24,20 +24,21 @@ public class ListNode {
     ListNode temp = this;
     if(temp==null) return ret;
     while(temp!=null){
-      ret += " " + temp.val;
+      ret += temp.val + " ";
       temp = temp.next;
     }
     return ret;
   }
 
   public static ListNode createListNode(List<Integer> l1){
-    ListNode node = new ListNode();
+    if(l1.isEmpty()) return null;
+    ListNode node = new ListNode(l1.get(0));
     ListNode temp = node;
-    for(int t : l1){
-      temp.val = t;
-      temp.next = new ListNode();
-      temp = temp.next;
+    int len = l1.size();
+    for(int i=1; i<len; i++){
+      node.next = new ListNode(l1.get(i));
+      node = node.next;
     }
-    return node;
+    return temp;
   }
 }
