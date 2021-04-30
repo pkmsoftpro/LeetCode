@@ -20,12 +20,14 @@ public class ListNode {
 
   @Override
   public String toString() {
+    int maxCount = 10;
     String ret = "";
     ListNode temp = this;
     if(temp==null) return ret;
-    while(temp!=null){
+    while(temp!=null && maxCount>0){
       ret += temp.val + " ";
       temp = temp.next;
+      maxCount--;
     }
     return ret;
   }
