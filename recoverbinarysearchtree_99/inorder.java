@@ -5,10 +5,6 @@ package recoverbinarysearchtree_99;
  */
 
 /*
-	 * This question appeared difficult to me but it is really just a simple in-order traversal! I got really frustrated when other people are showing off Morris Traversal which is totally not necessary here.
-	
-	Let's start by writing the in order traversal:
-	
 	private void traverse (TreeNode_old root) {
 	   if (root == null)
 	      return;
