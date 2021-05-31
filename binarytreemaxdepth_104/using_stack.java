@@ -6,7 +6,7 @@ package binarytreemaxdepth_104;
 
 import java.util.Stack;
 
-public class using_stack2 {
+public class using_stack {
 
 	// iteration method
 	public int maxDepth(TreeNode root) {
