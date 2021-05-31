@@ -7,7 +7,7 @@ package binarytreemaxdepth_104;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class using_stack {
+public class using_queue {
 
 	public int maxDepth(TreeNode root) {
 		if (root == null)
@@ -47,6 +47,6 @@ public class using_stack {
 		 * root.right.left = new TreeNode_old(6); root.right.right = new
 		 * TreeNode_old(20);
 		 */
-		System.out.println(new using_stack().maxDepth(root));
+		System.out.println(new using_queue().maxDepth(root));
 	}
 }
