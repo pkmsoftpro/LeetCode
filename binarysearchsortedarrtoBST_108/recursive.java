@@ -2,6 +2,7 @@ package binarysearchsortedarrtoBST_108;
 
 /*
  * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/discuss/35431/Simple-Recursive-Java-Solution_bestrecursive
+ * (f+s)/2 is same as (s+(f-s))/2
  */
 
 public class recursive {
