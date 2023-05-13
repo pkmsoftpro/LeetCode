@@ -1,0 +1,41 @@
+Participate in contests:
+https://leetcode.com/discuss/interview-question/2894923/My-12-Months-Coding-Journey-oror-750%2B-Questions-oror-Leetcode-2093-oror-Codeforces-1563-oror-Codechef-1963
+
+
+
+https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-prepare-for-interviews
+
+https://leetcode.com/discuss/interview-question/1367198/You-Only-Have-To-Be-Right-Once%3A-Facebook-Offer
+
+https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-round
+
+
+
+
+Dynamic Programming:
+1. https://leetcode.com/discuss/interview-question/1380561/Template-For-Dynamic-programming
+2. https://leetcode.com/discuss/interview-question/1271034/Count-no-of-subsets-with-given-difference-(DP)
+
+Runtime calculation:
+https://leetcode.com/discuss/interview-question/3055778/How-to-calculate-runtime-of-backtracking-algorithm-in-interview
+
+
+https://medium.com/javarevisited/10-best-books-for-data-structure-and-algorithms-for-beginners-in-java-c-c-and-python-5e3d9b478eb1
+
+
+
+
+
+
+
+
+
+
+
+
+
+not so important:----------------------------------------------------------------------------------------------------------------------------
+https://leetcode.com/discuss/interview-question/496042/Design-video-sharing-platform-like-Youtube
+
+Microservices-Architecture:
+https://leetcode.com/discuss/interview-question/3100171/Microservices-Architecture
