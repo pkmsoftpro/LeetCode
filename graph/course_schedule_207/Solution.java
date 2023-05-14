@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Solution {
 
-  public boolean canFinish(int numCourses, @org.jetbrains.annotations.NotNull int[][] prerequisites) {
+  public boolean canFinish(int numCourses, int[][] prerequisites) {
     boolean retval = true;
     if(prerequisites.length==0) return true;
     if(prerequisites.length==1){
