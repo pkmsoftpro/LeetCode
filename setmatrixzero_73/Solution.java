@@ -1,4 +1,4 @@
-package setmatrixzero;
+package setmatrixzero_73;
 
 /*
  * Challenge is to use only O(1) space.
