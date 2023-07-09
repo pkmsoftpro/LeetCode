@@ -1,5 +1,12 @@
 package LeetcodePatterns.generalized_abbreviation_320;
 
+//http://buttercola.blogspot.com/2016/01/leetcode-generalized-abbreviation.html
+/*
+ * 
+ * Understand the problem:
+ * A classic dfs + backtracking problem. 
+ * A trick here is if we've already abbreviate part of a word, we must jump at least a character.
+ */
 import java.util.ArrayList;
 import java.util.List;
 

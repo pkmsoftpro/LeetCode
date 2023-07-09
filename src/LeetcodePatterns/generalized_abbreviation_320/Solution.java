@@ -1,6 +1,7 @@
 package LeetcodePatterns.generalized_abbreviation_320;
 
 // https://yuncoong.gitbooks.io/leetcode/content/320.html
+// https://www.codingninjas.com/studio/problem-details/generalized-abbreviation_1233144
 import java.util.ArrayList;
 import java.util.List;
 
