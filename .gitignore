@@ -8,3 +8,8 @@ target
 production
 pom.xml
 LeetCodeModule2/
+.DS_Store
+bin/
+src/LeetcodePatterns/.DS_Store
+src/sort/.DS_Store
+src/.DS_Store
