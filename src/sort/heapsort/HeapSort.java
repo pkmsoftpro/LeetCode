@@ -1,13 +1,13 @@
 package sort.heapsort;
 
-import util.PrintArray;
+import util.Print;
 
 public class HeapSort {
 
   public static void main(String[] args) {
     int[] arr = {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
     heapsort(arr);
-    PrintArray.print(arr);
+    Print.print(arr);
   }
   
   public static void heapsort(int[] arr) {

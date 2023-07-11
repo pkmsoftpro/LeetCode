@@ -10,14 +10,14 @@ package LeetcodePatterns.generalized_abbreviation_320;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.PrintArray;
+import util.Print;
 
 public class DfsPlusBacktracking {
   
   public static void main(String[] args) {
     String abb = "word";
     List<String> list = generateAbbreviations(abb);
-    PrintArray.printList(list);
+    Print.printList(list);
     System.out.println("done");
   }
   
