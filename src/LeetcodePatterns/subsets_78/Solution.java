@@ -12,7 +12,7 @@ public class Solution {
     
     List<List<Integer>> list = new Solution().subsets(nums);
     
-    for(@SuppressWarnings("rawtypes") List intList : list) {
+    for(List intList : list) {
       System.out.print("[");
       Print.printList(intList); 
       System.out.print("],");
