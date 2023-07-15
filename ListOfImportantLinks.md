@@ -19,7 +19,7 @@ https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-r
 
 
 
-Dynamic Programming:
+# Dynamic Programming:
 1. https://leetcode.com/discuss/interview-question/1380561/Template-For-Dynamic-programming
 2. https://leetcode.com/discuss/interview-question/1271034/Count-no-of-subsets-with-given-difference-(DP)
 3. aatalyk---https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
@@ -147,7 +147,7 @@ https://yuncoong.gitbooks.io/leetcode/content/320.html
 320. Generalized Abbreviation
 
 
-Coding List:
+# Coding List:
 
 Complete (250 questions) DSA Sheet for Coding Interviews |Leetcode questions
 https://www.youtube.com/watch?app=desktop&v=NXQi_g1pVqI&t=0s
@@ -157,3 +157,8 @@ https://leetcode.com/discuss/interview-experience/3171859/Journey-to-a-FAANG-Com
 
 System design-----good books:
 https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%20the%20Coding%2C%204%20Edition%20-%20150%20Programming%20Questions%20and%20Solutions.pdf
+
+
+
+# Backtracking:
+https://leetcode.com/problems/subsets/solutions/27281/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/
