@@ -1,9 +1,6 @@
 # Current Coding Compilation
-```
-1. https://seanprashad.com/leetcode-patterns/
-2. https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
-
-```
+[`https://seanprashad.com/leetcode-patterns/`](https://seanprashad.com/leetcode-patterns/)  
+[`https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions`](https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions)  
 
 # Coding List:
 ```
@@ -164,9 +161,10 @@ https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%
 ```
 <hr class="dashed">
 
-
+<pre>
 paint_house_256  
 https://www.youtube.com/watch?v=fZIsEPhSBgM
 
 Generalized Abbreviation_320  
 https://yuncoong.gitbooks.io/leetcode/content/320.html
+</pre>
