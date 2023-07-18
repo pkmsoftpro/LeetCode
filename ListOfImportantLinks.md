@@ -1,3 +1,10 @@
+# Current Coding Compilation
+```
+1. https://seanprashad.com/leetcode-patterns/
+2. https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
+
+```
+
 # Coding List:
 ```
 Participate in contests:
@@ -7,6 +14,7 @@ https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-pr
 https://leetcode.com/discuss/interview-question/1367198/You-Only-Have-To-Be-Right-Once%3A-Facebook-Offer
 https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-round
 ```
+<hr class="dashed">
 
 # Dynamic Programming:
 ```
@@ -17,40 +25,34 @@ https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-r
 5. https://www.designgurus.io/course/grokking-dynamic-programming
 6. https://leetcode.com/discuss/interview-question/1979807/Most-Frequently-Asked-Dynamic-Programming-Questions-or-Practice-Well
 ```
-
+<hr class="dashed">
 
 # Runtime calculation:
 ```
 https://leetcode.com/discuss/interview-question/3055778/How-to-calculate-runtime-of-backtracking-algorithm-in-interview
 ```
+<hr class="dashed">
 
 https://medium.com/javarevisited/10-best-books-for-data-structure-and-algorithms-for-beginners-in-java-c-c-and-python-5e3d9b478eb1
 
 TakeUFordward and LoveBabbarDSA Sheet
 
-# Graph practice:
-```
-current====>https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
+<hr class="dashed">
 
-https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
+# Graph practice:  
+<hr class="dotted">
+<sub>
+1. DFS
+2. BFS
+3. Dijkstra
+4. Topological sort
+5. Union Find
+6. Minimum spanning tree
+</sub>
 
-union find:
-https://leetcode.com/tag/graph/discuss/1072418/Disjoint-Set-Union-(DSU)Union-Find-A-Complete-Guide
+<hr class="dotted">
 
-https://leetcode.com/discuss/interview-question/3365918/Graphs-or-All-Algorithms-or-Theroy-And-Implementation
-https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
-https://leetcode.com/tag/graph/discuss/1326900/Graph-algorithms-%2B-problems-to-practice
-https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
-
-Graph topics:
-
-DFS
-BFS
-Dijkstra
-Topological sort
-Union Find
-Minimum spanning tree
-
+<sub>
 1. Graph Basics
 2. BFS for Graphs
 3. DFS for Graphs
@@ -66,8 +68,11 @@ Minimum spanning tree
 13. Tarjan's Algorithm (Strongly Connected Components
 14. Articulation Point 
 15. Bridges in Graph
+</sub>
 
+<hr class="dotted">
 
+<sub>
 1. BFS
 2. DFS
 3. Dijkstra
@@ -83,52 +88,60 @@ Minimum spanning tree
 13. Trie
 14. Euler's and Hamilton's algo
 15. Ford-Fulkerson Algorithm
+</sub>
+<hr class="dotted">
 
 ```
+current====>https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 
+https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
+
+union find:
+https://leetcode.com/tag/graph/discuss/1072418/Disjoint-Set-Union-(DSU)Union-Find-A-Complete-Guide
+
+https://leetcode.com/discuss/interview-question/3365918/Graphs-or-All-Algorithms-or-Theroy-And-Implementation
+https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
+https://leetcode.com/tag/graph/discuss/1326900/Graph-algorithms-%2B-problems-to-practice
+https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
+https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
+```
+<hr class="dashed">
 
 ```
 https://leetcode.com/discuss/interview-question/3365796/ALL-IN-ONE-PLACE-TO-FAANG
 https://leetcode.com/discuss/study-guide/2546082/Leetcode-questions-for-SDE-Prep-for-FAANG(Links-are-topic-and-Difficulty-wise)------------------important
 https://leetcode.com/discuss/study-guide/1854225/Full-Interview-Preparation-Guides-%2B-Lists--------------------------------------good list
-https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
+
 ```
+
+<hr class="dashed">
 
 # List of lists
 ```
 https://github.com/hardik-menger/algo_implementations
 ```
 
-
-```
-https://hackmd.io/@arthurzllu/SkZBc7GoI
-https://github.com/Geek-a-Byte/Leetcode-Solutions
----MIT 6.006 
-https://leetcode.com/tag/graph/discuss?currentPage=1&orderBy=most_votes&query=
-
-https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
-
-https://leetcode.com/discuss/study-guide/3454470/Patterns-to-master-DSA
-```
-
+<hr class="dashed">
 
 # not so important:
 ```
 https://leetcode.com/discuss/interview-question/496042/Design-video-sharing-platform-like-Youtube
-
 Microservices-Architecture:
 https://leetcode.com/discuss/interview-question/3100171/Microservices-Architecture
 
 https://leetcode.com/discuss/general-discussion/1868912/My-Leetcode-Solutions-All-In-One --------------good
 https://studylib.net/doc/25736411/leetcode-dsa-sheet-320
+
+https://hackmd.io/@arthurzllu/SkZBc7GoI
+https://github.com/Geek-a-Byte/Leetcode-Solutions
+
+https://leetcode.com/tag/graph/discuss?currentPage=1&orderBy=most_votes&query=
+https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
+https://leetcode.com/discuss/study-guide/3454470/Patterns-to-master-DSA
+---MIT 6.006 
 ```
 
-
-
-
-=========================
-
-
+<hr class="dashed">
 
 # Coding List:
 ```
@@ -141,12 +154,14 @@ https://leetcode.com/discuss/interview-experience/3171859/Journey-to-a-FAANG-Com
 System design-----good books:
 https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%20the%20Coding%2C%204%20Edition%20-%20150%20Programming%20Questions%20and%20Solutions.pdf
 ```
-
+<hr class="dashed">
 
 # Backtracking:
 ```
 1. https://leetcode.com/problems/subsets/solutions/27281/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/
+2. https://seanprashad.com/leetcode-patterns/
 ```
+<hr class="dashed">
 
 paint_house_256  
 https://www.youtube.com/watch?v=fZIsEPhSBgM
