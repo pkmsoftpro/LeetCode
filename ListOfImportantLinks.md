@@ -1,110 +1,55 @@
-
-paint_house_256
-https://www.youtube.com/watch?v=fZIsEPhSBgM
-
-
 # Coding List:
-
+```
 Participate in contests:
 https://leetcode.com/discuss/interview-question/2894923/My-12-Months-Coding-Journey-oror-750%2B-Questions-oror-Leetcode-2093-oror-Codeforces-1563-oror-Codechef-1963
 
-
-
 https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-prepare-for-interviews
-
 https://leetcode.com/discuss/interview-question/1367198/You-Only-Have-To-Be-Right-Once%3A-Facebook-Offer
-
 https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-round
-
-
-
+```
 
 # Dynamic Programming:
+```
 1. https://leetcode.com/discuss/interview-question/1380561/Template-For-Dynamic-programming
 2. https://leetcode.com/discuss/interview-question/1271034/Count-no-of-subsets-with-given-difference-(DP)
 3. aatalyk---https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+4. https://codeforces.com/blog/entry/43256
+5. https://www.designgurus.io/course/grokking-dynamic-programming
+6. https://leetcode.com/discuss/interview-question/1979807/Most-Frequently-Asked-Dynamic-Programming-Questions-or-Practice-Well
+```
 
-Runtime calculation:
+
+# Runtime calculation:
+```
 https://leetcode.com/discuss/interview-question/3055778/How-to-calculate-runtime-of-backtracking-algorithm-in-interview
-
+```
 
 https://medium.com/javarevisited/10-best-books-for-data-structure-and-algorithms-for-beginners-in-java-c-c-and-python-5e3d9b478eb1
 
 TakeUFordward and LoveBabbarDSA Sheet
 
-Graph practice:
+# Graph practice:
+```
+current====>https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
+
 https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
-https://leetcode.com/discuss/interview-question/3365918/Graphs-or-All-Algorithms-or-Theroy-And-Implementation
-https://leetcode.com/discuss/interview-question/3365796/ALL-IN-ONE-PLACE-TO-FAANG
-https://leetcode.com/discuss/study-guide/2546082/Leetcode-questions-for-SDE-Prep-for-FAANG(Links-are-topic-and-Difficulty-wise)-------------------------------important
-https://leetcode.com/discuss/interview-question/1979807/Most-Frequently-Asked-Dynamic-Programming-Questions-or-Practice-Well
-https://leetcode.com/tag/graph/discuss/1326900/Graph-algorithms-%2B-problems-to-practice
-
-https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions---------------------------------start doing this
-https://leetcode.com/discuss/study-guide/1854225/Full-Interview-Preparation-Guides-%2B-Lists----------------------------------------------good list
-https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
-https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
-
-https://github.com/hardik-menger/algo_implementations------------------------------------------------------------------------------------good github list of lists
-
-
-https://hackmd.io/@arthurzllu/SkZBc7GoI
-https://github.com/Geek-a-Byte/Leetcode-Solutions
-
----MIT 6.006 
-
-
-https://leetcode.com/tag/graph/discuss?currentPage=1&orderBy=most_votes&query=
 
 union find:
 https://leetcode.com/tag/graph/discuss/1072418/Disjoint-Set-Union-(DSU)Union-Find-A-Complete-Guide
 
+https://leetcode.com/discuss/interview-question/3365918/Graphs-or-All-Algorithms-or-Theroy-And-Implementation
+https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
+https://leetcode.com/tag/graph/discuss/1326900/Graph-algorithms-%2B-problems-to-practice
+https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
 
+Graph topics:
 
-https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
-
-https://leetcode.com/discuss/study-guide/3454470/Patterns-to-master-DSA
-
-
-not so important:----------------------------------------------------------------------------------------------------------------------------
-https://leetcode.com/discuss/interview-question/496042/Design-video-sharing-platform-like-Youtube
-
-Microservices-Architecture:
-https://leetcode.com/discuss/interview-question/3100171/Microservices-Architecture
-
-
-https://leetcode.com/discuss/general-discussion/1868912/My-Leetcode-Solutions-All-In-One --------------good
-https://studylib.net/doc/25736411/leetcode-dsa-sheet-320
-
-
-
-
-=========================
-
-
-
-(DFS): 
-Depth First Search An algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node and explores as far as possible along each branch before backtracking.
-
-Breadth First Search (BFS): An algorithm for searching a tree data structure for a node that satisfies a given property. It starts at the tree root and explores all nodes at the present depth prior to moving on to the nodes at the next depth level.
-
-Dijkstra’s Algorithm: An algorithm for finding the shortest paths between nodes in a graph.
-
-Topological Sort: A linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
-
-Union-Find: A data structure that keeps track of a set of elements partitioned into a number of disjoint subsets.
-
-Minimum Spanning Tree: A subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
-
-
-
-
-
-
-
-
-
-
+DFS
+BFS
+Dijkstra
+Topological sort
+Union Find
+Minimum spanning tree
 
 1. Graph Basics
 2. BFS for Graphs
@@ -139,12 +84,50 @@ Minimum Spanning Tree: A subset of the edges of a connected, edge-weighted undir
 14. Euler's and Hamilton's algo
 15. Ford-Fulkerson Algorithm
 
+```
+
+
+```
+https://leetcode.com/discuss/interview-question/3365796/ALL-IN-ONE-PLACE-TO-FAANG
+https://leetcode.com/discuss/study-guide/2546082/Leetcode-questions-for-SDE-Prep-for-FAANG(Links-are-topic-and-Difficulty-wise)------------------important
+https://leetcode.com/discuss/study-guide/1854225/Full-Interview-Preparation-Guides-%2B-Lists--------------------------------------good list
+https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
+```
+
+# List of lists
+```
+https://github.com/hardik-menger/algo_implementations
+```
+
+
+```
+https://hackmd.io/@arthurzllu/SkZBc7GoI
+https://github.com/Geek-a-Byte/Leetcode-Solutions
+---MIT 6.006 
+https://leetcode.com/tag/graph/discuss?currentPage=1&orderBy=most_votes&query=
+
+https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
+
+https://leetcode.com/discuss/study-guide/3454470/Patterns-to-master-DSA
+```
+
+
+# not so important:
+```
+https://leetcode.com/discuss/interview-question/496042/Design-video-sharing-platform-like-Youtube
+
+Microservices-Architecture:
+https://leetcode.com/discuss/interview-question/3100171/Microservices-Architecture
+
+https://leetcode.com/discuss/general-discussion/1868912/My-Leetcode-Solutions-All-In-One --------------good
+https://studylib.net/doc/25736411/leetcode-dsa-sheet-320
+```
 
 
 
 
-https://yuncoong.gitbooks.io/leetcode/content/320.html
-320. Generalized Abbreviation
+=========================
+
 
 
 # Coding List:
@@ -161,4 +144,12 @@ https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%
 
 
 # Backtracking:
-https://leetcode.com/problems/subsets/solutions/27281/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/
+```
+1. https://leetcode.com/problems/subsets/solutions/27281/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/
+```
+
+paint_house_256
+https://www.youtube.com/watch?v=fZIsEPhSBgM
+
+Generalized Abbreviation_320
+https://yuncoong.gitbooks.io/leetcode/content/320.html
