@@ -131,7 +131,7 @@ https://studylib.net/doc/25736411/leetcode-dsa-sheet-320
 
 
 # Coding List:
-
+```
 Complete (250 questions) DSA Sheet for Coding Interviews |Leetcode questions
 https://www.youtube.com/watch?app=desktop&v=NXQi_g1pVqI&t=0s
 https://leadcoding.in/dsa-sheet/
@@ -140,7 +140,7 @@ https://leetcode.com/discuss/interview-experience/3171859/Journey-to-a-FAANG-Com
 
 System design-----good books:
 https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%20the%20Coding%2C%204%20Edition%20-%20150%20Programming%20Questions%20and%20Solutions.pdf
-
+```
 
 
 # Backtracking:
@@ -148,8 +148,8 @@ https://github.com/KreakEmp/InterviewPrep/blob/main/DSA%20%26%20Coding/Cracking%
 1. https://leetcode.com/problems/subsets/solutions/27281/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/
 ```
 
-paint_house_256
+paint_house_256  
 https://www.youtube.com/watch?v=fZIsEPhSBgM
 
-Generalized Abbreviation_320
+Generalized Abbreviation_320  
 https://yuncoong.gitbooks.io/leetcode/content/320.html
