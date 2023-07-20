@@ -8,7 +8,7 @@ import java.util.Set;
 import util.Print;
 
 /*
- * TLE
+ * Memoization
  * 
  * Trhwoing time limit exception
  * int[] nums = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1};

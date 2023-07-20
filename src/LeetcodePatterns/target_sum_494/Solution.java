@@ -8,7 +8,7 @@ public class Solution {
   char[] ch = {'+', '-'};
 
   public static void main(String[] args) {
-    int[] nums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
+    int[] nums = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
     int target = 1;
     int list = new Solution().findTargetSumWays(nums, target);
 

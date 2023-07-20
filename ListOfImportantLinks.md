@@ -168,3 +168,44 @@ https://www.youtube.com/watch?v=fZIsEPhSBgM
 Generalized Abbreviation_320  
 https://yuncoong.gitbooks.io/leetcode/content/320.html
 </pre>
+
+
+# Grokking DP : Design Gurus
+```
+https://www.designgurus.io/course-play/grokking-dynamic-programming/doc/637f6de8046a2a95a84d4834
+https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews/blob/main/%E2%9C%85%20%20Pattern%2005%3A%20Cyclic%20Sort.md
+
+https://github.com/asutosh97/educative-io-contents/blob/master/Grokking%20Dynamic%20Programming%20Patterns%20for%20Coding%20Interviews.md
+
+https://leetcode.com/discuss/study-guide/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+
+https://leetcode.com/discuss/study-guide/1688903/solved-all-two-pointers-problems-in-100-days
+```
+
+<hr class="dashed">
+
+
+# Categorize it
+
+```
+https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
+
+https://atcoder.jp/contests/dp/clarifications
+
+Take a look: Dynamic Programming | Coding | Interview Questions - YouTube (https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go)
+https://www.youtube.com/watch?v=iBnWHZmlIyY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=7&t=0s
+There are 10 standard problems of DP, doing them good you can almost solve 80 problems, which are just the variation of those 10 standard ones.
+
+
+DP List:
+https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+https://leetcode.com/discuss/general-discussion/592146/Dynamic-Programming-Summary
+https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise
+https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
+https://codeforces.com/blog/entry/67679
+https://codeforces.com/blog/entry/43256
+```
+
+<hr class="dashed">
+
+

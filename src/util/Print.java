@@ -13,6 +13,6 @@ public class Print {
   
   @SuppressWarnings("unchecked")
   public static void printList(List list) {
-    list.stream().forEach(i -> System.out.println(i + " "));
+    list.stream().forEach(i -> System.out.print(i + " "));
   }
 }
