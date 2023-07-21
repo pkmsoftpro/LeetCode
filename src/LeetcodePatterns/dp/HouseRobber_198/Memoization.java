@@ -1,7 +1,7 @@
 package LeetcodePatterns.dp.HouseRobber_198;
 
-//https://www.geeksforgeeks.org/find-maximum-possible-stolen-value-houses/
-//https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
+// https://www.geeksforgeeks.org/find-maximum-possible-stolen-value-houses/
+// https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
 
 import java.util.Arrays;
 
