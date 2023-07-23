@@ -14,7 +14,7 @@ public class Solution {
     return Math.max(rob2(nums,0, nums.length-2), rob2(nums, 1, nums.length-1));
   }
   
-  private int rob2(int[] num, int lo, int hi) {
+  private int rob3(int[] num, int lo, int hi) {
     int include = 0, exclude = 0;
     for (int j = lo; j <= hi; j++) {
         int i = include, e = exclude;
@@ -22,6 +22,17 @@ public class Solution {
         exclude = Math.max(e, i);
     }
     return Math.max(include, exclude);
+  }
+  
+  public int rob2(int[] nums, int lo, int hi) {
+    int pre = 0;
+    int curr = 0;
+    for (int i = lo; i <= hi; i++) { 
+      int temp = Math.max(curr, pre + nums[i]); 
+      pre = curr;
+      curr = temp;
+    }
+    return curr;
   }
   
   public int rob2(int[] nums) {

@@ -1,6 +1,7 @@
 package LeetcodePatterns.dp.HouseRobber_198;
 
 // https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
+// https://leetcode.com/problems/house-robber-ii/solutions/59921/9-lines-0ms-o-1-space-c-solution/
 
 public class Dp {
 
@@ -21,15 +22,13 @@ public class Dp {
   }
   
   public int rob(int[] nums) {
-
     int var1 = 0;
     int var2 = nums[0];
     for (int i = 2; i <= nums.length; i++) { 
       int temp = Math.max(var2, var1 + nums[i-1]); 
       var1 = var2;
       var2 = temp;
-      
     }
-    return Math.max(var1, var2);
+    return var2;
   }
 }

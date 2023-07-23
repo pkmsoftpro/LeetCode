@@ -117,6 +117,23 @@ https://leetcode.com/discuss/study-guide/1854225/Full-Interview-Preparation-Guid
 # List of lists
 ```
 https://github.com/hardik-menger/algo_implementations
+
+algo_implementations
+https://leetcode.com/discuss/interview-question/488887/Amazon-Final-Interview-Questions-or-SDE1
+https://leetcode.com/study-plan/dynamic-programming (part 1)
+https://github.com/xizhengszhang/Leetcode_company_frequency#microsoft
+https://github.com/ashuray/InterviewRoom CSES Sanket singh dp
+Aditya verma binarysearch, sliding window,dp
+https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
+https://leetcode.com/tag/string/discuss/1333049/Collections-of-string-questions-pattern-for-upcoming-placement-2021
+
+Todos
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+https://leetcode.com/tag/string/discuss/1333049/
+https://leetcode.com/tag/tree/discuss/1337373/Tree-question-pattern-oror2021-placement
+https://flykiller.github.io/tag/dijkstra
+https://flykiller.github.io/tag/monotonic%20deque
+https://flykiller.github.io/tag/backtracking
 ```
 
 <hr class="dashed">
