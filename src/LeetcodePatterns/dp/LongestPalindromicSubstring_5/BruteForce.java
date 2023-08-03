@@ -13,16 +13,12 @@ public class BruteForce {
 
   public String longestPalindrome(String s) {
     s = populateHash(s);
-    int l=0, r=0, c=0;
-    int[] p = new int[s.length()+1];
+    int l=0, r=0;
     int minL = 0;
     int maxR = 2;
     int max = 0;
-    p[0] = 0;
-    p[1] = 1;
     
     for(int i=2; i<s.length(); i++) {
-      c = i;
       l = i-1;
       r = i+1;
       int pincrement = 0;
@@ -40,7 +36,6 @@ public class BruteForce {
         maxR = r-1;
         max = pincrement;
       }
-      p[i] = pincrement;
     }
     
     
