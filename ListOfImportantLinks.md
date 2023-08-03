@@ -1,8 +1,7 @@
 # Current Coding Compilation
 [`https://seanprashad.com/leetcode-patterns/`](https://seanprashad.com/leetcode-patterns/)  
 [`https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions`](https://leetcode.com/tag/graph/discuss/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions) 
-start doing this
-[https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) 
+$start doing this$ [https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) 
 
 # Coding List:
 ```
@@ -13,6 +12,8 @@ https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-pr
 https://leetcode.com/discuss/interview-question/1367198/You-Only-Have-To-Be-Right-Once%3A-Facebook-Offer
 https://leetcode.com/discuss/interview-question/1729926/A-guide-for-Behavioral-round
 ```
+$Pepcoding$ https://www.youtube.com/@Pepcoding/videos
+
 <hr class="dashed">
 
 # Dynamic Programming:
