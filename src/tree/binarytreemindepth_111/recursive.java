@@ -1,7 +1,7 @@
 package tree.binarytreemindepth_111;
 
 /**
-https://leetcode.com/problems/minimum-depth-of-binary-tree/discuss/241008/Beats-100-easy-java-solution-in-9-line-simple-recursive-solution.
+https://leetcode.com/problems/minimum-depth-of-binary-tree/discuss/241008/Beats-100-easy-java-solution-in-9-line-simple-bruteforce-solution.
  */
 class recursive {
     public int minDepth(TreeNode root) {

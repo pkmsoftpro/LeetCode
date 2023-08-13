@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 /*
- * https://leetcode.com/problems/binary-tree-recursive-traversal/discuss/31404/Concise-JAVA-solution-based-on-Stack
+ * https://leetcode.com/problems/binary-tree-bruteforce-traversal/discuss/31404/Concise-JAVA-solution-based-on-Stack
  */
 
 public class usingstack2 {

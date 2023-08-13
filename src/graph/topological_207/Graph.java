@@ -29,7 +29,7 @@ public class Graph {
    adj.computeIfAbsent(w, m->new ArrayList<Integer>());
  }
 
- // A recursive function used by topologicalSort
+ // A bruteforce function used by topologicalSort
  void topologicalSortUtil(int v, boolean visited[],
                          Stack<Integer> stack)
  {
@@ -52,7 +52,7 @@ public class Graph {
  }
 
  // The function to do Topological Sort.
- // It uses recursive topologicalSortUtil()
+ // It uses bruteforce topologicalSortUtil()
  void topologicalSort()
  {
      Stack<Integer> stack = new Stack<Integer>();
@@ -62,7 +62,7 @@ public class Graph {
      for (int i = 0; i < V; i++)
          visited[i] = false;
 
-     // Call the recursive helper
+     // Call the bruteforce helper
      // function to store
      // Topological Sort starting
      // from all vertices one by one

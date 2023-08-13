@@ -3,7 +3,7 @@ package tree.uniqbinsearchtreeii_95;
 /*
  * https://leetcode.com/problems/unique-binary-search-trees-ii/discuss/31508/Divide-and-conquer.-F(i)-G(i-1)-*-G(n-i)
  * 
- * https://leetcode.com/problems/unique-binary-search-trees/discuss/31666/DP-recursive-in-6-lines-with-explanation.-F(i-n)-G(i-1)-*-G(n-i)
+ * https://leetcode.com/problems/unique-binary-search-trees/discuss/31666/DP-bruteforce-in-6-lines-with-explanation.-F(i-n)-G(i-1)-*-G(n-i)
  */
 
 import java.util.LinkedList;
@@ -67,7 +67,7 @@ Given a sequence 1…n, we pick a number i out of the sequence as the root, then
 i.e.
 
 F(i, n) = G(i-1) * G(n-i)	1 <= i <= n 
-Combining the above two formulas, we obtain the recursive formula for G(n). i.e.
+Combining the above two formulas, we obtain the bruteforce formula for G(n). i.e.
 
 G(n) = G(0) * G(n-1) + G(1) * G(n-2) + … + G(n-1) * G(0) 
 In terms of calculation, we need to start with the lower number, since the value of G(n) depends on the values of G(0) … G(n-1).

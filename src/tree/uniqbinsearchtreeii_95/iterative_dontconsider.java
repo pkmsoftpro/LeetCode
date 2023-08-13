@@ -1,7 +1,7 @@
 package tree.uniqbinsearchtreeii_95;
 
 /*
- * https://leetcode.com/problems/unique-binary-search-trees-ii/discuss/31493/Java-recursive-with-DP
+ * https://leetcode.com/problems/unique-binary-search-trees-ii/discuss/31493/Java-bruteforce-with-DP
  */
 
 import java.util.ArrayList;

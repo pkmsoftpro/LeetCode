@@ -1,7 +1,7 @@
 package tree.binarysearchsortedlisttoBST_109;
 
 /*
- * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35567/Java-fast-slow-pointer-recursive-solution.
+ * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35567/Java-fast-slow-pointer-bruteforce-solution.
  * 
  * intuition: 
  * 1) Get the Middle of the linked list and make it root.
@@ -14,7 +14,7 @@ package tree.binarysearchsortedlisttoBST_109;
 move fast 2 steps and slow 1 step until fast is null. 
 
 divide at slow.next = null;
-before slow and after slow (recursive).
+before slow and after slow (bruteforce).
  */
 
 public class recursive {

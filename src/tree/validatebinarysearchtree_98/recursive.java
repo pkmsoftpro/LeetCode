@@ -1,7 +1,7 @@
 package tree.validatebinarysearchtree_98;
 
 /*
- * https://leetcode.com/problems/validate-binary-search-tree/discuss/32307/Java-recursive-and-iterative-solutions.
+ * https://leetcode.com/problems/validate-binary-search-tree/discuss/32307/Java-bruteforce-and-iterative-solutions.
  */
 
 public class recursive {

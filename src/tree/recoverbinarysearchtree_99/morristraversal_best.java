@@ -125,7 +125,7 @@ public class morristraversal_best {
  * https://leetcode.com/problems/recover-binary-search-tree/discuss/32652/Java-Solution_bestrecursive%3A-Morris-Traversal-and-Iteration
  * 
  * 
- * For me, the true O(1) space solution means Morris Traversal and an iterative instead of recursive solution.
+ * For me, the true O(1) space solution means Morris Traversal and an iterative instead of bruteforce solution.
 
 public void recoverTree(TreeNode_old root) {
     List<TreeNode_old> targets = new ArrayList<TreeNode_old>(2);
