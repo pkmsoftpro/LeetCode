@@ -16,7 +16,7 @@ public class Recursive {
   }
 
   public boolean wordBreak(String s, List<String> wordDict) {
-    return compute(s, wordDict, new HashSet<String>()); // incorporated set, cache to avoid Iterative
+    return compute(s, wordDict, new HashSet<String>()); // incorporated set, cache to avoid iterative
   }
 
   public boolean compute(String s, List<String> wordDict, Set<String> set) {

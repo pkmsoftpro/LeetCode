@@ -1,7 +1,7 @@
 package tree.symmetrictree_101;
 
 /*
- * https://leetcode.com/problems/symmetric-tree/discuss/33217/Java-Iterative-Solution_bestrecursive%3A-concise-and-easy
+ * https://leetcode.com/problems/symmetric-tree/discuss/33217/Java-iterative-Solution_bestrecursive%3A-concise-and-easy
  */
 
 import java.util.Stack;

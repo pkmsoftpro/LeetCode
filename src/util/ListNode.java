@@ -19,6 +19,8 @@ public class ListNode {
       dummy = dummy.next;
       if(result.length()>50) break;
     }
-    return result.toString();
+    
+    String val = result.toString();
+    return val.substring(0, val.length() - 1);
   }
 }

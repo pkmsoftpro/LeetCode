@@ -21,7 +21,7 @@ public class Practice {
     root.left.left.left.left = new TreeNode(2);
     root.left.left.left.left.right = new TreeNode(1);
     
-    //System.out.println(new Iterative().levelOrder(root));
+    //System.out.println(new iterative().levelOrder(root));
     List<List<Integer>> lists = new ArrayList<List<Integer>>();
     new Practice().recurssive(root, 0, lists);
     System.out.println(lists);

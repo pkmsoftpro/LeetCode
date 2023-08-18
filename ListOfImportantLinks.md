@@ -228,4 +228,10 @@ https://codeforces.com/blog/entry/43256
 
 <hr class="dashed">
 
+# Practice List
 
+```
+https://leetcode.com/problems/add-two-numbers/solutions/1340/a-summary-about-how-to-solve-linked-list-problem-c/
+```
+
+<hr class="dashed">

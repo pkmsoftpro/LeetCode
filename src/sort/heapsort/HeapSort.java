@@ -7,7 +7,7 @@ public class HeapSort {
   public static void main(String[] args) {
     int[] arr = {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
     heapsort(arr);
-    Print.print(arr);
+    Print.printArray(arr);
   }
   
   public static void heapsort(int[] arr) {

@@ -2,7 +2,7 @@ package LeetcodePatterns.dp.CoinChange_322;
 
 import java.util.Arrays;
 
-// TODO: Iterative
+// TODO: iterative
 // https://leetcode.com/problems/coin-change/solutions/2058925/java-dynamic-programming-3-simplest-solutions/
 
 public class Recursion {

@@ -7,7 +7,7 @@ public class Print {
   
   private Print() {}
 
-  public static void print(int[] arr) {
+  public static void printArray(int[] arr) {
     Arrays.stream(arr).forEach(e -> System.out.print(e + " "));
   }
   
