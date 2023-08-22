@@ -38,7 +38,7 @@ package tree.recoverbinarysearchtree_99;
 			}
 		}
 	
-	In the above code, System.out.println(root.val);appear twice, which functions as outputing the Node in ascending order (BST). 
+	In the above code, System.out.println(root.val);appear twice, which functions as outputing the DLNode in ascending order (BST). 
 	Since these places are in order, replace them with
 	
 	    if(pre!=null && pre.val > root.val){

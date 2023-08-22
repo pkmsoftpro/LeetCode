@@ -61,7 +61,6 @@ public class Solution {
     neighbour4.neighbors.add(neighbour3);
 
     neighbour2 = new Solution().cloneGraph2(root);
-    
 }
 
   

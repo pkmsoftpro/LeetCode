@@ -16,7 +16,7 @@ public class trueiterative {
         for(; n > 0; n--) {
             List<TreeNode> next = new ArrayList<>();
             for(TreeNode node: res) {
-                //the special case when Node(n) is root of new tree
+                //the special case when DLNode(n) is root of new tree
                 TreeNode root = new TreeNode(n); 
                 root.right = node;
                 next.add(root);

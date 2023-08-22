@@ -1,18 +1,20 @@
 package util;
 
-public class ListNode {
+public class DLNode {   //Doubly Linked ListNode
   public int val;
-  public ListNode next;
+  public DLNode next;
+  public DLNode random;
 
-  public ListNode(int x) {
-    val = x;
-    next = null;
+  public DLNode(int val) {
+      this.val = val;
+      this.next = null;
+      this.random = null;
   }
-
+  
   public String toString() {
     
     StringBuilder result = new StringBuilder();
-    ListNode dummy = this;
+    DLNode dummy = this;
     
     while(dummy!=null) {
       result = result.append(dummy.val).append(":");

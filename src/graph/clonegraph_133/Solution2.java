@@ -35,6 +35,7 @@ public class Solution2 {
     while(!stack.isEmpty()) {
       Node1 oldNode = stack.pop();
       for(Node1 node : oldNode.neighbors) {
+        //map.computeIfAbsent(node, k -> new Node1(node.val, new ArrayList<Node1>()));
         if(!map.containsKey(node)) {
           stack.push(node);
           map.put(node, new Node1(node.val, new ArrayList<Node1>()));
