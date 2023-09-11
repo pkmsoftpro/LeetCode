@@ -3,7 +3,7 @@ package setmatrixzero_73;
 /*
  * Challenge is to use only O(1) space.
  * 
- * https://leetcode.com/problems/set-matrix-zeroes/discuss/26014/Any-shorter-O(1)-space-solution
+ * https://leetcode.com/problems/set-matrix-zeroes/discuss/26014/Any-shorter-O(1)-space-saddlebackvariant
  */
 
 public class Solution {

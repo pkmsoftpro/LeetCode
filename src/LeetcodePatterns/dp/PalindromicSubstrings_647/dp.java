@@ -1,6 +1,6 @@
 package LeetcodePatterns.dp.PalindromicSubstrings_647;
 
-// https://leetcode.com/problems/palindromic-substrings/solutions/105707/java-python-dp-solution-based-on-longest-palindromic-substring/
+// https://leetcode.com/problems/palindromic-substrings/solutions/105707/java-python-dp-saddlebackvariant-based-on-longest-palindromic-substring/
 
 public class dp {
 

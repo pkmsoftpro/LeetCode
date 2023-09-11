@@ -5,7 +5,7 @@ package LeetcodePatterns.permutations_46;
 import java.util.LinkedList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Backtracking {
 
@@ -15,7 +15,7 @@ public class Backtracking {
 
     for (List intList : lists) {
       System.out.print("[");
-      Print.printList(intList);
+      PrintJavaFunction.printList(intList);
       System.out.print("],");
     }
   }

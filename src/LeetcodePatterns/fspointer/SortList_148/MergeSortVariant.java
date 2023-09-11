@@ -1,6 +1,6 @@
 package LeetcodePatterns.fspointer.SortList_148;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class MergeSortVariant {
 
@@ -8,7 +8,7 @@ public class MergeSortVariant {
     int[] nums = {10,9,8,7,0,6,5,4,3,2,1};
       //{5,4,1,2,3,10,9,8,7,0};
     new MergeSortVariant().sort(nums);
-    Print.printArray(nums);
+    PrintJavaFunction.printArray(nums);
   }
 
   private void sort(int[] nums) {

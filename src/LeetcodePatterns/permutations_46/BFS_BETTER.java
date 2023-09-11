@@ -3,7 +3,7 @@ package LeetcodePatterns.permutations_46;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class BFS_BETTER {
   
@@ -13,7 +13,7 @@ public class BFS_BETTER {
     
     for(List intList : lists) {
       System.out.print("[");
-      Print.printList(intList); 
+      PrintJavaFunction.printList(intList); 
       System.out.print("],");
     }
   }

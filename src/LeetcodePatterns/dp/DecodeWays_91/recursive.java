@@ -5,9 +5,9 @@ package LeetcodePatterns.dp.DecodeWays_91;
  * https://leetcode.com/problems/decode-ways/solutions/30451/evolve-from-recursion-to-dp/
  * 
  * 
- * https://leetcode.com/problems/decode-ways/discuss/233731/my-simple-java-solution
+ * https://leetcode.com/problems/decode-ways/discuss/233731/my-simple-java-saddlebackvariant
  * 
- * https://leetcode.com/problems/decode-ways/solutions/2645299/java-easy-to-understand-detailed-solution-recursion-memoization/
+ * https://leetcode.com/problems/decode-ways/solutions/2645299/java-easy-to-understand-detailed-saddlebackvariant-recursion-memoization/
  */
 
 public class recursive {

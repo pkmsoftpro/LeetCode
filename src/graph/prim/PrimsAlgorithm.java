@@ -12,7 +12,7 @@ public class PrimsAlgorithm {
                                   { 6, 8, 0, 0, 9 },
                                   { 0, 5, 7, 9, 0 } };
 
-    // Generate the solution
+    // Generate the saddlebackvariant
     prims.generateMST(graph);
   }
 

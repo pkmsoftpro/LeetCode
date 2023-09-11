@@ -1,6 +1,6 @@
 package tree.binarytreeinorder_94;
 /*
- * https://leetcode.com/problems/binary-tree-bruteforce-traversal/discuss/232725/Clean-stack-based-Java-iterative-solution-1ms
+ * https://leetcode.com/problems/binary-tree-bruteforce-traversal/discuss/232725/Clean-stack-based-Java-iterative-saddlebackvariant-1ms
  */
 
 import java.util.ArrayDeque;

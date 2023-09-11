@@ -1,7 +1,7 @@
 package LeetcodePatterns.dp.HouseRobber_198;
 
 // https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
-// https://leetcode.com/problems/house-robber-ii/solutions/59921/9-lines-0ms-o-1-space-c-solution/
+// https://leetcode.com/problems/house-robber-ii/solutions/59921/9-lines-0ms-o-1-space-c-saddlebackvariant/
 
 public class Dp {
 

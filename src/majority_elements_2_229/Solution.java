@@ -3,14 +3,14 @@ package majority_elements_2_229;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Solution {
 
   public static void main(String[] args) {
     int[] nums = {2,2,1,3};
     List<Integer> list = new Solution().majorityElement(nums);
-    Print.printList(list);
+    PrintJavaFunction.printList(list);
   }
   
   

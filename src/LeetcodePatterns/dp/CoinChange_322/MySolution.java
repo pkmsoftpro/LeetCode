@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class MySolution {
     int retVal = Integer.MAX_VALUE, ret = -1;
@@ -53,7 +53,7 @@ public class MySolution {
       amount = amount-coins[i];
       if(amount==0) {
         k = count;
-        Print.printList(list);
+        PrintJavaFunction.printList(list);
         System.out.println();
         ret = 0;
         retVal = Math.min(retVal, count);

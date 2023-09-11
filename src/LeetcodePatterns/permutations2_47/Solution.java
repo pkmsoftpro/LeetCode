@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Solution {
 
@@ -16,7 +16,7 @@ public class Solution {
 
     for (List intList : lists) {
       System.out.print("[");
-      Print.printList(intList);
+      PrintJavaFunction.printList(intList);
       System.out.print("],");
     }
   }

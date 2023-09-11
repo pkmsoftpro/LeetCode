@@ -70,7 +70,7 @@ public class Graph {
          if (visited[i] == false)
              topologicalSortUtil(i, visited, stack);
 
-     // Print contents of stack
+     // PrintJavaFunction contents of stack
      while (stack.empty() == false)
          System.out.print(stack.pop() + " ");
  }

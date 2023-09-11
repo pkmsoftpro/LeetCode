@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 /*
  * Memoization
@@ -31,7 +31,7 @@ public class TLE {
   public int findTargetSumWays(int[] nums, int target) {
     List<String> list = new LinkedList<String>();
     compute(nums, target, list, "", 0, 0, new HashSet<>(), 0);
-    Print.printList(list);
+    PrintJavaFunction.printList(list);
     return list.size();
   }
   

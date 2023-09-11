@@ -1,7 +1,7 @@
 package LeetcodePatterns.fspointer.LinkedListCycleII_142;
 
 
-// https://leetcode.com/problems/linked-list-cycle-ii/solutions/44781/concise-o-n-solution-by-using-c-with-detailed-alogrithm-description/
+// https://leetcode.com/problems/linked-list-cycle-ii/solutions/44781/concise-o-n-saddlebackvariant-by-using-c-with-detailed-alogrithm-description/
 // https://www.youtube.com/watch?v=zbozWoMgKW0&t=2s&ab_channel=VivekanandKhyade-AlgorithmEveryDay
 // https://www.youtube.com/watch?v=LUm2ABqAs1w&ab_channel=VivekanandKhyade-AlgorithmEveryDay
 

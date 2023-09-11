@@ -1,7 +1,7 @@
 package tree.binarysearchsortedlisttoBST_109;
 
 /*
- * similar solution to 108
+ * similar saddlebackvariant to 108
  */
 
 import java.util.HashMap;

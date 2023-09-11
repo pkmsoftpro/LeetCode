@@ -1,7 +1,7 @@
 package LeetcodePatterns.dp.DecodeWays_91;
 
 /*
- * https://leetcode.com/problems/decode-ways/discuss/30547/Java-1ms-very-easy-AC-solution
+ * https://leetcode.com/problems/decode-ways/discuss/30547/Java-1ms-very-easy-AC-saddlebackvariant
  */
 
 public class iterative {

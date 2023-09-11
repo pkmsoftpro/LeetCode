@@ -1,7 +1,7 @@
 package tree.binarytreemaxdepth_104;
 
 /*
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34408/Java-solution-both-recursion-and-iteration
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34408/Java-saddlebackvariant-both-recursion-and-iteration
  */
 
 import java.util.Stack;

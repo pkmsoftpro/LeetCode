@@ -1,6 +1,6 @@
 package LeetcodePatterns.dp.DecodeWays_91;
 /*
- * https://leetcode.com/problems/decode-ways/discuss/30358/Java-clean-DP-solution-with-explanation
+ * https://leetcode.com/problems/decode-ways/discuss/30358/Java-clean-DP-saddlebackvariant-with-explanation
  * 
  *
  * video: https://www.youtube.com/watch?v=Q4_azFiO5nE

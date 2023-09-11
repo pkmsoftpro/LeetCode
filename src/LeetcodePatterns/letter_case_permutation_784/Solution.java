@@ -3,7 +3,7 @@ package LeetcodePatterns.letter_case_permutation_784;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Solution {
 
@@ -11,7 +11,7 @@ public class Solution {
     String s = "a1b2";  //a1b2 A1b2 A1B2 a1B2 
     List<String> list = new Solution().letterCasePermutation(s);
     if (list != null)
-      Print.printList(list);
+      PrintJavaFunction.printList(list);
     else
       System.out.println("empty");
   }

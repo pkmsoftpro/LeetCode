@@ -1,6 +1,6 @@
 package majority_elements_MinIndexValidSplit_2780;
 
-// https://leetcode.com/problems/minimum-index-of-a-valid-split/solutions/3771388/find-majority-boyer-moore-very-simple-and-easy-to-understand-solution/
+// https://leetcode.com/problems/minimum-index-of-a-valid-split/solutions/3771388/find-majority-boyer-moore-very-simple-and-easy-to-understand-saddlebackvariant/
 
 import java.util.ArrayList;
 import java.util.Arrays;

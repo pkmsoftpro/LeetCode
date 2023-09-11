@@ -1,18 +1,18 @@
 package LeetcodePatterns.Generate_Parentheses_22;
 
-// https://leetcode.com/problems/generate-parentheses/solutions/10100/easy-to-understand-java-backtracking-solution/
+// https://leetcode.com/problems/generate-parentheses/solutions/10100/easy-to-understand-java-backtracking-saddlebackvariant/
 
 import java.util.ArrayList;
 import java.util.List;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Solution {
 
   public static void main(String[] args) {
     int n = 3;
     List<String> parens = new Solution().generateParenthesis(n);
-    Print.printList(parens);
+    PrintJavaFunction.printList(parens);
   }
 
   public List<String> generateParenthesis(int n) {

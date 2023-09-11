@@ -1,6 +1,6 @@
 package LeetcodePatterns.longest_consecutive_sequence_128;
 
-// https://leetcode.com/problems/longest-consecutive-sequence/solutions/41055/my-really-simple-java-o-n-solution-accepted/
+// https://leetcode.com/problems/longest-consecutive-sequence/solutions/41055/my-really-simple-java-o-n-saddlebackvariant-accepted/
 // https://leetcode.com/problems/longest-consecutive-sequence/solutions/41057/simple-o-n-with-explanation-just-walk-each-streak/
 import java.util.HashMap;
 import java.util.HashSet;

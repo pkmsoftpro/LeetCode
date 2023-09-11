@@ -1,5 +1,8 @@
 package LeetcodePatterns.inplacereversal.RotateList_61;
 
+
+// https://leetcode.com/problems/rotate-list/solutions/22735/my-clean-c-code-quite-standard-find-tail-and-reconnect-the-list/
+
 import util.ListNode;
 
 public class connecttail {

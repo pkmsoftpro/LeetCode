@@ -1,7 +1,7 @@
 package tree.binarytreemaxdepth_104;
 
 /*
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34216/Simple-solution-using-Java
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34216/Simple-saddlebackvariant-using-Java
  */
 
 public class recursive {

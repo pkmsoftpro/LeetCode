@@ -1,5 +1,5 @@
 package LeetcodePatterns.letter_case_permutation_784;
-//https://leetcode.com/problems/letter-case-permutation/solutions/115485/java-easy-bfs-dfs-solution-with-explanation/
+//https://leetcode.com/problems/letter-case-permutation/solutions/115485/java-easy-bfs-dfs-saddlebackvariant-with-explanation/
 
 import java.util.LinkedList;
 import java.util.List;

@@ -95,7 +95,7 @@ public class MST {
              }
      }
 
-     // Print the constructed MST
+     // PrintJavaFunction the constructed MST
      printUtility(parent, graph);
  }
 
@@ -108,7 +108,7 @@ public class MST {
                                    { 6, 8, 0, 0, 9 },
                                    { 0, 5, 7, 9, 0 } };
 
-     // Print the solution
+     // PrintJavaFunction the saddlebackvariant
      t.generateMST(graph);
  }
 }

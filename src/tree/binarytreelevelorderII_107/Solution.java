@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/discuss/
- * 35045/Simple-Java-solution-with-LinkedList.
+ * 35045/Simple-Java-saddlebackvariant-with-LinkedList.
  */
 class Solution {
 	// The addFirst() method of LinkedLinked save us from reverse final result.

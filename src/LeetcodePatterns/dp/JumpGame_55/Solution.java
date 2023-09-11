@@ -1,6 +1,6 @@
 package LeetcodePatterns.dp.JumpGame_55;
 
-//https://leetcode.com/problems/jump-game/solutions/20917/linear-and-simple-solution-in-c/
+//https://leetcode.com/problems/jump-game/solutions/20917/linear-and-simple-saddlebackvariant-in-c/
 
 public class Solution {
   

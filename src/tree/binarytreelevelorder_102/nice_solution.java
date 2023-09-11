@@ -1,6 +1,6 @@
 package tree.binarytreelevelorder_102;
 /*
- * https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33450/Java-solution-with-a-queue-used
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33450/Java-saddlebackvariant-with-a-queue-used
  */
 
 import java.util.LinkedList;

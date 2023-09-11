@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class Solution {
   
@@ -13,7 +13,7 @@ public class Solution {
     String digits = "23";
     List<String> list = new Solution().letterCombinations(digits);
     
-    Print.printList(list);
+    PrintJavaFunction.printList(list);
   }
   
   public List<String> letterCombinations(String digits) {

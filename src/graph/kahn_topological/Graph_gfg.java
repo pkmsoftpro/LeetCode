@@ -94,7 +94,7 @@ public class Graph_gfg {
            return;
        }
 
-       // Print topological order
+       // PrintJavaFunction topological order
        for (int i : topOrder) {
            System.out.print(i + " ");
        }

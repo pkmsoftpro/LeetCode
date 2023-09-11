@@ -1,6 +1,6 @@
 package LeetcodePatterns.dp.LongestIncreasingSubsequence_300;
 // https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
-// https://leetcode.com/problems/longest-increasing-subsequence/solutions/74825/short-java-solution-using-dp-o-n-log-n/
+// https://leetcode.com/problems/longest-increasing-subsequence/solutions/74825/short-java-saddlebackvariant-using-dp-o-n-log-n/
 
 import java.util.Arrays;
 

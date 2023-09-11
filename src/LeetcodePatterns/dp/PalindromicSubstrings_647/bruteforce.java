@@ -1,6 +1,6 @@
 package LeetcodePatterns.dp.PalindromicSubstrings_647;
 
-// https://leetcode.com/problems/palindromic-substrings/solutions/105689/java-solution-8-lines-extendpalindrome/
+// https://leetcode.com/problems/palindromic-substrings/solutions/105689/java-saddlebackvariant-8-lines-extendpalindrome/
 
 public class bruteforce {
   

@@ -209,6 +209,7 @@ https://leetcode.com/discuss/study-guide/1688903/solved-all-two-pointers-problem
 
 ```
 https://leetcode.com/problems/house-robber/solutions/156523/from-good-to-great-how-to-approach-most-of-dp-problems/
+solutions: https://github.com/Seanforfun/Algorithm-and-Leetcode/tree/master
 
 https://atcoder.jp/contests/dp/clarifications
 
@@ -232,6 +233,13 @@ https://codeforces.com/blog/entry/43256
 
 ```
 https://leetcode.com/problems/add-two-numbers/solutions/1340/a-summary-about-how-to-solve-linked-list-problem-c/
+```
+
+<hr class="dashed">
+
+# Top 500 reputation leetcode
+```
+https://cc189.github.io/leetcode/
 ```
 
 <hr class="dashed">

@@ -1,11 +1,11 @@
 package LeetcodePatterns.letter_case_permutation_784;
-//https://leetcode.com/problems/letter-case-permutation/solutions/115485/java-easy-bfs-dfs-solution-with-explanation/
+//https://leetcode.com/problems/letter-case-permutation/solutions/115485/java-easy-bfs-dfs-saddlebackvariant-with-explanation/
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 public class BFS {
 
@@ -13,7 +13,7 @@ public class BFS {
     String s = "a1b2";  //a1b2 A1b2 A1B2 a1B2 
     List<String> list = new BFS().letterCasePermutation(s);
     if (list != null)
-      Print.printList(list);
+      PrintJavaFunction.printList(list);
     else
       System.out.println("empty");
   }

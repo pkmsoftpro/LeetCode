@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import util.Print;
+import util.PrintJavaFunction;
 
 /*
  * take the element one by one from the array nums = [ ,2,3]
@@ -37,7 +37,7 @@ public class BFS {
     
     for(List intList : lists) {
       System.out.print("[");
-      Print.printList(intList); 
+      PrintJavaFunction.printList(intList); 
       System.out.print("],");
     }
   }

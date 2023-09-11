@@ -1,7 +1,7 @@
 package tree.binarysearchsortedlisttoBST_109;
 
 /*
- * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35567/Java-fast-slow-pointer-bruteforce-solution.
+ * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35567/Java-fast-slow-pointer-bruteforce-saddlebackvariant.
  * 
  * intuition: 
  * 1) Get the Middle of the linked list and make it root.

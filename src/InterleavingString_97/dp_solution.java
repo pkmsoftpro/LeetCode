@@ -1,7 +1,7 @@
 package InterleavingString_97;
 
 /*
- * https://leetcode.com/problems/interleaving-string/discuss/32029/Clean-Java-DP-solution
+ * https://leetcode.com/problems/interleaving-string/discuss/32029/Clean-Java-DP-saddlebackvariant
  * 
  * String Interleaving Dynamic Programming:
  * Tushar Roy - Coding Made Simple:
