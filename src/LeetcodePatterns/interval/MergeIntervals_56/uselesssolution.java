@@ -4,7 +4,7 @@ package LeetcodePatterns.interval.MergeIntervals_56;
 
 /*
  * 
- * use the best.java to understand this solution
+ * use the best.java to understand this useless
  */
 
 import java.util.LinkedList;

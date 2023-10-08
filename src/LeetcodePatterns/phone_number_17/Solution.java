@@ -10,7 +10,7 @@ import util.PrintJavaFunction;
 public class Solution {
   
   public static void main(String[] args) {
-    String digits = "23";
+    String digits = "8809199802";
     List<String> list = new Solution().letterCombinations(digits);
     
     PrintJavaFunction.printList(list);

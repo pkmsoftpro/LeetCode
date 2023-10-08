@@ -48,7 +48,7 @@ public class GoldenSectionSearch {
     private boolean expectingValue      = false;    // Stores the state (true, if next call should be setValue(), false for getPoint())
 
     private int     numberOfIterations  = 0;        // Number of numberOfIterations
-    private double  accuracy;                       // Current accuracy of solution
+    private double  accuracy;                       // Current accuracy of useless
     private boolean isDone              = false;    // Will be true if machine accuracy has been reached
 
     public static void main(final String[] args) {
@@ -252,7 +252,7 @@ public class GoldenSectionSearch {
     }
 
     /**
-     * @return Returns true if the solver is unable to improve further. This may be either due to reached accuracy or due to no solution existing.
+     * @return Returns true if the solver is unable to improve further. This may be either due to reached accuracy or due to no useless existing.
      */
     public boolean isDone() {
         return isDone;

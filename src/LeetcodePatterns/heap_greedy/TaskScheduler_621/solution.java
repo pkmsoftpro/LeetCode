@@ -1,6 +1,6 @@
 package LeetcodePatterns.heap_greedy.TaskScheduler_621;
 
-// https://leetcode.com/problems/task-scheduler/solutions/104500/java-o-n-time-o-1-space-1-pass-no-sorting-solution-with-detailed-explanation/
+// https://leetcode.com/problems/task-scheduler/solutions/104500/java-o-n-time-o-1-space-1-pass-no-sorting-useless-with-detailed-explanation/
 
 public class solution {
   
