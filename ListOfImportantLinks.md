@@ -17,7 +17,7 @@ $Pepcoding$ https://www.youtube.com/@Pepcoding/videos
 <hr class="dashed">
 
 # Important topic wise:
-```
+
 Dynamic Programming Patterns: https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns
 
 Tree Patterns: https://leetcode.com/discuss/study-guide/1337373/tree-question-pattern-2021-placement
@@ -40,7 +40,7 @@ Heap Patterns: https://leetcode.com/discuss/general-discussion/1127238/master-he
 
 Sliding Window Patterns: https://leetcode.com/problems/frequency-of-the-most-frequent-element/solutions/1175088/C++-Maximum-Sliding-Window-Cheatsheet-Template/
 
-```
+
 
 <hr class="dashed">
 
