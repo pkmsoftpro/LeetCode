@@ -3,6 +3,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 //   https://www.youtube.com/watch?v=4-LshVFzfLI
+//https://www.youtube.com/watch?v=6avtxejCZYA
+//https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/
 
 
 public class EasySol {
