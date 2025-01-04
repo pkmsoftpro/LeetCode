@@ -1,3 +1,9 @@
+/*
+Create nRows StringBuffers, and keep collecting characters from original string to corresponding StringBuffer.
+Just take care of your index to keep them in bound.
+
+ */
+
 class Solution {
     public String convert(String s, int nRows) {
     char[] c = s.toCharArray();
