@@ -7,6 +7,11 @@ package InterleavingString_97;
  * Tushar Roy - Coding Made Simple:
  * 
  * https://www.youtube.com/watch?v=ih2OZ9-M3OM
+
+
+ https://www.geeksforgeeks.org/find-if-a-string-is-interleaved-of-two-other-strings-dp-33/
+
+ We create a dp table where dp[i][j] stores whether the first i characters of s1 and the first j characters of s2 can form the first i + j characters of s3. 
  */
 
 public class dp_solution {
