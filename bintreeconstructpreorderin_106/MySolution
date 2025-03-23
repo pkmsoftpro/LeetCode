@@ -1,0 +1,34 @@
+
+public class MySolution {
+
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        if(inorder==null || postorder==null || inorder.length==0 || postorder.length==0){
+            return null;
+        }
+        int breakIndex = 0;
+        for(int i=0; i<inorder.length; i++){
+            if(postorder[postorder.length-1]==inorder[i]){
+                breakIndex = i;
+                break;
+            }
+        }
+        TreeNode root = new TreeNode(postorder[postorder.length-1]);
+        int[] subinleft = Arrays.copyOfRange(inorder, 0, breakIndex);
+        int[] subpostleft = Arrays.copyOfRange(postorder, 0, breakIndex);
+        int[] subinright = Arrays.copyOfRange(inorder, breakIndex+1, inorder.length);
+        int[] subpostright = Arrays.copyOfRange(postorder, breakIndex, postorder.length-1);
+
+        root.left = buildTree(subinleft, subpostleft);
+        root.right = buildTree(subinright, subpostright);
+
+        return root;
+    }
+
+    public static void main(String[] args) {
+        int[] in =   {1,2,3,4,5,6,7,8,9,10,20,25,30,40,50};
+        int[] post = {1,3,2,5,7,6,4,9,20,10,30,50,40,25,8};
+
+        System.out.println(new MySolution().buildTree(in,post));
+    }
+}
+
