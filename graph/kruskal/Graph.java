@@ -162,9 +162,9 @@ public class Graph {
 		/* Let us create following weighted graph
 			  10
 			0----1
-			| \	 |
-		   6| 5\ |15
-			|	\|
+			|    |
+		       6| 5\ |15
+			|   \|
 			2----3
 			  4	 */
         int V = 4; // Number of vertices in graph
