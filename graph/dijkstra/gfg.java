@@ -10,11 +10,11 @@ package graph.dijkstra;
  * 
  *      8      7
     1-------2-----3__
-  / |       |\    |  \9
+ 4/ |       |\    |  \9
  /  |      2| \   |   \
 0   |11  ___8  \  |14  4
  \  |  /    |  4\ |    /
-  \ | /7    |6   \|   /10
+ 8\ | /7    |6   \|   /10
     7-------6-----5--/
     
  */
@@ -26,7 +26,7 @@ public class gfg {
 	public static void main (String[] args) 
 	{ 
 		/* Let us create the example graph discussed above */
-	int graph[][] = new int[][]			       {{0, 4,  0, 0,  0,  0,  0, 8,  0}, 
+	int graph[][] = new int[][]{{0, 4,  0, 0,  0,  0,  0, 8,  0},
 								{4, 0,  8, 0,  0,  0,  0, 11, 0}, 
 								{0, 8,  0, 7,  0,  4,  0, 0,  2}, 
 								{0, 0,  7, 0,  9,  14, 0, 0,  0}, 
