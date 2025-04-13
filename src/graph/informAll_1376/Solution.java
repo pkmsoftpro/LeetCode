@@ -55,3 +55,48 @@ public class Solution {
     System.out.println(new Solution().numOfMinutes(n, headId, manager, informTime));
   }
 }
+/*
+https://www.youtube.com/watch?v=cpfIx7jqqu8
+
+import java.util.*;
+
+class Solution {
+    public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
+
+        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        for(int i=0; i<manager.length; i++){
+            if(adjList.get(manager[i])==null){
+                adjList.put(manager[i], new ArrayList<>());
+            }
+            adjList.get(manager[i]).add(i);
+        }
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(headID);
+
+        int maxTime = 0;
+        while(!queue.isEmpty()){
+            int managerId = queue.poll();
+            if(adjList.containsKey(managerId)){
+                for(int emp : adjList.get(managerId)){
+                    informTime[emp] = informTime[emp] + informTime[manager[emp]];
+                    queue.offer(emp);
+                    maxTime = Math.max(maxTime, informTime[emp]);
+                }
+            }
+        }
+        return maxTime;
+    }
+
+    public static void main(String[] args) {
+
+        int n = 9;
+        int headId = 2;
+        int[] manager = {2,2,-1,2,2,2,1,3,6};
+        int[] informTime = {0,3,2,20,0,0,4,0,0};
+        System.out.println(new Solution().numOfMinutes(n, headId, manager, informTime));
+    }
+}
+
+*/
+
+
