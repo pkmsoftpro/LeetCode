@@ -2,7 +2,7 @@ package samerowstones_947;
 
 public class Solution {
   
-  int[] unions;
+  int[] parent;
   int count = 0;
   
   public static void main(String[] args) {
@@ -16,9 +16,9 @@ public class Solution {
   public int removeStones(int[][] stones) {
     int len = stones.length;
     count = stones.length;
-    unions = new int[len];
+    parent = new int[len];
     for(int i=0; i<len; i++) {
-      unions[i] = i;
+      parent[i] = i;
     }
     for(int i=0; i<len; i++) {
       for(int j=i+1; j<len; j++) {
@@ -36,14 +36,14 @@ public class Solution {
     
     if(rootx==rooty) return;
     else {
-      unions[rooty] = rootx;
+      parent[rooty] = rootx;
       count--;
     } 
   }
 
   public int find(int x) {
-    if(unions[x]==x)
+    if(parent[x]==x)
       return x;
-    return find(unions[x]);
+    return parent[x]=find(parent[x]);
   }
 }

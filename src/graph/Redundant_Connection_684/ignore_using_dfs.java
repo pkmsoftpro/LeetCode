@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+public class Solution {
 
     int cycleStart = -1;
 
@@ -55,14 +57,16 @@ class Solution {
         // If both nodes of the edge were marked as cycle nodes then this edge
         // can be removed.
         for (int i = edges.length - 1; i >= 0; i--) {
-            if (
-                    cycleNodes.containsKey(edges[i][0] - 1) &&
-                            cycleNodes.containsKey(edges[i][1] - 1)
-            ) {
+            if (cycleNodes.containsKey(edges[i][0] - 1) && cycleNodes.containsKey(edges[i][1] - 1)) {
                 return edges[i];
             }
         }
 
         return new int[] {}; // This line should theoretically never be reached
+    }
+
+    public static void main(String[] args) {
+        int[][] edges = {{1,2},{2,3},{3,4},{1,4},{1,5}};
+        new Solution().findRedundantConnection(edges);
     }
 }
