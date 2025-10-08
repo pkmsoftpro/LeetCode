@@ -1,4 +1,4 @@
-package rotatelist;
+package rotatelist_61;
 
 /*
  * https://leetcode.com/problems/rotate-list/discuss/213152/Java-Solution2%3A-O(n)-time-and-O(1)-space
