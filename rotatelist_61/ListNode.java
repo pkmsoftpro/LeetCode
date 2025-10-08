@@ -1,4 +1,4 @@
-package rotatelist;
+package rotatelist_61;
 
 public class ListNode {
 	int val;
