@@ -1,0 +1,27 @@
+Original Linked List (head -> ... -> tail)
+head -> 1 -> 2 -> 3 -> 4 -> 5 -> null
+
+Step 1: Find length n and tail node
+n = 5
+tail -> 5
+
+Step 2: Calculate k mod n
+Given k = 2
+k = k % 5 = 2
+
+Step 3: Connect tail to head, forming a cycle
+1 -> 2 -> 3 -> 4 -> 5
+^                   |
+|___________________|
+
+Step 4: Find new tail (n - k) steps from tail
+New Tail = 5 -> move 3 steps forward -> 3
+
+Step 5: New head is node after new tail
+New Head = 4
+
+Step 6: Break the cycle after new tail
+3.next = null
+
+Final rotated list:
+4 -> 5 -> 1 -> 2 -> 3 -> null
