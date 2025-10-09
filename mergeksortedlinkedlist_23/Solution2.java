@@ -1,4 +1,4 @@
-package mergeksortedlinkedlist;
+package mergeksortedlinkedlist_23;
 
 
 public class Solution2{
