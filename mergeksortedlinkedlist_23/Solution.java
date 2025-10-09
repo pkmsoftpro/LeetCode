@@ -1,4 +1,4 @@
-package mergeksortedlinkedlist;
+package mergeksortedlinkedlist_23;
 /*
  * https://leetcode.com/problems/merge-k-sorted-lists/discuss/210903/MergeSort-Algorithm-using-JAVA-beats-81
  * https://leetcode.com/problems/merge-k-sorted-lists/discuss/10528/A-java-solution-based-on-Priority-Queue?page=1
